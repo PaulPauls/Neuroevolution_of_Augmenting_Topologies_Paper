@@ -1,7 +1,8 @@
-## Seminar Paper about Neuroevolution of Augmenting Topologies (*NEAT*) ##
+## Overview about Neuroevolution of Augmenting Topologies (*NEAT*) ##
 
-This repository contains my paper about Neuroevolution of Augmenting Topologies
-including its LaTeX source code.
+This repository contains my seminar paper about Neuroevolution of Augmenting 
+Topologies including its LaTeX source code, which intends to give a good 
+overview of the current state of research.
 Until the paper is done does this README contain interesting potential research
 resources.
 Feedback welcome.
