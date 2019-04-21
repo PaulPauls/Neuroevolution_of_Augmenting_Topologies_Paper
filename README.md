@@ -74,13 +74,21 @@ Feedback welcome.
 
 * [ ] https://www.reddit.com/r/MachineLearning/comments/1s6fdb/neat_vs_deep_learning_neural_networks_has_anyone/cduhcyt?utm_source=share&utm_medium=web2x
 * [ ] Extracted Media from Stanleys original Paper: https://www.semanticscholar.org/paper/Evolving-Neural-Networks-through-Augmenting-Stanley-Miikkulainen/10fb6715f0cdbf1f0c3c5574d022b132e1e99cca
-* [ ] http://aigamedev.com/open/review/neuro-evolution-augmented-topologies/
-      > Check out rtNEAT (real-time NEAT)
-* [ ] https://medium.com/@moocaholic/2017-the-year-of-neuroevolution-30e59ae8fe18
-      > Based on: 'Evolution Strategies as a Scalable Alternative to Reinforcement Learning'
-* [ ] https://towardsdatascience.com/neat-an-awesome-approach-to-neuroevolution-3eca5cc7930f
+* [1] Real-time Neuroevolution of Augmented Topologies in Video Games: http://aigamedev.com/open/review/neuro-evolution-augmented-topologies/
+      > Based on 'Real-time Neuroevolution in the NERO Video Game' (see Conceptual Resources)
+      > Check out rtNEAT (real-time NEAT), possibly in the NERO framework
+      > Efficient technique, it starts out with a very simple set of behavior and only expands the search space when it is found to be beneficial
+      > Difference to other genetic algorithms is that it not only changes the weights of the neural net but also its structure
+* [0] 2017, The Year of Neuroevolution: https://medium.com/@moocaholic/2017-the-year-of-neuroevolution-30e59ae8fe18
+      > Based on: 'Evolution Strategies as a Scalable Alternative to Reinforcement Learning' (Background Knowledge)
+      > Evolution Strategies (ES) can be a strong alternative to Reinforcement Learning (RL) and have a number of advantages like ease of implementation, invariance to the length of the episode and settings with sparse rewards, better exploration behaviour than policy gradient methods, ease to scale in a distributed setting
+      > ES scales extremely well with the number of CPUs available demonstrating linear speedups in run time
+      > The communication overhead of implementing ES in a distributed setting is lower than for reinforcement learning methods such as policy gradients and Q-learning.
+      > The whole history of deep learning is full of re-invention and re-surrection, the main neural network learning algorithm, the backpropagation, was reinvented several times. (http://people.idsia.ch/~juergen/who-invented-backpropagation.html)
+      > NEAT is a TWEANN (Topology- and Weight-Evolving Artificial Neural Networks)
+* [ ] NEAT, An Awesome Approach to NeuroEvolution: https://towardsdatascience.com/neat-an-awesome-approach-to-neuroevolution-3eca5cc7930f
 * [ ] https://stackoverflow.com/questions/45390481/what-is-neat-neuroevolution-of-augmenting-topologies
-* [ ] https://medium.com/datadriveninvestor/neuroevolution-neat-algorithm-and-my-neat-b83c5174d8b0
+* [ ] NeuroEvolution, NEAT Algorithm and My NEAT: https://medium.com/datadriveninvestor/neuroevolution-neat-algorithm-and-my-neat-b83c5174d8b0
 * [ ] http://blog.otoro.net/2015/07/31/neurogram/
 
 
@@ -96,6 +104,25 @@ Feedback welcome.
 * [ ] Introduction to Evolutionary Algorithms: https://towardsdatascience.com/introduction-to-evolutionary-algorithms-a8594b484ac
 * [ ] Beginners Guide to Genetic and Evolutionary Algorithms: https://skymind.ai/wiki/evolutionary-genetic-algorithm
 * [ ] Playing FPS Games with Deep Reinforcement Learning: https://arxiv.org/abs/1609.05521
+* [ ] Evolution Strategies as a Scalable Alternative to Reinforcement Learning: https://openai.com/blog/evolution-strategies/, https://arxiv.org/abs/1703.03864
+
+
+
+#### Unsorted ####
+* https://en.wikipedia.org/wiki/Neuroevolution
+* https://en.wikipedia.org/wiki/Evolutionary_algorithm
+* https://en.wikipedia.org/wiki/Evolutionary_robotics
+* https://en.wikipedia.org/wiki/General_game_playing
+* https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
+* https://www.researchgate.net/publication/261851261_CMA-TWEANN_Efficient_Optimization_of_Neural_Networks_via_Self-Adaptation_and_Seamless_Augmentation
+* http://primo.ai/index.php?title=Topology_and_Weight_Evolving_Artificial_Neural_Network_(TWEANN)
+* https://pdfs.semanticscholar.org/42a2/6d4e18cd413f576c721985e8e54f189e8b8d.pdf
+* https://becominghuman.ai/neuroevolution-evolving-artificial-neural-networks-topology-from-the-scratch-d1ebc5540d84
+* http://avellano.fis.usal.es/~lalonso/compt_soft/articulos/yao99evolving.pdf
+* https://towardsdatascience.com/deep-neuroevolution-genetic-algorithms-are-a-competitive-alternative-for-training-deep-neural-822bfe3291f5
+* https://www.inovex.de/blog/neuroevolution/
+* http://nn.cs.utexas.edu/?neuroevolution
+* https://www.nature.com/articles/s42256-018-0006-z
 
 
 
