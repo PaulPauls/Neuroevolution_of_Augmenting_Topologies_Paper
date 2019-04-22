@@ -9,13 +9,8 @@ Feedback welcome.
 
 
 
-#### Resources worked through ####
+#### General Overview Resources ####
 
-* [1] Real-time Neuroevolution of Augmented Topologies in Video Games: http://aigamedev.com/open/review/neuro-evolution-augmented-topologies/
-      > Based on 'Real-time Neuroevolution in the NERO Video Game' (see Conceptual Resources)
-      > Check out rtNEAT (real-time NEAT), possibly in the NERO framework
-      > Efficient technique, it starts out with a very simple set of behavior and only expands the search space when it is found to be beneficial
-      > Difference to other genetic algorithms is that it not only changes the weights of the neural net but also its structure
 * [1] 2017, The Year of Neuroevolution: https://medium.com/@moocaholic/2017-the-year-of-neuroevolution-30e59ae8fe18
       > Based on: 'Evolution Strategies as a Scalable Alternative to Reinforcement Learning' (Background Knowledge)
       > Evolution Strategies (ES) can be a strong alternative to Reinforcement Learning (RL) and have a number of advantages like ease of implementation, invariance to the length 
@@ -27,6 +22,11 @@ Feedback welcome.
       > NEAT is a TWEANN (Topology- and Weight-Evolving Artificial Neural Networks)
       > Referenced: Genetic CNN, Large Scale Evolution of Image Classifiers, Evolving Deep Neural Networks, NMode - Neuro-MODule Evolution, PathNet, Evolution Channels Gradient Descent 
         in Super Neural Networks
+* [1] Real-time Neuroevolution of Augmented Topologies in Video Games: http://aigamedev.com/open/review/neuro-evolution-augmented-topologies/
+      > Based on 'Real-time Neuroevolution in the NERO Video Game' (see Conceptual Resources)
+      > Check out rtNEAT (real-time NEAT), possibly in the NERO framework
+      > Efficient technique, it starts out with a very simple set of behavior and only expands the search space when it is found to be beneficial
+      > Difference to other genetic algorithms is that it not only changes the weights of the neural net but also its structure
 
 
 
@@ -58,6 +58,14 @@ Feedback welcome.
 
 #### Unsorted Resources ####
 
+* Wikipedia Page: https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies
+* Wiki on HyperNeat: https://en.wikipedia.org/wiki/HyperNEAT
+* https://en.wikipedia.org/wiki/Neuroevolution
+* https://en.wikipedia.org/wiki/Evolutionary_algorithm
+* https://en.wikipedia.org/wiki/Evolutionary_robotics
+* https://en.wikipedia.org/wiki/General_game_playing
+* Wiki on Reinforcement-Learning: https://en.wikipedia.org/wiki/Reinforcement_learning
+* Wiki on Evolutionary Algorithms: https://en.wikipedia.org/wiki/Evolutionary_algorithm
 * Original Paper by Stanley and Miikkulainen: http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf
 * Stanleys Webpage describing NEAT: http://www.cs.ucf.edu/~kstanley/neat.html
 * Hybrid Evolution of Convolutional Networks: https://ieeexplore.ieee.org/document/6146987?tp=&arnumber=6146987&url=http:%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D6146987
@@ -68,7 +76,6 @@ Feedback welcome.
 * Comparison of NEAT and HyperNEAT on a Strategic Decision-Making Problem: http://web.mit.edu/jessiehl/Public/aaai11/fullpaper.pdf
 * Automatic Task Decomposition for the NeuroEvolution of Augmenting Topologies (NEAT) Algorithm: https://link.springer.com/chapter/10.1007/978-3-642-29066-4_1
 * Stanley: Competitive Coevolution through Evolutionary Complexification: https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume21/stanley04a-html/jairhtml.html
-* Wikipedia Page: https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies
 * Efficient reinforcement learning through evolving neural network topologies: https://dl.acm.org/citation.cfm?id=2955578
 * Automatic feature selection in neuroevolution: https://dl.acm.org/citation.cfm?id=1068210
 * Experiments on Neuroevolution and OnlineWeight Adaptation in Complex Environments: https://core.ac.uk/download/pdf/19336609.pdf
@@ -87,7 +94,6 @@ Feedback welcome.
 * Real-time Neuroevolution in the NERO Video Game: http://nn.cs.utexas.edu/downloads/papers/stanley.ieeetec05.pdf
 * Stanleys Webpage describing HyperNEAT: https://eplex.cs.ucf.edu/hyperNEATpage/
 * A Hypercube-Based Indirect Encoding for Evolving Large-Scale Neural Networks: https://ieeexplore.ieee.org/document/6792316
-* Wiki on HyperNeat: https://en.wikipedia.org/wiki/HyperNEAT
 * Blog post on HyperNEAT: https://towardsdatascience.com/hyperneat-powerful-indirect-neural-network-evolution-fba5c7c43b7b
 * HyperNEAT lecture: https://www.youtube.com/watch?v=MZzJ-EB-_yA
 * Go implementaiton of evolvable substrate HyperNEAT: https://github.com/yaricom/goESHyperNEAT
@@ -112,17 +118,11 @@ Feedback welcome.
 * Tensorflow Eager for required dynamic computation graphs: https://www.tensorflow.org/guide/eager
 * Intro to Reinforcement-Learning: https://medium.freecodecamp.org/an-introduction-to-reinforcement-learning-4339519de419
 * Intro to Reinforcement-Learning: https://www.geeksforgeeks.org/what-is-reinforcement-learning/
-* Wiki on Reinforcement-Learning: https://en.wikipedia.org/wiki/Reinforcement_learning
 * Beginners Guide to Deep Reinforcement Learning: https://skymind.ai/wiki/deep-reinforcement-learning
-* Wiki on Evolutionary Algorithms: https://en.wikipedia.org/wiki/Evolutionary_algorithm
 * Introduction to Evolutionary Algorithms: https://towardsdatascience.com/introduction-to-evolutionary-algorithms-a8594b484ac
 * Beginners Guide to Genetic and Evolutionary Algorithms: https://skymind.ai/wiki/evolutionary-genetic-algorithm
 * Playing FPS Games with Deep Reinforcement Learning: https://arxiv.org/abs/1609.05521
 * Evolution Strategies as a Scalable Alternative to Reinforcement Learning: https://openai.com/blog/evolution-strategies/, https://arxiv.org/abs/1703.03864
-* https://en.wikipedia.org/wiki/Neuroevolution
-* https://en.wikipedia.org/wiki/Evolutionary_algorithm
-* https://en.wikipedia.org/wiki/Evolutionary_robotics
-* https://en.wikipedia.org/wiki/General_game_playing
 * https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 * https://www.researchgate.net/publication/261851261_CMA-TWEANN_Efficient_Optimization_of_Neural_Networks_via_Self-Adaptation_and_Seamless_Augmentation
 * http://primo.ai/index.php?title=Topology_and_Weight_Evolving_Artificial_Neural_Network_(TWEANN)
