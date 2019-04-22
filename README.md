@@ -123,13 +123,11 @@ Feedback welcome.
 
 
 
-#### Unsorted NEAT/HyperNEAT Resources ####
+#### NEAT/HyperNEAT Resources ####
 
-* *Tutorial* Stanley - Webpage describing NEAT (**2003**)
+* *Primer* Stanley - Webpage describing NEAT (**2003**)
       http://www.cs.ucf.edu/~kstanley/neat.html
-* *Tutorial* Stanley - Competitive Coevolution through Evolutionary Complexification (**2004**)
-      https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume21/stanley04a-html/jairhtml.html
-* *Tutorial* Stanley - Webpage describing HyperNEAT (**2009**)
+* *Primer* Stanley - Webpage describing HyperNEAT (**2009**)
       https://eplex.cs.ucf.edu/hyperNEATpage/
 * *Bookchapter* Automatic Task Decomposition for the NeuroEvolution of Augmenting Topologies (NEAT) Algorithm (**2012**)
       https://link.springer.com/chapter/10.1007/978-3-642-29066-4_1
@@ -148,20 +146,43 @@ Feedback welcome.
 
 
 
-#### Unsorted Resources ####
+###############################################################
+
+
+
+
+#### Neuroevolution and Broader Resources ####
+
+* *Primer* Stanley - Competitive Coevolution through Evolutionary Complexification (**2004**)
+      https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume21/stanley04a-html/jairhtml.html
+* *Primer* Stanley - Neuroevolution: A different kind of deep learning (**2017**)
+      https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
+* *Primer* Neuroevolution: A Primer On Evolving Artificial Neural Networks (**2018**)
+      https://www.inovex.de/blog/neuroevolution/
+* *Blogpost* Neuroevolution\u200a\u2014\u200aevolving Artificial Neural Networks topology from the scratch (**2018**)
+      https://becominghuman.ai/neuroevolution-evolving-artificial-neural-networks-topology-from-the-scratch-d1ebc5540d84
+* *Blogpost* Deep Neuroevolution: Genetic Algorithms are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning (**2018**)
+      https://towardsdatascience.com/deep-neuroevolution-genetic-algorithms-are-a-competitive-alternative-for-training-deep-neural-822bfe3291f5
+* *Collection* Neuroevolution Collection
+      http://nn.cs.utexas.edu/?neuroevolution
+
+
+
+* Introduction to Evolutionary Algorithms: https://towardsdatascience.com/introduction-to-evolutionary-algorithms-a8594b484ac
+* Beginners Guide to Genetic and Evolutionary Algorithms: https://skymind.ai/wiki/evolutionary-genetic-algorithm
+* Topology and Weight Evolving Artificial Neural Network (TWEANN)
+      http://primo.ai/index.php?title=Topology_and_Weight_Evolving_Artificial_Neural_Network_(TWEANN)
+
+
+
+
+
+#### Background Knowledge Resources ####
 
 * Tensorflow Eager for required dynamic computation graphs: https://www.tensorflow.org/guide/eager
 * Intro to Reinforcement-Learning: https://medium.freecodecamp.org/an-introduction-to-reinforcement-learning-4339519de419
 * Intro to Reinforcement-Learning: https://www.geeksforgeeks.org/what-is-reinforcement-learning/
 * Beginners Guide to Deep Reinforcement Learning: https://skymind.ai/wiki/deep-reinforcement-learning
-* Introduction to Evolutionary Algorithms: https://towardsdatascience.com/introduction-to-evolutionary-algorithms-a8594b484ac
-* Beginners Guide to Genetic and Evolutionary Algorithms: https://skymind.ai/wiki/evolutionary-genetic-algorithm
-* https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
-* http://primo.ai/index.php?title=Topology_and_Weight_Evolving_Artificial_Neural_Network_(TWEANN)
-* https://becominghuman.ai/neuroevolution-evolving-artificial-neural-networks-topology-from-the-scratch-d1ebc5540d84
-* https://towardsdatascience.com/deep-neuroevolution-genetic-algorithms-are-a-competitive-alternative-for-training-deep-neural-822bfe3291f5
-* https://www.inovex.de/blog/neuroevolution/
-* http://nn.cs.utexas.edu/?neuroevolution
 
 
 
