@@ -123,22 +123,33 @@ Feedback welcome.
 
 
 
+#### Unsorted NEAT/HyperNEAT Resources ####
+
+* *Tutorial* Stanley - Webpage describing NEAT (**2003**)
+      http://www.cs.ucf.edu/~kstanley/neat.html
+* *Tutorial* Stanley - Competitive Coevolution through Evolutionary Complexification (**2004**)
+      https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume21/stanley04a-html/jairhtml.html
+* *Tutorial* Stanley - Webpage describing HyperNEAT (**2009**)
+      https://eplex.cs.ucf.edu/hyperNEATpage/
+* *Bookchapter* Automatic Task Decomposition for the NeuroEvolution of Augmenting Topologies (NEAT) Algorithm (**2012**)
+      https://link.springer.com/chapter/10.1007/978-3-642-29066-4_1
+* *Bookchapter* HyperNEAT - The First 5 years (**2014**)
+      https://link.springer.com/chapter/10.1007/978-3-642-55337-0_5
+* *Podcast* Stanleys Podcast about NEAT (**2018**)
+      https://twimlai.com/twiml-talk-94-neuroevolution-evolving-novel-neural-network-architectures-kenneth-stanley/
+* *Video Lecture* NEAT/HyperNEAT in evolutionary robotics (**2018**)
+      https://www.youtube.com/watch?v=MZzJ-EB-_yA
+* *Blogpost* NEAT, An Awesome Approach to NeuroEvolution (**2019**)
+      https://towardsdatascience.com/neat-an-awesome-approach-to-neuroevolution-3eca5cc7930f
+* *Blogpost* HyperNEAT: Powerful, Indirect Neural Network Evolution (**2019**)
+      https://towardsdatascience.com/hyperneat-powerful-indirect-neural-network-evolution-fba5c7c43b7b
+* *Blogpost* NeuroEvolution, NEAT Algorithm and My NEAT (**2018**)
+      https://medium.com/datadriveninvestor/neuroevolution-neat-algorithm-and-my-neat-b83c5174d8b0
+
+
+
 #### Unsorted Resources ####
 
-* Stanleys Webpage describing NEAT: http://www.cs.ucf.edu/~kstanley/neat.html
-* Stanleys Podcast about NEAT: https://twimlai.com/twiml-talk-94-neuroevolution-evolving-novel-neural-network-architectures-kenneth-stanley/
-* Automatic Task Decomposition for the NeuroEvolution of Augmenting Topologies (NEAT) Algorithm: https://link.springer.com/chapter/10.1007/978-3-642-29066-4_1
-* Stanley: Competitive Coevolution through Evolutionary Complexification: https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume21/stanley04a-html/jairhtml.html
-* Stanleys Webpage describing HyperNEAT: https://eplex.cs.ucf.edu/hyperNEATpage/
-* Blog post on HyperNEAT: https://towardsdatascience.com/hyperneat-powerful-indirect-neural-network-evolution-fba5c7c43b7b
-* HyperNEAT lecture: https://www.youtube.com/watch?v=MZzJ-EB-_yA
-* HyperNEAT - The First 5 years [ESPECIALLY RELEVANT DUE TO ALL THE REFERENCES]: https://link.springer.com/chapter/10.1007/978-3-642-55337-0_5
-* MarI/O: https://www.youtube.com/watch?v=qv6UVOQ0F44
-* https://www.reddit.com/r/MachineLearning/comments/1s6fdb/neat_vs_deep_learning_neural_networks_has_anyone/cduhcyt?utm_source=share&utm_medium=web2x
-* NEAT, An Awesome Approach to NeuroEvolution: https://towardsdatascience.com/neat-an-awesome-approach-to-neuroevolution-3eca5cc7930f
-* https://stackoverflow.com/questions/45390481/what-is-neat-neuroevolution-of-augmenting-topologies
-* NeuroEvolution, NEAT Algorithm and My NEAT: https://medium.com/datadriveninvestor/neuroevolution-neat-algorithm-and-my-neat-b83c5174d8b0
-* http://blog.otoro.net/2015/07/31/neurogram/
 * Tensorflow Eager for required dynamic computation graphs: https://www.tensorflow.org/guide/eager
 * Intro to Reinforcement-Learning: https://medium.freecodecamp.org/an-introduction-to-reinforcement-learning-4339519de419
 * Intro to Reinforcement-Learning: https://www.geeksforgeeks.org/what-is-reinforcement-learning/
@@ -154,7 +165,16 @@ Feedback welcome.
 
 
 
+#### Unsorted Small Resources ####
+* https://www.reddit.com/r/MachineLearning/comments/1s6fdb/neat_vs_deep_learning_neural_networks_has_anyone/cduhcyt?utm_source=share&utm_medium=web2x
+* https://stackoverflow.com/questions/45390481/what-is-neat-neuroevolution-of-augmenting-topologies
+* http://blog.otoro.net/2015/07/31/neurogram/
+
+
+
 #### Unsorted Implementation Resources ####
+* MarI/O - Machine Learning for Videogames (**2015**)
+      https://www.youtube.com/watch?v=qv6UVOQ0F44
 * Go implementaiton of evolvable substrate HyperNEAT: https://github.com/yaricom/goESHyperNEAT
 * PyTorch NEAT's adaptive HyperNEAT: https://github.com/uber-research/PyTorch-NEAT
 * NEAT-Python: https://neat-python.readthedocs.io/en/latest/
