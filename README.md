@@ -206,11 +206,3 @@ https://arxiv.org/search/?query=neuroevolution&searchtype=all
 
 
 
-#### Small Neuroevolution/NEAT Resources ####
-
-* [ ] https://www.reddit.com/r/MachineLearning/comments/1s6fdb/neat_vs_deep_learning_neural_networks_has_anyone/cduhcyt?utm_source=share&utm_medium=web2x
-* [ ] https://stackoverflow.com/questions/45390481/what-is-neat-neuroevolution-of-augmenting-topologies
-* [ ] http://blog.otoro.net/2015/07/31/neurogram/
-
-
-
