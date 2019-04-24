@@ -10,13 +10,6 @@ resources.
 Feedback welcome.
 
 
-#### Further Search ####
-https://ieeexplore.ieee.org/search/searchresult.jsp?newsearch=true&queryText=neuroevolution
-https://www.nature.com/search?q=neuroevolution
-https://www.researchgate.net/search?q=neuroevolution
-https://arxiv.org/search/?query=neuroevolution&searchtype=all
-
-
 
 #### Unsorted Wikipedia Resources ####
 
@@ -109,26 +102,54 @@ https://arxiv.org/search/?query=neuroevolution&searchtype=all
       https://ieeexplore.ieee.org/document/6792316
 * [ ] Buk, Snorek, et al - NEAT in HyperNEAT substituted with genetic programming (**2009**)
       https://www.researchgate.net/publication/225720114
+* [ ] Cardamone, Loiacono - Learning to Drive in the Open Racing Car Simulator Using Online Neuroevolution (**2010**)
+      https://ieeexplore.ieee.org/document/5482132
 * [ ] Cheung, Sable, et al - Hybrid Evolution of Convolutional Networks (**2011**)
       https://ieeexplore.ieee.org/document/6146987
 * [ ] Lowell, Birger, et al - Comparison of NEAT and HyperNEAT on a Strategic Decision-Making Problem (**2011**) 
       http://web.mit.edu/jessiehl/Public/aaai11/fullpaper.pdf
+* [ ] Cuccu, Luciw, et al - Intrinsically motivated neuroevolution for vision-based reinforcement learning (**2011**)
+      https://ieeexplore.ieee.org/document/6037324
+* [ ] Lowell, Grabkovsky - Comparison of NEAT and HyperNEAT Performance on a Strategic Decision-Making Problem (**2011**)
+      https://ieeexplore.ieee.org/document/6042728
 * [ ] Pereira, Petry - Data Assimilation using NeuroEvolution of Augmenting Topologies (**2012**) 
       https://www.researchgate.net/publication/237049328
+* [ ] Schrum, Miikkulainen - Evolving Multimodal Networks for Multitask Games (**2012**)
+      https://ieeexplore.ieee.org/document/6179519
 * [ ] Moriguchi, Honiden - CMA-TWEANN: Efficient Optimization of Neural Networks via Self-Adaptation and Seamless Augmentation (**2012**)
       https://www.researchgate.net/publication/261851261
 * [ ] Gallego-Dur'an, Molina-Carmona - Experiments on Neuroevolution and OnlineWeight Adaptation in Complex Environments (**2013**) 
       https://core.ac.uk/download/pdf/19336609.pdf
 * [ ] Verbancsics, Harguess - Generative NeuroEvolution for Deep Learning (**2013**)
       https://arxiv.org/abs/1312.5355
+* [ ] Sohangir, Rahimi, et al - Optimized feature selection using NeuroEvolution of Augmenting Topologies (NEAT) (**2013**)
+      https://ieeexplore.ieee.org/document/6608379
 * [ ] Pugh, Stanley - Evolving Multimodal Controllers with HyperNEAT (**2013**)
       http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.379.867&rep=rep1&type=pdf
+* [ ] Risi, Tugelius - Neuroevolution in Games: State of the Art and Open Challenges (**2014**)
+      https://arxiv.org/abs/1410.7326
+* [ ] Caamano, Bellas, et al - Augmenting the NEAT algorithm to improve its temporal processing capabilities (**2014**)
+      https://ieeexplore.ieee.org/document/6889488
+* [ ] Huang, Lehman, Miikkulainen - Grasping novel objects with a dexterous robotic hand through neuroevolution (**2014**)
+      https://ieeexplore.ieee.org/document/7013242
+* [ ] Miikkulainen - Tutorial III: Evolving neural networks (**2015**)
+      https://ieeexplore.ieee.org/document/7317663
 * [ ] Verbancsics, Harguess - Image Classification Using Generative Neuro Evolution for Deep Learning (**2015**)
       https://ieeexplore.ieee.org/abstract/document/7045925
+* [ ] Samothrakis, Perez-Liebana - Neuroevolution for General Video Game Playing (**2015**)
+      https://ieeexplore.ieee.org/document/7317943
 * [ ] Cussat-Blanc, Harrington, et al - Gene Regulatory Network Evolution Through Augmenting Topologies (**2015**)
       https://ieeexplore.ieee.org/abstract/document/7018989
 * [ ] Lample, Chaplot - Playing FPS Games with Deep Reinforcement Learning (**2016**)
       https://arxiv.org/abs/1609.05521
+* [ ] Kristo, Maulidevi - Deduction of fighting game countermeasures using Neuroevolution of Augmenting Topologies (**2016**)
+      https://ieeexplore.ieee.org/document/7936127
+* [ ] Sorensen, Olsen, et al - Breeding a diversity of Super Mario behaviors through interactive evolution (**2016**)
+      https://ieeexplore.ieee.org/document/7860436
+* [ ] Boris, Goran - Evolving neural network to play game 2048 (**2016**)
+      https://ieeexplore.ieee.org/document/7818911
+* [ ] Rodzin, Rodzina - Neuroevolution: Problems, algorithms, and experiments (**2017**)
+      https://ieeexplore.ieee.org/document/7991745
 * [ ] Xie, Yuille - Genetic CNN (**2017**)
       https://arxiv.org/abs/1703.01513
       > explores the idea of learning deep network structures automatically. Authors proposed a genetic algorithm to create new network structures.
@@ -161,15 +182,51 @@ https://arxiv.org/search/?query=neuroevolution&searchtype=all
       https://ieeexplore.ieee.org/document/7969727
 * [ ] Pastorek, O'Neill - Historical Markings in Neuroevolution of Augmenting Topologies Revisited (**2017**) 
       https://www.researchgate.net/publication/321148165
+* [ ] Desell - Developing a Volunteer Computing Project to Evolve Convolutional Neural Networks and Their Hyperparameters (**2017**)
+      https://ieeexplore.ieee.org/document/8109119
 * [ ] Alvernaz, Togelius - Autoencoder-augmented neuroevolution for visual doom playing (**2017**)
       https://ieeexplore.ieee.org/abstract/document/8080408
 * [ ] Salimans, Ho, et al - Evolution Strategies as a Scalable Alternative to Reinforcement Learning (**2017**)
       https://openai.com/blog/evolution-strategies/ 
       https://arxiv.org/abs/1703.03864
+* [ ] Assuncao, Lourenco, et al - Towards the Evolution of Multi-Layered Neural Networks: A Dynamic Structured Grammatical Evolution Approach (**2017**)
+      https://arxiv.org/abs/1706.08493
+* [ ] Such, Madhave - Deep Neuroevolution: Genetic Algorithms Are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning (**2017**)
+      https://www.researchgate.net/publication/321902574
+* [ ] Miikkulainen, Liang, et al - Evolving Deep Neural Networks (**2017**)
+      https://arxiv.org/abs/1703.00548
+* [ ] Wen, Guo, et al - Neuroevolution of augmenting topologies based musculor-skeletal arm neurocontroller (**2017**)
+      https://ieeexplore.ieee.org/document/7969727
 * [ ] Kadish - Clustering sensory inputs using NeuroEvolution of Augmenting Topologies (**2018**) 
       https://www.researchgate.net/publication/325877035
+* [ ] Aly, Dugan - Experiential Robot Learning with Accelerated Neuroevolution (**2018**)
+      https://arxiv.org/abs/1808.05525
+* [ ] Lehman, Clune, Stanley, et al - Safe mutations for deep and recurrent neural networks through output gradients (**2018**)
+      https://www.researchgate.net/publication/326163251
+* [ ] Ha - Neuroevolution for deep reinforcement learning problems (**2018**)
+      https://www.researchgate.net/publication/326238939
+* [ ] Iba - Evolutionary Approach to Deep Learning (**2018**)
+      https://www.researchgate.net/publication/325799313
+* [ ] Omelianenko - Neuroevolution - evolving Artificial Neural Networks topology from the scratch (**2018**)
+      https://www.researchgate.net/publication/325848235
+* [ ] Baldominos, Saez - Evolutionary Convolutional Neural Networks: an Application to Handwriting Recognition (**2018**)
+      https://www.researchgate.net/publication/322079459
+* [ ] Wang, Clune, Stanley - VINE: An Open Source Interactive Data Visualization Tool for Neuroevolution (**2018**)
+      https://arxiv.org/abs/1805.01141
+* [ ] Baldominos, Saez - On the Automated, Evolutionary Design of Neural Networks-Past, Present, and Future (**2019**)
+      https://www.researchgate.net/publication/331864343
+* [ ] Vargas, Murata - Spectrum-Diverse Neuroevolution with Unified Neural Models (**2019**)
+      https://arxiv.org/abs/1902.06703
 * [ ] Stanley, Miikkulainen, et al - Designing neural networks through neuroevolution (**2019**)
       https://www.nature.com/articles/s42256-018-0006-z
+* [ ] Behjat, Chidambaran, et al - Adaptive Genomic Evolution of Neural Network Topologies (AGENT) for State-to-Action Mapping in Autonomous Agents (**2019**)
+      https://arxiv.org/abs/1903.07107
+* [ ] Aly, Weikersdorfer, et al - Optimizing Deep Neural Networks with Multiple Search Neuroevolution (**2019**)
+      https://arxiv.org/abs/1901.05988
+* [ ] Assuncao, Lourenco, et al - Fast DENSER: Efficient Deep NeuroEvolution (**2019**)
+      https://www.researchgate.net/publication/332306893
+* [ ] Miller, Cussat-Blanc - Evolving Programs to Build Artificial Neural Networks (**2020**)
+      https://www.researchgate.net/publication/332470796
 
 
 
@@ -192,6 +249,11 @@ https://arxiv.org/search/?query=neuroevolution&searchtype=all
       https://www.cl.cam.ac.uk/~ey204/teaching/ACS/R244_2018_2019/presentation/S8/MP_Cristian.pdf
 * [ ] goNEAT (**2019**)
       https://github.com/yaricom/goNEAT
+* [ ] DeepLearning on Car Simulator (**2018**)
+      https://towardsdatascience.com/deep-learning-on-car-simulator-ff5d105744aa
+* [ ] Self Driving Car Simulation Unity 3D using Genetic Algorithms and Neural Networks (**2019**)
+      https://www.youtube.com/watch?v=m8fYPy9eiOo
+      https://github.com/dDevTech/Self-Driving-Car-Tutorial
 
 
 
