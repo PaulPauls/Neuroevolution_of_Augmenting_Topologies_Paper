@@ -1,5 +1,7 @@
 ## Overview about Neuroevolution of Augmenting Topologies (*NEAT*) ##
 
+Advisor: Michael Adam (Technical University Munich)
+
 This repository contains my seminar paper about Neuroevolution of Augmenting 
 Topologies including its LaTeX source code, which intends to give a good 
 overview of the current state of research.
