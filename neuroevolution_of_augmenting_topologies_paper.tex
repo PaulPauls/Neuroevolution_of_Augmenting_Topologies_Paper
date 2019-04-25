@@ -52,19 +52,35 @@
 
 % ######################################################################################################################
 
-\section{Section 1}
+\section{Introduction}
 
-\IEEEPARstart{B}{eginning} 
-\blindtext
-example cite \cite{cite01}
+\IEEEPARstart{T}{his} shall be my introduction. And this shall be my citation \cite{cite01}.
 
 
 
 % ######################################################################################################################
 
-\section{Section 2}
+\section{Overview}
 
-\blindtext
+most commonly applied in artificial life, general game playing and evolutionary robotics.
+main benefit is that Neuroevolution can be applied more widely than supervised learning algorithms [...] [as it] requires only a measure of a network's performance at a task
+
+Neuroevolution is in competition with Gradient Descent. Around 2017 researchers at Uber stated they had found that simple structural Neuroevolution algorithms were competitive with sophisticated modern industry-standard gradient-descent deep learning algorithms, in part because Neuroevolution was found to be less likely to get stuck in local minima
+
+
+\subsection{Classification of Neuroevolution Algorithms}
+Conventional Neuroevolution:
+evolve only the strength of the connection weights for a fixed network topology
+
+TWEANNs (Topology and Weight Evolving Artificial Neural Network):
+evolve both the topology of the network and its weights
+
+Parallel or sequential Evolving:
+A separate distinction can be made between methods that evolve the structure of ANNs in parallel to its parameters and those that develop them separately
+
+
+\subsection{Genotypes and Direct/Indirect Encoding}
+Evolutionary algorithms operate on genotypes. In neuroevolution, a genotype is mapped to a neural network phenotype that is evaluated on some task to derive its fitness.
 
 
 
