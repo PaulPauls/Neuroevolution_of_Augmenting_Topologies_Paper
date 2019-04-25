@@ -62,8 +62,6 @@ Feedback welcome.
       https://towardsdatascience.com/neat-an-awesome-approach-to-neuroevolution-3eca5cc7930f
 * [ ] *Blogpost* HyperNEAT: Powerful, Indirect Neural Network Evolution (**2019**)
       https://towardsdatascience.com/hyperneat-powerful-indirect-neural-network-evolution-fba5c7c43b7b
-* [ ] *Blogpost* NeuroEvolution, NEAT Algorithm and My NEAT (**2018**)
-      https://medium.com/datadriveninvestor/neuroevolution-neat-algorithm-and-my-neat-b83c5174d8b0
 
 
 
