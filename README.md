@@ -58,8 +58,16 @@ Feedback welcome.
       https://twimlai.com/twiml-talk-94-neuroevolution-evolving-novel-neural-network-architectures-kenneth-stanley/
 * [ ] *Video Lecture* NEAT/HyperNEAT in evolutionary robotics (**2018**)
       https://www.youtube.com/watch?v=MZzJ-EB-_yA
-* [ ] *Blogpost* NEAT, An Awesome Approach to NeuroEvolution (**2019**)
+* [1] *Blogpost* NEAT, An Awesome Approach to NeuroEvolution (**2019**)
+      (Difficulty: Easy, Audience: Beginners)
       https://towardsdatascience.com/neat-an-awesome-approach-to-neuroevolution-3eca5cc7930f
+      > NEAT's original paper focused solely on evolving dense neural networks node by node and connection by connection
+      > progress we have made with training NNs through gradient descent and back propagation need not be abandoned for a neuroevolutionary process... 
+        Recent papers have even highlighted ways to use NEAT and NEAT-like algorithms to evolved neural net structure and then use 
+        back propagation and gradient descent to optimize these networks
+      > The NEAT algorithm chooses a direct encoding methodology because of this. Their representation is a little more complex than a simple graph 
+        or binary encoding, however, it is still straightforward to understand. It simply has two lists of genes, a series of nodes and a series of connections.
+      > Cites: 'Evolving Deep Neural Networks'
 * [ ] *Blogpost* HyperNEAT: Powerful, Indirect Neural Network Evolution (**2019**)
       https://towardsdatascience.com/hyperneat-powerful-indirect-neural-network-evolution-fba5c7c43b7b
 
@@ -134,6 +142,9 @@ Feedback welcome.
       https://ieeexplore.ieee.org/document/6042728
 * [ ] Pereira, Petry - Data Assimilation using NeuroEvolution of Augmenting Topologies (**2012**) 
       https://www.researchgate.net/publication/237049328
+* [ ] Risi, Stanley - An Enhanced Hypercube-Based Encoding for Evolving thePlacement, Density and Connectivity of Neurons (**2012**)
+      Cited by my resources: 1
+      https://eplex.cs.ucf.edu/papers/risi_alife12.pdf
 * [ ] Schrum, Miikkulainen - Evolving Multimodal Networks for Multitask Games (**2012**)
       https://ieeexplore.ieee.org/document/6179519
 * [ ] Moriguchi, Honiden - CMA-TWEANN: Efficient Optimization of Neural Networks via Self-Adaptation and Seamless Augmentation (**2012**)
@@ -179,6 +190,7 @@ Feedback welcome.
       > Neuroevolution is capable of constructing large, accurate networks starting from trivial initial conditions while searching a very large space. The process described, 
         once started, needs no participation from the experimenter.
 * [ ] Miikkulaien, Liang, et al - Evolving Deep Neural Networks (**2017**)
+      Cited by my resources: 2
       https://arxiv.org/abs/1703.00548
       > by Miikkulainen (the co-author of the original NEAT paper)
       > DeepNEAT differs from NEAT in that each node in the chromosome no longer represents a neuron, but a layer in a DNN. A variant of DeepNEAT, called Coevolution DeepNEAT (CoDeepNEAT), 
