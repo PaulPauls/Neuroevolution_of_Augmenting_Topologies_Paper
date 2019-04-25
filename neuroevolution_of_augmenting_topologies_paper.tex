@@ -16,6 +16,14 @@
 \definecolor{gray}{rgb}{0.5, 0.5, 0.5}
 \definecolor{orange}{rgb}{1, 0.66, 0}
 \definecolor{codebg}{rgb}{0.97, 0.97, 0.97}
+
+\newcommand{\customincludegraphics}[3]{
+    \begin{figure}
+        \includegraphics[width=0.45\textwidth]{{#1}}
+        \caption{{#2}} 
+        \label{{#3}}
+    \end{figure}
+}
  
 \lstdefinestyle{c-style}{
   language={[ANSI]C},
@@ -95,7 +103,7 @@ Let's take the example of a giraffe population that has both long-necked and sho
 
 A genotype is the genetic representation of a creature and the phenotype is the actualized physical representation of the creature. Evolutionary algorithms always heavily mirror biology, neuroevolution being no different in this respect.
 
-\includegraphics[width=0.45\textwidth]{Genotype_to_Phenotype_Representation}
+\customincludegraphics{Genotype_to_Phenotype_Representation}{Source: \cite{cite02}}{lbl_genotype}
 
 
 
@@ -106,20 +114,21 @@ A genotype is the genetic representation of a creature and the phenotype is the 
 \subsection{Mutation}
 In NEAT, mutation can either mutate existing connections or can add new structure to a network. If a new connection is added between a start and end node, it is randomly assigned a weight. \cite{cite02}
 
-\includegraphics[width=0.45\textwidth]{Mutate_Add_Connection_and_Add_Node}
-
+\customincludegraphics{Mutate_Add_Connection_and_Add_Node}{Source: \cite{cite02}}{lbl_mutate}
 
 \subsection{Competing Conventions}
 
 Another big issue with evolving the topologies of neural networks is something that the NEAT paper calls “competing conventions.” The idea is that just blindly crossing over the genomes of two neural networks could result in networks that are horribly mutated and non-functional. If two networks are dependent on central nodes that both get recombined out of the network, we have an issue. \cite{cite02}
 
-\includegraphics[width=0.45\textwidth]{Crossovers_with_Missing_Information}
+\customincludegraphics{Crossovers_with_Missing_Information}{Source: \cite{cite02}}{lbl_crossovers}
 
 More than that, genomes can be of different sizes. How do we align genomes that don’t seem to be obviously compatible? In biology, this is taken care of through an idea called homology. Homology is the alignment of chromosomes based on matching genes for a specific trait. Once that happens, crossover can happen with much less chance of error than if chromosomes were blindly mixed together. \cite{cite02}
 
 NEAT tackles this issue through the usage of historical markings (as seen above). By marking new evolutions with a historical number, when it comes time to crossover two individuals, this can be done with much less chance of creating individuals that are non-functional. Each gene can be aligned and (potentially) crossed-over. Each time a new node or new type of connection occurs, a historical marking is assigned, allowing easy alignment when it comes to breed two of our individuals. \cite{cite02}
 
-\includegraphics[width=0.45\textwidth]{Crossover_Process_Visualisation}
+\customincludegraphics{Crossover_Process_Visualization}{Source: \cite{cite02}}{lbl_crossover_viz}
+
+Historical Markings: used to properly line up encodings for any sort of crossover
 
 \subsection{Speciation}
 
@@ -129,11 +138,49 @@ Speciation simply splits up the population into several species based on the sim
 
 More than that, NEAT takes things one step forward through something called explicit fitness sharing. That means that individuals share how well they are doing across the species, boosting up higher performing species, though still allowing for other species to explore their structure optimization before being out evolved. \cite{cite02}
 
-\subsection{Minimal Structure}
+\subsection{Minimal Structure / Complexification}
+
+Complexification: We’ll start with simple and evolve complexity if and when it’s needed
 
 A large goal of the NEAT paper was to create a framework for evolving networks that allowed for minimal networks to be evolved. The authors did not want to create an algorithm that first found good networks and then had to reduce the number of nodes and connections after the fact. Instead, the idea was to build an algorithm that started with the minimal amount of nodes and connections, evolving complexity as time goes on if and only if it is found to be useful and necessary. \cite{cite02}
 
 NEAT sets up their algorithm to evolve minimal networks by starting all networks with no hidden nodes. Each individual in the initial population is simply input nodes, output nodes, and a series of connection genes between them. By itself, this may not necessarily work, but when combined with the idea of speciation, this proves to be a powerful idea in evolving minimal, yet high-performing networks. \cite{cite02}
+
+
+
+% ######################################################################################################################
+
+\section{HyperNEAT}
+
+HyperNEAT drops the idea of direct encoding and replaces it with indirect encoding, because in order to evolve a network like the brain (with billions of neurons), direct coding can not provide the necessary speed to make this approach feasible.
+
+\subsection{Motivation for HyperNEAT}
+
+The creators of HyperNEAT highlight that if one were to look at the brain, they see a network with billions of nodes and trillions of connections. They see a network that uses repetition of structure, reusing a mapping of the same gene to generate the same physical structure multiple times. The human brain is constructed in a way so as to exploit physical properties of the world: symmetry (have mirrors of structures, two eyes for input for example) and locality (where nodes are in the structure influences their connections and functions).
+Traditional dense, feed-forward networks where all nodes in one layer are connected to all nodes in the next do obviously not follow this structure. Neither do the networks constructed by the vanilla NEAT algorithm? They tend to be disorganized, sporadic, and not exhibit any of these nice regularities.
+Enter in HyperNEAT! Utilizing an indirect encoding through something called connective Compositional Pattern Producing Networks (CPPNs), HyperNEAT attempts to exploit geometric properties to produce very large neural networks with these nice features that we might like to see in our evolved networks. \cite{cite03}
+
+Instead of using the NEAT algorithm to evolve neural networks directly, HyperNEAT uses NEAT to evolve CPPNs.
+
+\subsection{Compositional Pattern Producing Networks (CPPNs)}
+
+Things like Gaussians give rise to symmetry and trigonometric functions help with repetition of structure.
+
+\subsubsection{Substrate}
+
+In the context of HyperNEAT, a substrate is simply a geometric ordering of nodes. The simplest example could be a plane or a grid, where each discrete (x, y) point is a node. A connective CPPN will actually take two of these points and compute weight between these two nodes. We could think of that as the following equation: $CPPN(x_1, y_1, x_2, y_2) = w$ \cite{cite03}
+
+\customincludegraphics{Simple_Substrate_CPPN_Visualization}{Source: \cite{cite03}}{lbl_substrate_cppn_viz}
+
+In doing this, every single node will actually have some sort of weight connection between them (even allowing for recurrent connections). Connections can be positive or negative, and a minimum weight magnitude can also be defined so that any outputs below that threshold will result in no connection. \cite{cite03}
+
+In the case where the nodes are arranged on some sort of 2 dimensional plane or grid, the CPPN is a function of four dimensions and thus we can say it is being evolved on a four dimensional hypercube. This is where HyperNEAT gets its name from. \cite{cite03}
+
+the configuration of the substrate is critical. Therefore, the structure of our nodes are tightly linked to the functionality and performance that may be seen on a particular task.
+
+\customincludegraphics{Sample_Substrate_Configurations}{Source: \cite{cite03}}{lbl_substrate_configs}
+
+Interesting substrates are the three dimensional cube(making CPPN six-dimensional) and the sandwich configuration allowing for nodes on one half to connect to the other half. This can be seen easily as an input/output configuration.
 
 
 
@@ -155,6 +202,9 @@ NEAT sets up their algorithm to evolve minimal networks by starting all networks
     
   \bibitem{cite02}
   \url{https://towardsdatascience.com/neat-an-awesome-approach-to-neuroevolution-3eca5cc7930f}
+  
+  \bibitem{cite03}
+  \url{https://towardsdatascience.com/hyperneat-powerful-indirect-neural-network-evolution-fba5c7c43b7b}
 
 \end{thebibliography}
 

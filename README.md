@@ -59,7 +59,7 @@ Feedback welcome.
 * [ ] *Video Lecture* NEAT/HyperNEAT in evolutionary robotics (**2018**)
       https://www.youtube.com/watch?v=MZzJ-EB-_yA
 * [1] *Blogpost* NEAT, An Awesome Approach to NeuroEvolution (**2019**)
-      (Difficulty: Easy, Audience: Beginners)
+      (Difficulty: Easy, Audience: Beginners, Quality: 4/5)
       https://towardsdatascience.com/neat-an-awesome-approach-to-neuroevolution-3eca5cc7930f
       > NEAT's original paper focused solely on evolving dense neural networks node by node and connection by connection
       > progress we have made with training NNs through gradient descent and back propagation need not be abandoned for a neuroevolutionary process... 
@@ -68,8 +68,12 @@ Feedback welcome.
       > The NEAT algorithm chooses a direct encoding methodology because of this. Their representation is a little more complex than a simple graph 
         or binary encoding, however, it is still straightforward to understand. It simply has two lists of genes, a series of nodes and a series of connections.
       > Cites: 'Evolving Deep Neural Networks'
-* [ ] *Blogpost* HyperNEAT: Powerful, Indirect Neural Network Evolution (**2019**)
+* [1] *Blogpost* HyperNEAT: Powerful, Indirect Neural Network Evolution (**2019**)
+      (Difficulty: Easy, Audience: Beginners, Quality: 3/5)
       https://towardsdatascience.com/hyperneat-powerful-indirect-neural-network-evolution-fba5c7c43b7b
+      > DNA is an indirect encoding because the phenotypic results (what we actually see) are orders of magnitude larger than the genotypic content (the genes in the DNA). 
+        If you look at a human genome, we\u2019ll say it has about 30,000 genes coding for approximately 3 billion amino acids. Well, the brain has 
+        3 trillion connections. Obviously, there is something indirect going on here!
 
 
 
@@ -127,7 +131,7 @@ Feedback welcome.
 * [ ] Chen, Alahakoon - NeuroEvolution of Augmenting Topologies with Learning for Data Classification (**2007**)
       https://www.researchgate.net/publication/4255903
 * [ ] Stanley, D'Ambrosio, et al - A Hypercube-Based Indirect Encoding for Evolving Large-Scale Neural Networks (**2009**)
-      https://ieeexplore.ieee.org/document/6792316
+      http://axon.cs.byu.edu/~dan/778/papers/NeuroEvolution/stanley3**.pdf
 * [ ] Buk, Snorek, et al - NEAT in HyperNEAT substituted with genetic programming (**2009**)
       https://www.researchgate.net/publication/225720114
 * [ ] Cardamone, Loiacono - Learning to Drive in the Open Racing Car Simulator Using Online Neuroevolution (**2010**)
