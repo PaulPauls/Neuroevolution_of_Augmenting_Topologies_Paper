@@ -81,13 +81,8 @@ Feedback welcome.
 
 * [ ] *Primer* Stanley - Competitive Coevolution through Evolutionary Complexification (**2004**)
       https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume21/stanley04a-html/jairhtml.html
-* [1] *Blogpost* Real-time Neuroevolution of Augmented Topologies in Video Games (**2008**)
-      http://aigamedev.com/open/review/neuro-evolution-augmented-topologies/
-      > Based on 'Real-time Neuroevolution in the NERO Video Game' (see Conceptual Resources)
-      > Check out rtNEAT (real-time NEAT), possibly in the NERO framework
-      > Efficient technique, it starts out with a very simple set of behavior and only expands the search space when it is found to be beneficial
-      > Difference to other genetic algorithms is that it not only changes the weights of the neural net but also its structure
 * [1] *Blogpost* 2017, The Year of Neuroevolution (**2017**)
+      (Difficulty: Easy, Audience: Overview, Quality: 3/5)
       https://medium.com/@moocaholic/2017-the-year-of-neuroevolution-30e59ae8fe18
       > Based on: 'Evolution Strategies as a Scalable Alternative to Reinforcement Learning' (Background Knowledge)
       > Evolution Strategies (ES) can be a strong alternative to Reinforcement Learning (RL) and have a number of advantages like ease of implementation, invariance to the length 
