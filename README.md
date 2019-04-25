@@ -17,8 +17,30 @@ Feedback welcome.
       https://en.wikipedia.org/wiki/Neuroevolution
 * [ ] Evolutionary Algorithm 
       https://en.wikipedia.org/wiki/Evolutionary_algorithm
+* [ ] Evolution Strategy
+      https://en.wikipedia.org/wiki/Evolution_strategy
+* [ ] Evolutionary Programming
+      https://en.wikipedia.org/wiki/Evolutionary_programming
+* [ ] Evolutionary Acquistion of Neural Topologies
+      https://en.wikipedia.org/wiki/Evolutionary_acquisition_of_neural_topologies
+* [ ] Genetic Algorithm
+      https://en.wikipedia.org/wiki/Genetic_algorithm
+* [ ] Genetic Programming
+      https://en.wikipedia.org/wiki/Genetic_programming
 * [ ] Artifical Development
       https://en.wikipedia.org/wiki/Artificial_development
+* [ ] NEAT
+      https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies
+* [ ] HyperNEAT
+      https://en.wikipedia.org/wiki/HyperNEAT
+* [ ] Fitness Function
+      https://en.wikipedia.org/wiki/Fitness_function
+* [ ] Memetic Algorithm
+      https://en.wikipedia.org/wiki/Memetic_algorithm
+* [ ] General Game Playing
+      https://en.wikipedia.org/wiki/General_game_playing
+* [ ] Evolutionary Robotics
+      https://en.wikipedia.org/wiki/Evolutionary_robotics
 
 
 
@@ -267,6 +289,8 @@ Feedback welcome.
       https://www.geeksforgeeks.org/what-is-reinforcement-learning/
 * [ ] Beginners Guide to Deep Reinforcement Learning: 
       https://skymind.ai/wiki/deep-reinforcement-learning
+* [ ] Wikipedia: Artifical Neural Network
+      https://en.wikipedia.org/wiki/Artificial_neural_network
 
 
 
