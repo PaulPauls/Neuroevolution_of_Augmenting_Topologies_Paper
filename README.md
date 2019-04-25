@@ -56,8 +56,6 @@ Feedback welcome.
       https://link.springer.com/chapter/10.1007/978-3-642-55337-0_5
 * [ ] *Podcast* Stanleys Podcast about NEAT (**2018**)
       https://twimlai.com/twiml-talk-94-neuroevolution-evolving-novel-neural-network-architectures-kenneth-stanley/
-* [ ] *Video Lecture* NEAT/HyperNEAT in evolutionary robotics (**2018**)
-      https://www.youtube.com/watch?v=MZzJ-EB-_yA
 * [1] *Blogpost* NEAT, An Awesome Approach to NeuroEvolution (**2019**)
       (Difficulty: Easy, Audience: Beginners, Quality: 4/5)
       https://towardsdatascience.com/neat-an-awesome-approach-to-neuroevolution-3eca5cc7930f
