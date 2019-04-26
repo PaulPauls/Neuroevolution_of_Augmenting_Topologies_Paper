@@ -94,6 +94,8 @@ Feedback welcome.
         in Super Neural Networks
 * [ ] *Primer* Stanley - Neuroevolution: A different kind of deep learning (**2017**)
       https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
+* [ ] Stanley, Clune, Uber - Welcoming the Era of Deep Neuroevolution
+      https://eng.uber.com/deep-neuroevolution/
 * [1] *Blogpost* Introduction to Evolutionary Algorithms (**2018**)
       (Difficulty: Very Easy, Audience: Beginners, Quality: 3/5)
       https://towardsdatascience.com/introduction-to-evolutionary-algorithms-a8594b484ac
@@ -181,6 +183,8 @@ Feedback welcome.
       https://arxiv.org/abs/1703.01513
       > explores the idea of learning deep network structures automatically. Authors proposed a genetic algorithm to create new network structures.
 * [ ] Real, Moore, et al - Large Scale Evolution of Image Classifiers (**2017**)
+      Cited by my resources: 2
+      [Quite Reputable Resource, done by Google Resarch]
       https://arxiv.org/abs/1703.01041
       > Authors employ simple evolutionary techniques at unprecedented scales to discover models for the CIFAR-10 and CIFAR-100 datasets, starting from trivial initial conditions.
       > Neuroevolution is capable of constructing large, accurate networks starting from trivial initial conditions while searching a very large space. The process described, 
