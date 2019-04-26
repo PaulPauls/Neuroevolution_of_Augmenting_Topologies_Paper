@@ -94,7 +94,8 @@ Feedback welcome.
         in Super Neural Networks
 * [ ] *Primer* Stanley - Neuroevolution: A different kind of deep learning (**2017**)
       https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
-* [ ] *Blogpost* Introduction to Evolutionary Algorithms (**2018**)
+* [1] *Blogpost* Introduction to Evolutionary Algorithms (**2018**)
+      (Difficulty: Very Easy, Audience: Beginners, Quality: 3/5)
       https://towardsdatascience.com/introduction-to-evolutionary-algorithms-a8594b484ac
 * [ ] *Primer* Neuroevolution: A Primer On Evolving Artificial Neural Networks (**2018**)
       https://www.inovex.de/blog/neuroevolution/

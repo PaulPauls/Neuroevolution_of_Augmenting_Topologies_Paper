@@ -106,6 +106,31 @@ A genotype is the genetic representation of a creature and the phenotype is the 
 \customincludegraphics{Genotype_to_Phenotype_Representation}{Source: \cite{cite02}}{lbl_genotype}
 
 
+\subsection{Background and General Neuroevolution}
+
+\subsubsection{Genetic and Evolutionary Algorithms}
+
+genetic algorithms are often used in tandem with other methods, acting as a quick way to find a somewhat optimal starting place for another algorithm to work off of. \cite{cite04}
+
+An Evolutionary Algorithm contains four overall steps: initialization, selection, genetic operators, and termination. These steps each correspond, roughly, to a particular facet of natural selection. \cite{cite04}
+
+\customincludegraphics{Evolutionary_Algorithm_Steps}{Source: \cite{cite04}}{lbl_ea_steps}
+
+\paragraph{Initialization}
+In order to begin our algorithm, we must first create an initial population of solutions. The population will contain an arbitrary number of possible solutions to the problem, oftentimes called members. It will often be created randomly (within the constraints of the problem) or, if some prior knowledge of the task is known, roughly centered around what is believed to be ideal. It is important that the population encompasses a wide range of solutions, because it essentially represents a gene pool; ergo, if we wish to explore many different possibilities over the course of the algorithm, we should aim to have many different genes present. \cite{cite04}
+
+\paragraph{Selection}
+To determine the portion of top-performing members of a population in each generation are all members of the population evaluated according to a fitness function. A fitness function is a function that takes in the characteristics of a member, and outputs a numerical representation of how viable of a solution it is. Creating the fitness function can often be very difficult, and it is important to find a good function that accurately represents the data; it is very problem-specific. EAs can also be extended to use multiple fitness functions. This complicates the process somewhat as we can end up with a set of optimal points when using multiple fitness functions. The set of optimal solutions is called the Pareto frontier, and contains elements that are equally optimal in the sense that no solution dominates any other solution in the frontier. \cite{cite04}
+
+\paragraph{Genetic Operators}
+This step really includes two sub-steps: crossover and mutation. After selecting the top members (typically top 2, but this number can vary), these members are now used to create the next generation in the algorithm. Using the characteristics of the selected parents, new children are created that are a mixture of the parents’ qualities. 
+Now, we must introduce new genetic material into the generation. If we do not do this crucial step, we will become stuck in local extrema very quickly, and will not obtain optimal results. This step is mutation, and we do this, quite simply, by changing a small portion of the children such that they no longer perfectly mirror subsets of the parents’ genes. Mutation typically occurs probabilistically, in that the chance of a child receiving a mutation as well as the severity of the mutation are governed by a probability distribution. \cite{cite04}
+
+\paragraph{Termination}
+Eventually, the algorithm must end.This occurs either when the algorithm has reached some maximum runtime, or the algorithm has reached some threshold of performance. At this point a final solution is selected and returned. \cite{cite04}
+
+
+
 
 % ######################################################################################################################
 
@@ -205,6 +230,9 @@ Interesting substrates are the three dimensional cube(making CPPN six-dimensiona
   
   \bibitem{cite03}
   \url{https://towardsdatascience.com/hyperneat-powerful-indirect-neural-network-evolution-fba5c7c43b7b}
+  
+  \bibitem{cite04}
+  \url{https://towardsdatascience.com/introduction-to-evolutionary-algorithms-a8594b484ac}
 
 \end{thebibliography}
 
