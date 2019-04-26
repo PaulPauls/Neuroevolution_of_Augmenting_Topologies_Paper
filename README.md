@@ -1,6 +1,6 @@
 ## Overview about Neuroevolution of Augmenting Topologies (*NEAT*) ##
 
-Advisor: Michael Adam (Technical University Munich)
+Advisor: Michael Adam 
 
 This repository contains my seminar paper about Neuroevolution of Augmenting 
 Topologies including its LaTeX source code, which intends to give a good 
@@ -94,9 +94,13 @@ Feedback welcome.
         in Super Neural Networks
 * [ ] *Primer* Stanley - Neuroevolution: A different kind of deep learning (**2017**)
       https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
-* [ ] Stanley, Clune, Uber - Welcoming the Era of Deep Neuroevolution
+* [ ] *Blogpost* Introduction to Genetic Algorithms - Including Example Code (**2017**)
+      https://towardsdatascience.com/e396e98d8bf3
+* [ ] *Collection* Stanley, Clune, Uber - Welcoming the Era of Deep Neuroevolution (**2017**)
       [IMPORTANT RESOURCE]
       https://eng.uber.com/deep-neuroevolution/
+      https://github.com/uber-research/deep-neuroevolution
+      https://eng.uber.com/accelerated-neuroevolution/
 * [1] *Blogpost* Introduction to Evolutionary Algorithms (**2018**)
       (Difficulty: Very Easy, Audience: Beginners, Quality: 3/5)
       https://towardsdatascience.com/introduction-to-evolutionary-algorithms-a8594b484ac
@@ -106,10 +110,12 @@ Feedback welcome.
       > References: Large Scale Evolution of Image Classifiers, Evolving Deep Neural Networks
 * [ ] *Blogpost* Deep Neuroevolution: Genetic Algorithms are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning (**2018**)
       https://towardsdatascience.com/deep-neuroevolution-genetic-algorithms-are-a-competitive-alternative-for-training-deep-neural-822bfe3291f5
+      > Mostly referencing and Summarizing Uber's (Deep / Accelerated - Neuroevolution) and OpenAI's (Evolution Strategies as a scalable Alternative to Reinforcement Learning) research 
+      > These results indicate that GAs (and RS) are not all out better or worse than other methods of optimising DNN, but that they are a competitive alternative that one can add to their RL tool belt.
+        Like OpenAI, they state that although DNNs don't struggle with local optima in supervised learning, they can still get into trouble in RL tasks due to a deceptive or sparse reward signal. 
+        It is for this reason that non gradient based methods such as GAs can perform well compared to other popular algorithms in RL.
 * [ ] *Collection* Neuroevolution Collection
       http://nn.cs.utexas.edu/?neuroevolution
-* [ ] *Primer* Beginners Guide to Genetic and Evolutionary Algorithms
-      https://skymind.ai/wiki/evolutionary-genetic-algorithm
 
 
 
@@ -236,7 +242,7 @@ Feedback welcome.
       Cited by my Resources: 2
 * [ ] Assuncao, Lourenco, et al - Towards the Evolution of Multi-Layered Neural Networks: A Dynamic Structured Grammatical Evolution Approach (**2017**)
       https://arxiv.org/abs/1706.08493
-* [ ] Such, Madhave - Deep Neuroevolution: Genetic Algorithms Are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning (**2017**)
+* [ ] Such, Madhave, Stanley - Deep Neuroevolution: Genetic Algorithms Are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning (**2017**)
       https://www.researchgate.net/publication/321902574
 * [ ] Miikkulainen, Liang, et al - Evolving Deep Neural Networks (**2017**)
       Cited by my resources: 2
