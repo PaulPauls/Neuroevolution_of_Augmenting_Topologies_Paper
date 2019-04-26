@@ -102,8 +102,6 @@ Feedback welcome.
       https://becominghuman.ai/neuroevolution-evolving-artificial-neural-networks-topology-from-the-scratch-d1ebc5540d84
 * [ ] *Blogpost* Deep Neuroevolution: Genetic Algorithms are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning (**2018**)
       https://towardsdatascience.com/deep-neuroevolution-genetic-algorithms-are-a-competitive-alternative-for-training-deep-neural-822bfe3291f5
-* [ ] *Video Lecture* Topology and Weight Evolving Artificial Neural Network (TWEANN) (**2019**)
-      http://primo.ai/index.php?title=Topology_and_Weight_Evolving_Artificial_Neural_Network_(TWEANN)
 * [ ] *Collection* Neuroevolution Collection
       http://nn.cs.utexas.edu/?neuroevolution
 * [ ] *Primer* Beginners Guide to Genetic and Evolutionary Algorithms
