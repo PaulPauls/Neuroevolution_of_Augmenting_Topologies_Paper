@@ -95,6 +95,7 @@ Feedback welcome.
 * [ ] *Primer* Stanley - Neuroevolution: A different kind of deep learning (**2017**)
       https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 * [ ] Stanley, Clune, Uber - Welcoming the Era of Deep Neuroevolution
+      [IMPORTANT RESOURCE]
       https://eng.uber.com/deep-neuroevolution/
 * [1] *Blogpost* Introduction to Evolutionary Algorithms (**2018**)
       (Difficulty: Very Easy, Audience: Beginners, Quality: 3/5)
@@ -115,7 +116,7 @@ Feedback welcome.
 #### Research Paper Resources ####
 
 * [ ] Stanley, Miiikkulainen - Evolving Neural Networks throughAugmenting Topologies (**2002**)
-      [The Original NEAT Paper]
+      [The Original NEAT Paper, IMPORTANT RESOURCE]
       http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf
 * [ ] Whiteson, Stone, Stanley, Miikkulainen, et al - Automatic feature selection in neuroevolution (**2005**) 
       https://dl.acm.org/citation.cfm?id=1068210
@@ -185,7 +186,7 @@ Feedback welcome.
       > explores the idea of learning deep network structures automatically. Authors proposed a genetic algorithm to create new network structures.
 * [ ] Real, Moore, et al - Large Scale Evolution of Image Classifiers (**2017**)
       Cited by my resources: 2
-      [Quite Reputable Resource, done by Google Resarch]
+      [Quite Reputable Resource, done by Google Resarch, IMPORTANT RESOURCE]
       https://arxiv.org/abs/1703.01041
       > Authors employ simple evolutionary techniques at unprecedented scales to discover models for the CIFAR-10 and CIFAR-100 datasets, starting from trivial initial conditions.
       > Neuroevolution is capable of constructing large, accurate networks starting from trivial initial conditions while searching a very large space. The process described, 
@@ -199,6 +200,7 @@ Feedback welcome.
         (ii) neuro-evolution can do this starting from trivial initial conditions while searching a very large space; (iii) the process, once started, needs no experimenter participation; 
         and (iv) the process yields fully trained models."
 * [ ] Miikkulaien, Liang, et al - Evolving Deep Neural Networks (**2017**)
+      [IMPORTANT RESOURCE]
       Cited by my resources: 2
       https://arxiv.org/abs/1703.00548
       > by Miikkulainen (the co-author of the original NEAT paper)
@@ -228,20 +230,23 @@ Feedback welcome.
 * [ ] Alvernaz, Togelius - Autoencoder-augmented neuroevolution for visual doom playing (**2017**)
       https://ieeexplore.ieee.org/abstract/document/8080408
 * [ ] Salimans, Ho, et al - Evolution Strategies as a Scalable Alternative to Reinforcement Learning (**2017**)
+      [IMPORTANT RESOURCE]
       https://openai.com/blog/evolution-strategies/ 
       https://arxiv.org/abs/1703.03864
+      Cited by my Resources: 2
 * [ ] Assuncao, Lourenco, et al - Towards the Evolution of Multi-Layered Neural Networks: A Dynamic Structured Grammatical Evolution Approach (**2017**)
       https://arxiv.org/abs/1706.08493
 * [ ] Such, Madhave - Deep Neuroevolution: Genetic Algorithms Are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning (**2017**)
       https://www.researchgate.net/publication/321902574
 * [ ] Miikkulainen, Liang, et al - Evolving Deep Neural Networks (**2017**)
       Cited by my resources: 2
-      [Quite Reputable Resource, also called CoDeepNEAT]
+      [Quite Reputable Resource, also called CoDeepNEAT, IMPORTANT RESOURCE]
       https://arxiv.org/abs/1703.00548
       > Read again the good summary of this paper in: https://www.inovex.de/blog/neuroevolution/
       > The conclusion of the paper reads as follows: "Evolutionary optimisation makes it possible to construct more complex deep learning architectures than can be done by hand. 
         The topology, components, and hyperparameters of the architecture can all be optimised simultaneously to fit the requirements of the task, resulting in superior performance."
 * [ ] Sun, Xue - Evolving Deep Convolutional Neural Networks for Image Classification (**2017**)
+      [IMPORTANT RESOURCE]
       https://arxiv.org/abs/1710.10741
       Cited by my resources: 2
       > Read again the good summary of this paper in: https://www.inovex.de/blog/neuroevolution/
