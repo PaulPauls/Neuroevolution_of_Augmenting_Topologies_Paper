@@ -77,6 +77,21 @@ main benefit is that Neuroevolution can be applied more widely than supervised l
 
 Neuroevolution is in competition with Gradient Descent. Around 2017 researchers at Uber stated they had found that simple structural Neuroevolution algorithms were competitive with sophisticated modern industry-standard gradient-descent deep learning algorithms, in part because Neuroevolution was found to be less likely to get stuck in local minima
 
+“Neuroevolution is a machine learning technique that applies evolutionary algorithms to construct artificial neural networks, taking inspiration from the evolution of biological nervous systems in nature.” - Scholarpedia
+
+First methods using neuroevolution can be traced back to the 1980s and 1990s, where direct genetic algorithms were used to evolve the weights of fixed ANNs.\cite{cite05}
+
+Neuroevolution, can be applied more broadly than traditional Machine Learning because it does not require a large set of correct input-output pairs. Instead, it only requires that a) the performance can somehow be measured over time, and b) the behaviour of the networks can be modified through evolution. \cite{cite05}
+
+Depending on the specific AI based solution, AutoML can be seen as neuroevolution. Google AI, for example, presented both a reinforcement learning approach as well as an evolutionary approach to find, i.e. generate, ANNs and refer to both of them as AutoML. \cite{cite05}
+
+\subsection{Motivation}
+
+Inspired by biological neural networks, ANNs consist of many artificial neurons that are connected to each other. In a process, mostly referred to as training or learning, ANNs are optimised to solve specific, predefined tasks such as detecting faces. Learning is usually realised by employing a form of stochastic gradient descent (SGD) in order to change the network parameters in such a way that a future prediction for the same input is closer to the desired output. \cite{cite05}
+
+The architecture of a network, i.e. how the neurons are connected to each other, plays a very important role in whether or not an ANN can be trained to successfully learn a task. Over the years, human experts carefully designed complex architectures such as the VGGNet, AlexNet, GoogleNet, ResNet and many more to achieve and often surpass human-level performance on many different tasks. However, there is no single architecture that is sufficient for all tasks, and therefore manually designing well performing ANNs is a very challenging, time consuming and complex task that requires knowledge and experience. A typical ten layer network, for example, can have ~10\^10 candidate networks. This makes it impractical to evaluate all combinations and select the best performing one. \cite{cite05}
+
+Consequently, a lot of effort is currently put into automating the process of finding good ANN architectures. Solving this requires answering many questions, such as i) how to design the components of the architecture, ii) how to put them together, and iii) how to set the hyperparameters. There are two different paradigms that caught people’s attention in approaching this problems, namely a) using artificial intelligence (AI) based search methods, and b) using evolutionary techniques to generate networks. The latter is referred to as neuroevolution and, similar to machine learning, is “… yet another example that old algorithms combined with modern amounts of computing can work surprisingly well” \cite{cite05}
 
 \subsection{Classification of Neuroevolution Algorithms}
 Conventional Neuroevolution:
@@ -135,6 +150,12 @@ Eventually, the algorithm must end.This occurs either when the algorithm has rea
 % ######################################################################################################################
 
 \section{NEAT}
+
+\subsection{Overview and Motivation}
+
+NEAT evolves both the parameters and architecture of ANNs and thus is an example of TWEANN (Topology and Weight Evolving Artificial Neural Network). NEAT employs a set of three different mutations: i) modify a weight, ii) add a connection between nodes, and iii) insert a node while splitting an existing connection. \cite{cite05}
+
+Novelty search is another invention that abandons the goal to maximise a fitness function. Instead, it rewards individuals that behave differently. This change often leads to much better solutions in the end because novel solutions perform badly in the beginning and need time to fully manifest their potential. \cite{cite05}
 
 \subsection{Mutation}
 In NEAT, mutation can either mutate existing connections or can add new structure to a network. If a new connection is added between a start and end node, it is randomly assigned a weight. \cite{cite02}
@@ -233,6 +254,9 @@ Interesting substrates are the three dimensional cube(making CPPN six-dimensiona
   
   \bibitem{cite04}
   \url{https://towardsdatascience.com/introduction-to-evolutionary-algorithms-a8594b484ac}
+  
+  \bibitem{cite05}
+  \url{https://www.inovex.de/blog/neuroevolution/}
 
 \end{thebibliography}
 

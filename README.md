@@ -90,7 +90,7 @@ Feedback welcome.
       > The whole history of deep learning is full of re-invention and re-surrection, the main neural network learning algorithm, the backpropagation, was reinvented several times. 
         (http://people.idsia.ch/~juergen/who-invented-backpropagation.html)
       > NEAT is a TWEANN (Topology- and Weight-Evolving Artificial Neural Networks)
-      > Referenced: Genetic CNN, Large Scale Evolution of Image Classifiers, Evolving Deep Neural Networks, NMode - Neuro-MODule Evolution, PathNet, Evolution Channels Gradient Descent 
+      > References: Genetic CNN, Large Scale Evolution of Image Classifiers, Evolving Deep Neural Networks, NMode - Neuro-MODule Evolution, PathNet, Evolution Channels Gradient Descent 
         in Super Neural Networks
 * [ ] *Primer* Stanley - Neuroevolution: A different kind of deep learning (**2017**)
       https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
@@ -101,6 +101,7 @@ Feedback welcome.
       https://towardsdatascience.com/introduction-to-evolutionary-algorithms-a8594b484ac
 * [ ] *Primer* Neuroevolution: A Primer On Evolving Artificial Neural Networks (**2018**)
       https://www.inovex.de/blog/neuroevolution/
+      > References: Large Scale Evolution of Image Classifiers, Evolving Deep Neural Networks
 * [ ] *Blogpost* Neuroevolutio: Evolving Artificial Neural Networks topology from the scratch (**2018**)
       https://becominghuman.ai/neuroevolution-evolving-artificial-neural-networks-topology-from-the-scratch-d1ebc5540d84
 * [ ] *Blogpost* Deep Neuroevolution: Genetic Algorithms are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning (**2018**)
@@ -115,6 +116,7 @@ Feedback welcome.
 #### Research Paper Resources ####
 
 * [ ] Stanley, Miiikkulainen - Evolving Neural Networks throughAugmenting Topologies (**2002**)
+      [The Original NEAT Paper]
       http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf
 * [ ] Whiteson, Stone, Stanley, Miikkulainen, et al - Automatic feature selection in neuroevolution (**2005**) 
       https://dl.acm.org/citation.cfm?id=1068210
@@ -189,6 +191,14 @@ Feedback welcome.
       > Authors employ simple evolutionary techniques at unprecedented scales to discover models for the CIFAR-10 and CIFAR-100 datasets, starting from trivial initial conditions.
       > Neuroevolution is capable of constructing large, accurate networks starting from trivial initial conditions while searching a very large space. The process described, 
         once started, needs no participation from the experimenter.
+      > A large search space is enabled by allowing to insert and remove whole layers and not restricting the possible values to choose from (yielding a dense search space). 
+        Backpropagation is used to optimise the weights. The schema of the used EA is an example of tournament selection: a worker selects two individuals from the population 
+        at each evolutionary step and compares their fitness. The worst of the pair is immediately removed, while the best pair is selected to be a parent. A parent undergoes 
+        reproduction by producing a copy of itself and applying mutation. The modified copy (a child) is trained and put back into the population. The worker picks a mutation 
+        at random from a predetermined set (altering learning rate, reset weights, insert and remove convolutions, add and skip connections, etc.).
+      > "In this paper we have shown that (i) neuro-evolution is capable of constructing large, accurate networks for two challenging and popular image classification benchmarks; 
+        (ii) neuro-evolution can do this starting from trivial initial conditions while searching a very large space; (iii) the process, once started, needs no experimenter participation; 
+        and (iv) the process yields fully trained models."
 * [ ] Miikkulaien, Liang, et al - Evolving Deep Neural Networks (**2017**)
       Cited by my resources: 2
       https://arxiv.org/abs/1703.00548
@@ -226,7 +236,17 @@ Feedback welcome.
 * [ ] Such, Madhave - Deep Neuroevolution: Genetic Algorithms Are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning (**2017**)
       https://www.researchgate.net/publication/321902574
 * [ ] Miikkulainen, Liang, et al - Evolving Deep Neural Networks (**2017**)
+      Cited by my resources: 2
+      [Quite Reputable Resource, also called CoDeepNEAT]
       https://arxiv.org/abs/1703.00548
+      > Read again the good summary of this paper in: https://www.inovex.de/blog/neuroevolution/
+      > The conclusion of the paper reads as follows: "Evolutionary optimisation makes it possible to construct more complex deep learning architectures than can be done by hand. 
+        The topology, components, and hyperparameters of the architecture can all be optimised simultaneously to fit the requirements of the task, resulting in superior performance."
+* [ ] Sun, Xue - Evolving Deep Convolutional Neural Networks for Image Classification (**2017**)
+      https://arxiv.org/abs/1710.10741
+      Cited by my resources: 2
+      > Read again the good summary of this paper in: https://www.inovex.de/blog/neuroevolution/
+      > also called 'EvoCNN'
 * [ ] Wen, Guo, et al - Neuroevolution of augmenting topologies based musculor-skeletal arm neurocontroller (**2017**)
       https://ieeexplore.ieee.org/document/7969727
 * [ ] Kadish - Clustering sensory inputs using NeuroEvolution of Augmenting Topologies (**2018**) 
