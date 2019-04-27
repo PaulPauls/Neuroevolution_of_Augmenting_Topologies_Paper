@@ -38,16 +38,16 @@ Feedback welcome.
 * [1] *Blogpost* Introduction to Evolutionary Algorithms (**2018**)
       (Difficulty: Very Easy, Audience: Beginners, Quality: 3/5)
       https://towardsdatascience.com/introduction-to-evolutionary-algorithms-a8594b484ac
-* [ ] *Primer* Neuroevolution: A Primer On Evolving Artificial Neural Networks (**2018**)
-      [Difficulty: Medium, Audience: Advanced, Quality: 5/5]
-      https://www.inovex.de/blog/neuroevolution/
-      > References: Large Scale Evolution of Image Classifiers, Evolving Deep Neural Networks
-* [ ] *Blogpost* Deep Neuroevolution: Genetic Algorithms are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning (**2018**)
+* [0] *Blogpost* Deep Neuroevolution: Genetic Algorithms are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning (**2018**)
       https://towardsdatascience.com/deep-neuroevolution-genetic-algorithms-are-a-competitive-alternative-for-training-deep-neural-822bfe3291f5
       > Mostly referencing and Summarizing Uber's (Deep / Accelerated - Neuroevolution) and OpenAI's (Evolution Strategies as a scalable Alternative to Reinforcement Learning) research 
       > These results indicate that GAs (and RS) are not all out better or worse than other methods of optimising DNN, but that they are a competitive alternative that one can add to their RL tool belt.
         Like OpenAI, they state that although DNNs don't struggle with local optima in supervised learning, they can still get into trouble in RL tasks due to a deceptive or sparse reward signal. 
         It is for this reason that non gradient based methods such as GAs can perform well compared to other popular algorithms in RL.
+* [0] *Primer* Neuroevolution: A Primer On Evolving Artificial Neural Networks (**2018**)
+      [Difficulty: Medium, Audience: Advanced, Quality: 5/5]
+      https://www.inovex.de/blog/neuroevolution/
+      > References: Large Scale Evolution of Image Classifiers, Evolving Deep Neural Networks
 
 
 
