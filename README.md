@@ -94,8 +94,6 @@ Feedback welcome.
         in Super Neural Networks
 * [ ] *Primer* Stanley - Neuroevolution: A different kind of deep learning (**2017**)
       https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
-* [ ] *Blogpost* Introduction to Genetic Algorithms - Including Example Code (**2017**)
-      https://towardsdatascience.com/e396e98d8bf3
 * [ ] *Collection* Stanley, Clune, Uber - Welcoming the Era of Deep Neuroevolution (**2017**)
       [IMPORTANT RESOURCE]
       https://eng.uber.com/deep-neuroevolution/
