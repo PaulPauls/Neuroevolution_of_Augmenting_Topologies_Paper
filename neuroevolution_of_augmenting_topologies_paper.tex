@@ -103,7 +103,6 @@ Depending on the specific AI based solution, AutoML can be seen as neuroevolutio
 
 Inspired by biological neural networks, ANNs consist of many artificial neurons that are connected to each other. In a process, mostly referred to as training or learning, ANNs are optimised to solve specific, predefined tasks such as detecting faces. Learning is usually realised by employing a form of stochastic gradient descent (SGD) in order to change the network parameters in such a way that a future prediction for the same input is closer to the desired output. \cite{cite05}
 
-
 % Classification of Neuroevolution Algorithms (Put examples to each classification: NEAT, HyperNEAT, CoDeepNEAT, AutoML)
 - Conventional Neuroevolution: Evolve only the strength of the connection weights for a fixed network topology
 - TWEANNs (Topology and Weight Evolving Artificial Neural Network): Evolve both the topology of the network and its weights
@@ -113,48 +112,36 @@ Inspired by biological neural networks, ANNs consist of many artificial neurons 
 
 % ######################################################################################################################
 
-\section{Overview}
+\section{Evolutionary and Genetic Algorithms}
 
-\subsection{Genotypes and Direct/Indirect Encoding}
-The question of encoding comes from the question of how do we wish to represent individuals genetically in our algorithm. The way in which we encode our individuals lays out the path for how our algorithm will handle the key evolutionary processes: selection, mutation, and crossover (also known as recombination). Any encoding will fall into one of two categories, direct or indirect.
+% Overview and Intro to Genetic Algorithms
+A genetic algorithm is a search heuristic that is inspired by the theory of natural evolution. This algorithm reflects the process of natural selection where the fittest individuals are selected for reproduction in order to produce even fitter offspring of the next generation. This process keeps on iterating and at the end, a generation with the fittest individuals will be found.
 
-Evolutionary algorithms operate on genotypes. In neuroevolution, a genotype is mapped to a neural network phenotype that is evaluated on some task to derive its fitness.
-
-A direct encoding will explicitly specify everything about an individual. If it represents a neural network this means that each gene will directly be linked to some node, connection, or property of the network. This can be a binary encoding of 1s and 0s, a graph encoding (linking various nodes by weighted connections), or something even more complex. The point is that there will always be a direct connection between genotype and phenotype that is very obvious and readable. \cite{cite02}
-
-An indirect encoding is the exact opposite. Instead of directly specifying what a structure may look like, indirect encodings tends to specify rules or parameters of processes for creating an individual. As a result, indirect encodings are much more compact. The flip side is that setting the rules for an indirect encoding can result in a heavy bias within the search space, therefore, it is much harder to create an indirect encoding without substantial knowledge about how the encoding will be used. \cite{cite02}
-
-Phenotypes and Genomes in the context of Neuroevolution:
-Let's take the example of a giraffe population that has both long-necked and short-necked giraffes. These giraffes have different phenotypes (think visible features) because they have different genomes (think codes for life).
-
-A genotype is the genetic representation of a creature and the phenotype is the actualized physical representation of the creature. Evolutionary algorithms always heavily mirror biology, neuroevolution being no different in this respect.
-
-\customincludegraphics{Genotype_to_Phenotype_Representation}{Source: \cite{cite02}}{lbl_genotype}
-
-
-\subsection{Background and General Neuroevolution}
-
-\subsubsection{Genetic and Evolutionary Algorithms}
-
-genetic algorithms are often used in tandem with other methods, acting as a quick way to find a somewhat optimal starting place for another algorithm to work off of. \cite{cite04}
-
+Genetic algorithms are often used in tandem with other methods, acting as a quick way to find a somewhat optimal starting place for another algorithm to work off of. \cite{cite04}
 An Evolutionary Algorithm contains four overall steps: initialization, selection, genetic operators, and termination. These steps each correspond, roughly, to a particular facet of natural selection. \cite{cite04}
 
 \customincludegraphics{Evolutionary_Algorithm_Steps}{Source: \cite{cite04}}{lbl_ea_steps}
 
-\paragraph{Initialization}
-In order to begin our algorithm, we must first create an initial population of solutions. The population will contain an arbitrary number of possible solutions to the problem, oftentimes called members. It will often be created randomly (within the constraints of the problem) or, if some prior knowledge of the task is known, roughly centered around what is believed to be ideal. It is important that the population encompasses a wide range of solutions, because it essentially represents a gene pool; ergo, if we wish to explore many different possibilities over the course of the algorithm, we should aim to have many different genes present. \cite{cite04}
+% INITIALIZATION / INIITAL POPULATION
+In order to begin our algorithm, we must first create an initial population of solutions. It will often be created randomly (within the constraints of the problem) or, if some prior knowledge of the task is known, roughly centered around what is believed to be ideal. It is important that the population encompasses a wide range of solutions, because it essentially represents a gene pool; ergo, if we wish to explore many different possibilities over the course of the algorithm, we should aim to have many different genes present. \cite{cite04}
 
-\paragraph{Selection}
+% SELECTION
 To determine the portion of top-performing members of a population in each generation are all members of the population evaluated according to a fitness function. A fitness function is a function that takes in the characteristics of a member, and outputs a numerical representation of how viable of a solution it is. Creating the fitness function can often be very difficult, and it is important to find a good function that accurately represents the data; it is very problem-specific. EAs can also be extended to use multiple fitness functions. This complicates the process somewhat as we can end up with a set of optimal points when using multiple fitness functions. The set of optimal solutions is called the Pareto frontier, and contains elements that are equally optimal in the sense that no solution dominates any other solution in the frontier. \cite{cite04}
 
-\paragraph{Genetic Operators}
+% Genetic Operators [POSSIBLY DIFFERENTIATE THESE SUB CAHPTERS INTO CROSSOVER AND MUTAITONS]
 This step really includes two sub-steps: crossover and mutation. After selecting the top members (typically top 2, but this number can vary), these members are now used to create the next generation in the algorithm. Using the characteristics of the selected parents, new children are created that are a mixture of the parents’ qualities. 
 Now, we must introduce new genetic material into the generation. If we do not do this crucial step, we will become stuck in local extrema very quickly, and will not obtain optimal results. This step is mutation, and we do this, quite simply, by changing a small portion of the children such that they no longer perfectly mirror subsets of the parents’ genes. Mutation typically occurs probabilistically, in that the chance of a child receiving a mutation as well as the severity of the mutation are governed by a probability distribution. \cite{cite04}
 
-\paragraph{Termination}
+% Termination
 Eventually, the algorithm must end.This occurs either when the algorithm has reached some maximum runtime, or the algorithm has reached some threshold of performance. At this point a final solution is selected and returned. \cite{cite04}
 
+% Genotypes and Direct/Indirect Encoding
+The question of encoding comes from the question of how do we wish to represent individuals genetically in our algorithm. The way in which we encode our individuals lays out the path for how our algorithm will handle the key evolutionary processes: selection, mutation and crossover (also known as recombination). Any encoding will fall into one of two categories, direct or indirect. \cite{cite02}
+Evolutionary algorithms operate on genotypes. In neuroevolution, a genotype (in Biology: genetic representation of the creature; in Neuroevolution: encoding of the neural net) is mapped to a neural network phenotype (in Biology: physical representation (think visible features) of the creature; in Neuroevolution: Actual topology and weights of the neural net) that is evaluated on some task to derive its fitness.
+A direct encoding will explicitly specify everything about an individual. If it represents a neural network this means that each gene will directly be linked to some node, connection, or property of the network. This can be a binary encoding of 1s and 0s, a graph encoding (linking various nodes by weighted connections), or something even more complex. The point is that there will always be a direct connection between genotype and phenotype that is very obvious and readable. \cite{cite02}
+An indirect encoding is the exact opposite. Instead of directly specifying what a structure may look like, indirect encodings tends to specify rules or parameters of processes for creating an individual. As a result, indirect encodings are much more compact. The flip side is that setting the rules for an indirect encoding can result in a heavy bias within the search space, therefore, it is much harder to create an indirect encoding without substantial knowledge about how the encoding will be used. \cite{cite02}
+
+\customincludegraphics{Genotype_to_Phenotype_Representation}{Source: \cite{cite02}}{lbl_genotype}
 
 
 
@@ -162,40 +149,39 @@ Eventually, the algorithm must end.This occurs either when the algorithm has rea
 
 \section{NEAT}
 
-\subsection{Overview and Motivation}
-
+% Overview and Motivation
 NEAT evolves both the parameters and architecture of ANNs and thus is an example of TWEANN (Topology and Weight Evolving Artificial Neural Network). NEAT employs a set of three different mutations: i) modify a weight, ii) add a connection between nodes, and iii) insert a node while splitting an existing connection. \cite{cite05}
 
+% Novelty Search
 Novelty search is another invention that abandons the goal to maximise a fitness function. Instead, it rewards individuals that behave differently. This change often leads to much better solutions in the end because novel solutions perform badly in the beginning and need time to fully manifest their potential. \cite{cite05}
 
-\subsection{Mutation}
+% Mutate in NEAT
 In NEAT, mutation can either mutate existing connections or can add new structure to a network. If a new connection is added between a start and end node, it is randomly assigned a weight. \cite{cite02}
 
 \customincludegraphics{Mutate_Add_Connection_and_Add_Node}{Source: \cite{cite02}}{lbl_mutate}
 
-\subsection{Competing Conventions}
 
+% NEATs handling of competing conventions
 Another big issue with evolving the topologies of neural networks is something that the NEAT paper calls “competing conventions.” The idea is that just blindly crossing over the genomes of two neural networks could result in networks that are horribly mutated and non-functional. If two networks are dependent on central nodes that both get recombined out of the network, we have an issue. \cite{cite02}
 
 \customincludegraphics{Crossovers_with_Missing_Information}{Source: \cite{cite02}}{lbl_crossovers}
 
 More than that, genomes can be of different sizes. How do we align genomes that don’t seem to be obviously compatible? In biology, this is taken care of through an idea called homology. Homology is the alignment of chromosomes based on matching genes for a specific trait. Once that happens, crossover can happen with much less chance of error than if chromosomes were blindly mixed together. \cite{cite02}
 
-NEAT tackles this issue through the usage of historical markings (as seen above). By marking new evolutions with a historical number, when it comes time to crossover two individuals, this can be done with much less chance of creating individuals that are non-functional. Each gene can be aligned and (potentially) crossed-over. Each time a new node or new type of connection occurs, a historical marking is assigned, allowing easy alignment when it comes to breed two of our individuals. \cite{cite02}
+NEAT tackles this issue through the usage of historical markings (as seen above), which are used to properly line up encodings for any sort of crossover. By marking new evolutions with a historical number, when it comes time to crossover two individuals, this can be done with much less chance of creating individuals that are non-functional. Each gene can be aligned and (potentially) crossed-over. Each time a new node or new type of connection occurs, a historical marking is assigned, allowing easy alignment when it comes to breed two of our individuals. \cite{cite02}
 
 \customincludegraphics{Crossover_Process_Visualization}{Source: \cite{cite02}}{lbl_crossover_viz}
 
-Historical Markings: used to properly line up encodings for any sort of crossover
 
-\subsection{Speciation}
-
+% SPECIATION
 A very interesting idea put forth in NEAT was that most new evolutions are not good ones. In fact, adding a new connection or node before any optimization of weights have occurred often leads to a lower performing individual. This puts new structures at a disadvantage. How can we protect new structures and allow them to optimize before we eliminate them from the population entirely? NEAT suggests speciation. \cite{cite02}
 
 Speciation simply splits up the population into several species based on the similarity of topology and connections. If the competing convention problem still existed, this would be very hard to measure! However, since NEAT uses historical markings in its encoding, this becomes much easier to measure. A function for deciding how to speciate is given in the paper, but the important part to note is that individuals in a population only have to compete with other individuals within that species. This allows for new structure to be created and optimized without fear that it will be eliminated before it can be truly explored. \cite{cite02}
 
 More than that, NEAT takes things one step forward through something called explicit fitness sharing. That means that individuals share how well they are doing across the species, boosting up higher performing species, though still allowing for other species to explore their structure optimization before being out evolved. \cite{cite02}
 
-\subsection{Minimal Structure / Complexification}
+
+% MINMAL STRUCTURE / COMPLEXIFICATION
 
 Complexification: We’ll start with simple and evolve complexity if and when it’s needed
 
