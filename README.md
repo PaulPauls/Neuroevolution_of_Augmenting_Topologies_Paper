@@ -105,7 +105,7 @@ Feedback welcome.
       (Difficulty: Very Easy, Audience: Beginners, Quality: 3/5)
       https://towardsdatascience.com/introduction-to-evolutionary-algorithms-a8594b484ac
 * [ ] *Primer* Neuroevolution: A Primer On Evolving Artificial Neural Networks (**2018**)
-      [Difficulty: Medium, Audience: Advanced, Quality: 4/5]
+      [Difficulty: Medium, Audience: Advanced, Quality: 5/5]
       https://www.inovex.de/blog/neuroevolution/
       > References: Large Scale Evolution of Image Classifiers, Evolving Deep Neural Networks
 * [ ] *Blogpost* Deep Neuroevolution: Genetic Algorithms are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning (**2018**)
