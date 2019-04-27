@@ -114,8 +114,7 @@ Feedback welcome.
       > These results indicate that GAs (and RS) are not all out better or worse than other methods of optimising DNN, but that they are a competitive alternative that one can add to their RL tool belt.
         Like OpenAI, they state that although DNNs don't struggle with local optima in supervised learning, they can still get into trouble in RL tasks due to a deceptive or sparse reward signal. 
         It is for this reason that non gradient based methods such as GAs can perform well compared to other popular algorithms in RL.
-* [ ] *Collection* Neuroevolution Collection
-      http://nn.cs.utexas.edu/?neuroevolution
+
 
 
 
@@ -185,6 +184,10 @@ Feedback welcome.
       https://ieeexplore.ieee.org/document/7860436
 * [ ] Boris, Goran - Evolving neural network to play game 2048 (**2016**)
       https://ieeexplore.ieee.org/document/7818911
+* [ ] Rawal, Miikkulainen - Evolving Deep LSTM-based Memory networks using an Information Maximization Objective (**2016**)
+      http://nn.cs.utexas.edu/?rawal:gecco2016
+* [ ] Braylan, Miikkulainen - Reuse of Neural Modules for General Video Game Playing (**2016**)
+      http://nn.cs.utexas.edu/?braylan:aaai16
 * [ ] Rodzin, Rodzina - Neuroevolution: Problems, algorithms, and experiments (**2017**)
       https://ieeexplore.ieee.org/document/7991745
 * [ ] Xie, Yuille - Genetic CNN (**2017**)
@@ -208,10 +211,12 @@ Feedback welcome.
 * [ ] Miikkulaien, Liang, et al - Evolving Deep Neural Networks (**2017**)
       [IMPORTANT RESOURCE]
       Cited by my resources: 2
-      https://arxiv.org/abs/1703.00548
+      http://nn.cs.utexas.edu/?miikkulainen:chapter18
       > by Miikkulainen (the co-author of the original NEAT paper)
       > DeepNEAT differs from NEAT in that each node in the chromosome no longer represents a neuron, but a layer in a DNN. A variant of DeepNEAT, called Coevolution DeepNEAT (CoDeepNEAT), 
         separately evolves both network structure and composing modules structure. Authors used it for CNN and LSTM networks.
+* [ ] Rawal, Miikkulainen - From Nodes to Networks: Evolving Recurrent Neural Networks (**2018**)
+      http://nn.cs.utexas.edu/?rawal:arxiv18
 * [ ] Ghazi-Zahedi - NMode - Neuro-MODule Evolution (**2017**)
       https://arxiv.org/abs/1701.05121
       > Authors showed that NMODE was able to evolve a locomotion behaviour for a standard six-legged walking machine in approximately 10 generations and showed how it can be used 
@@ -287,6 +292,8 @@ Feedback welcome.
       https://arxiv.org/abs/1901.05988
 * [ ] Assuncao, Lourenco, et al - Fast DENSER: Efficient Deep NeuroEvolution (**2019**)
       https://www.researchgate.net/publication/332306893
+* [ ] Liang, Miikkulainen, et al - Evolutionary Neural AutoML for Deep Learning (**2019**)
+      http://nn.cs.utexas.edu/?liang:gecco19
 * [ ] Miller, Cussat-Blanc - Evolving Programs to Build Artificial Neural Networks (**2020**)
       https://www.researchgate.net/publication/332470796
 
@@ -331,6 +338,13 @@ Feedback welcome.
       https://skymind.ai/wiki/deep-reinforcement-learning
 * [ ] Wikipedia: Artifical Neural Network
       https://en.wikipedia.org/wiki/Artificial_neural_network
+
+
+
+#### Other Resources ####
+
+* Neuroevolution Research Group of UTexas (Stanley, Miikkulainen)
+  http://nn.cs.utexas.edu/?neuroevolution
 
 
 
