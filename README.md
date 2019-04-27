@@ -140,7 +140,7 @@ Feedback welcome.
       https://ieeexplore.ieee.org/document/6042728
 * [ ] Pereira, Petry - Data Assimilation using NeuroEvolution of Augmenting Topologies (**2012**) 
       https://www.researchgate.net/publication/237049328
-* [ ] Risi, Stanley - An Enhanced Hypercube-Based Encoding for Evolving thePlacement, Density and Connectivity of Neurons (**2012**)
+* [ ] Risi, Stanley - An Enhanced Hypercube-Based Encoding for Evolving the Placement, Density and Connectivity of Neurons (**2012**)
       Cited by my resources: 1
       https://eplex.cs.ucf.edu/papers/risi_alife12.pdf
 * [ ] Schrum, Miikkulainen - Evolving Multimodal Networks for Multitask Games (**2012**)
