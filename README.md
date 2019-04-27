@@ -50,10 +50,6 @@ Feedback welcome.
       http://www.cs.ucf.edu/~kstanley/neat.html
 * [ ] *Primer* Stanley - Webpage describing HyperNEAT (**2009**)
       https://eplex.cs.ucf.edu/hyperNEATpage/
-* [ ] *Bookchapter* Automatic Task Decomposition for the NeuroEvolution of Augmenting Topologies (NEAT) Algorithm (**2012**)
-      https://link.springer.com/chapter/10.1007/978-3-642-29066-4_1
-* [ ] *Bookchapter* HyperNEAT - The First 5 years (**2014**)
-      https://link.springer.com/chapter/10.1007/978-3-642-55337-0_5
 * [ ] *Podcast* Stanleys Podcast about NEAT (**2018**)
       https://twimlai.com/twiml-talk-94-neuroevolution-evolving-novel-neural-network-architectures-kenneth-stanley/
 * [1] *Blogpost* NEAT, An Awesome Approach to NeuroEvolution (**2019**)
