@@ -11,66 +11,6 @@ Feedback welcome.
 
 
 
-#### Unsorted Wikipedia Resources ####
-
-* [ ] Neuroevolution
-      https://en.wikipedia.org/wiki/Neuroevolution
-* [ ] Evolutionary Algorithm 
-      https://en.wikipedia.org/wiki/Evolutionary_algorithm
-* [ ] Evolution Strategy
-      https://en.wikipedia.org/wiki/Evolution_strategy
-* [ ] Evolutionary Programming
-      https://en.wikipedia.org/wiki/Evolutionary_programming
-* [ ] Evolutionary Acquistion of Neural Topologies
-      https://en.wikipedia.org/wiki/Evolutionary_acquisition_of_neural_topologies
-* [ ] Genetic Algorithm
-      https://en.wikipedia.org/wiki/Genetic_algorithm
-* [ ] Genetic Programming
-      https://en.wikipedia.org/wiki/Genetic_programming
-* [ ] Artifical Development
-      https://en.wikipedia.org/wiki/Artificial_development
-* [ ] NEAT
-      https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies
-* [ ] HyperNEAT
-      https://en.wikipedia.org/wiki/HyperNEAT
-* [ ] Fitness Function
-      https://en.wikipedia.org/wiki/Fitness_function
-* [ ] Memetic Algorithm
-      https://en.wikipedia.org/wiki/Memetic_algorithm
-* [ ] General Game Playing
-      https://en.wikipedia.org/wiki/General_game_playing
-* [ ] Evolutionary Robotics
-      https://en.wikipedia.org/wiki/Evolutionary_robotics
-
-
-
-#### NEAT/HyperNEAT Resources ####
-
-* [ ] *Primer* Stanley - Webpage describing NEAT (**2003**)
-      http://www.cs.ucf.edu/~kstanley/neat.html
-* [ ] *Primer* Stanley - Webpage describing HyperNEAT (**2009**)
-      https://eplex.cs.ucf.edu/hyperNEATpage/
-* [ ] *Podcast* Stanleys Podcast about NEAT (**2018**)
-      https://twimlai.com/twiml-talk-94-neuroevolution-evolving-novel-neural-network-architectures-kenneth-stanley/
-* [1] *Blogpost* NEAT, An Awesome Approach to NeuroEvolution (**2019**)
-      (Difficulty: Easy, Audience: Beginners, Quality: 4/5)
-      https://towardsdatascience.com/neat-an-awesome-approach-to-neuroevolution-3eca5cc7930f
-      > NEAT's original paper focused solely on evolving dense neural networks node by node and connection by connection
-      > progress we have made with training NNs through gradient descent and back propagation need not be abandoned for a neuroevolutionary process... 
-        Recent papers have even highlighted ways to use NEAT and NEAT-like algorithms to evolved neural net structure and then use 
-        back propagation and gradient descent to optimize these networks
-      > The NEAT algorithm chooses a direct encoding methodology because of this. Their representation is a little more complex than a simple graph 
-        or binary encoding, however, it is still straightforward to understand. It simply has two lists of genes, a series of nodes and a series of connections.
-      > Cites: 'Evolving Deep Neural Networks'
-* [1] *Blogpost* HyperNEAT: Powerful, Indirect Neural Network Evolution (**2019**)
-      (Difficulty: Easy, Audience: Beginners, Quality: 3/5)
-      https://towardsdatascience.com/hyperneat-powerful-indirect-neural-network-evolution-fba5c7c43b7b
-      > DNA is an indirect encoding because the phenotypic results (what we actually see) are orders of magnitude larger than the genotypic content (the genes in the DNA). 
-        If you look at a human genome, we\u2019ll say it has about 30,000 genes coding for approximately 3 billion amino acids. Well, the brain has 
-        3 trillion connections. Obviously, there is something indirect going on here!
-
-
-
 #### Neuroevolution and Broader Resources ####
 
 * [ ] *Primer* Stanley - Competitive Coevolution through Evolutionary Complexification (**2004**)
@@ -109,6 +49,65 @@ Feedback welcome.
         Like OpenAI, they state that although DNNs don't struggle with local optima in supervised learning, they can still get into trouble in RL tasks due to a deceptive or sparse reward signal. 
         It is for this reason that non gradient based methods such as GAs can perform well compared to other popular algorithms in RL.
 
+
+
+#### NEAT/HyperNEAT Resources ####
+
+* [ ] *Primer* Stanley - Webpage describing NEAT (**2003**)
+      http://www.cs.ucf.edu/~kstanley/neat.html
+* [ ] *Primer* Stanley - Webpage describing HyperNEAT (**2009**)
+      https://eplex.cs.ucf.edu/hyperNEATpage/
+* [ ] *Podcast* Stanleys Podcast about NEAT (**2018**)
+      https://twimlai.com/twiml-talk-94-neuroevolution-evolving-novel-neural-network-architectures-kenneth-stanley/
+* [1] *Blogpost* NEAT, An Awesome Approach to NeuroEvolution (**2019**)
+      (Difficulty: Easy, Audience: Beginners, Quality: 4/5)
+      https://towardsdatascience.com/neat-an-awesome-approach-to-neuroevolution-3eca5cc7930f
+      > NEAT's original paper focused solely on evolving dense neural networks node by node and connection by connection
+      > progress we have made with training NNs through gradient descent and back propagation need not be abandoned for a neuroevolutionary process... 
+        Recent papers have even highlighted ways to use NEAT and NEAT-like algorithms to evolved neural net structure and then use 
+        back propagation and gradient descent to optimize these networks
+      > The NEAT algorithm chooses a direct encoding methodology because of this. Their representation is a little more complex than a simple graph 
+        or binary encoding, however, it is still straightforward to understand. It simply has two lists of genes, a series of nodes and a series of connections.
+      > Cites: 'Evolving Deep Neural Networks'
+* [1] *Blogpost* HyperNEAT: Powerful, Indirect Neural Network Evolution (**2019**)
+      (Difficulty: Easy, Audience: Beginners, Quality: 3/5)
+      https://towardsdatascience.com/hyperneat-powerful-indirect-neural-network-evolution-fba5c7c43b7b
+      > DNA is an indirect encoding because the phenotypic results (what we actually see) are orders of magnitude larger than the genotypic content (the genes in the DNA). 
+        If you look at a human genome, we\u2019ll say it has about 30,000 genes coding for approximately 3 billion amino acids. Well, the brain has 
+        3 trillion connections. Obviously, there is something indirect going on here!
+
+
+
+#### Unsorted Wikipedia Resources ####
+
+* [ ] Neuroevolution
+      https://en.wikipedia.org/wiki/Neuroevolution
+* [ ] Evolutionary Algorithm 
+      https://en.wikipedia.org/wiki/Evolutionary_algorithm
+* [ ] Evolution Strategy
+      https://en.wikipedia.org/wiki/Evolution_strategy
+* [ ] Evolutionary Programming
+      https://en.wikipedia.org/wiki/Evolutionary_programming
+* [ ] Evolutionary Acquistion of Neural Topologies
+      https://en.wikipedia.org/wiki/Evolutionary_acquisition_of_neural_topologies
+* [ ] Genetic Algorithm
+      https://en.wikipedia.org/wiki/Genetic_algorithm
+* [ ] Genetic Programming
+      https://en.wikipedia.org/wiki/Genetic_programming
+* [ ] Artifical Development
+      https://en.wikipedia.org/wiki/Artificial_development
+* [ ] NEAT
+      https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies
+* [ ] HyperNEAT
+      https://en.wikipedia.org/wiki/HyperNEAT
+* [ ] Fitness Function
+      https://en.wikipedia.org/wiki/Fitness_function
+* [ ] Memetic Algorithm
+      https://en.wikipedia.org/wiki/Memetic_algorithm
+* [ ] General Game Playing
+      https://en.wikipedia.org/wiki/General_game_playing
+* [ ] Evolutionary Robotics
+      https://en.wikipedia.org/wiki/Evolutionary_robotics
 
 
 
