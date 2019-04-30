@@ -15,8 +15,10 @@ Feedback welcome.
 
 * [ ] Stanley, Miiikkulainen - Evolving Neural Networks throughAugmenting Topologies (**2002**)
       http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf
+      http://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf
 * [ ] *Primer* Stanley - Webpage describing NEAT (**2003**)
       http://www.cs.ucf.edu/~kstanley/neat.html
+      http://www.cs.ucf.edu/~kstanley/#publications
 * [ ] *Primer* Stanley - Webpage describing HyperNEAT (**2009**)
       https://eplex.cs.ucf.edu/hyperNEATpage/
 * [ ] *Collection* Stanley, Clune, Uber - Welcoming the Era of Deep Neuroevolution (**2017**)
@@ -293,11 +295,13 @@ Feedback welcome.
 
 * [ ] Collection of most of the published NEAT software
       https://eplex.cs.ucf.edu/neat_software/
+* [ ] NEAT Visualizer SFML (**2014**)
+      https://sourceforge.net/projects/neatvisualizers/
 * [ ] MarI/O - Machine Learning for Videogames (NEAT) (**2015**)
       https://www.youtube.com/watch?v=qv6UVOQ0F44
 * [ ] NEAT-Python (**2018**)
       https://neat-python.readthedocs.io/en/latest/
-      https://github.com/CodeReclaimers/neat-python
+      https://github.com/CodeReclaimers/neat-python 
 * [ ] PyTorch NEAT's adaptive HyperNEAT (**2018**)
       https://github.com/uber-research/PyTorch-NEAT
 * [ ] TensorflowNEAT (**2019**)  
@@ -326,10 +330,13 @@ Feedback welcome.
 
 
 
-#### Other Resources ####
+#### Other/Unsorted Resources ####
 
 * Neuroevolution Research Group of UTexas (Stanley, Miikkulainen)
   http://nn.cs.utexas.edu/?neuroevolution
-
-
+* https://github.com/openai/evolution-strategies-starter
+* http://nn.cs.utexas.edu/?neuroevolution-tutorial-ijcnn2013
+* http://nerogame.org/
+* http://www.cs.utexas.edu/users/nn/keyword?rtneat
+* https://github.com/sean-dougherty/accneat
 
