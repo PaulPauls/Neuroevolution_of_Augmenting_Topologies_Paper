@@ -45,15 +45,12 @@ Feedback welcome.
       > by Miikkulainen (the co-author of the original NEAT paper)
       > DeepNEAT differs from NEAT in that each node in the chromosome no longer represents a neuron, but a layer in a DNN. A variant of DeepNEAT, called Coevolution DeepNEAT (CoDeepNEAT), 
         separately evolves both network structure and composing modules structure. Authors used it for CNN and LSTM networks.
-* [ ] *Paper* Salimans, Ho, et al - Evolution Strategies as a Scalable Alternative to Reinforcement Learning (**2017**)
-      https://openai.com/blog/evolution-strategies/ 
-      https://arxiv.org/abs/1703.03864
-* [ ] *Paper* Miikkulainen, Liang, et al - Evolving Deep Neural Networks (**2017**)
-      Cited by my resources: 2
-      https://arxiv.org/abs/1703.00548
       > Read again the good summary of this paper in: https://www.inovex.de/blog/neuroevolution/
       > The conclusion of the paper reads as follows: "Evolutionary optimisation makes it possible to construct more complex deep learning architectures than can be done by hand. 
         The topology, components, and hyperparameters of the architecture can all be optimised simultaneously to fit the requirements of the task, resulting in superior performance."
+* [ ] *Paper* Salimans, Ho, et al - Evolution Strategies as a Scalable Alternative to Reinforcement Learning (**2017**)
+      https://openai.com/blog/evolution-strategies/ 
+      https://arxiv.org/abs/1703.03864
 * [ ] *Paper* Sun, Xue - Evolving Deep Convolutional Neural Networks for Image Classification (**2017**)
       https://arxiv.org/abs/1710.10741
       Cited by my resources: 2
