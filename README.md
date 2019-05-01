@@ -336,4 +336,8 @@ Feedback welcome.
 * http://nerogame.org/
 * http://www.cs.utexas.edu/users/nn/keyword?rtneat
 * https://github.com/sean-dougherty/accneat
+* http://gekkoquant.com/2016/03/13/evolving-neural-networks-through-augmenting-topologies-part-1-of-4/
+* https://gitlab.com/lucasrthompson/Sonic-Bot-In-OpenAI-and-NEAT
+* http://gar.eecs.ucf.edu/
+* http://groups.yahoo.com/group/neat/
 
