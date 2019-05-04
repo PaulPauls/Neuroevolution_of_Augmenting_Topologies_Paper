@@ -1,0 +1,127 @@
+% ######################################################################################################################
+
+\documentclass[journal, a4paper]{IEEEtran}
+
+\usepackage{graphicx}   % For graphics, photos, etc
+\usepackage{hyperref}   % For URL and href
+\usepackage{amsmath}    % For advanced mathematical formatting and symbols
+\usepackage{blindtext}  % For placeholder text
+\usepackage{listings}   % For code listings
+\usepackage{color}      % For color
+
+\graphicspath{{./images/}}
+
+\definecolor{green}{rgb}{0, 0.66, 0}
+\definecolor{red}{rgb}{1, 0, 0}
+\definecolor{gray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{orange}{rgb}{1, 0.66, 0}
+\definecolor{codebg}{rgb}{0.97, 0.97, 0.97}
+
+\newcommand{\customincludegraphics}[3]{
+    \begin{figure}
+        \includegraphics[width=0.45\textwidth]{{#1}}
+        \caption{{#2}} 
+        \label{{#3}}
+    \end{figure}
+}
+ 
+\lstdefinestyle{c-style}{
+  language={[ANSI]C},
+  frame=single,
+  backgroundcolor=\color{codebg},
+  commentstyle=\itshape\color{green},
+  keywordstyle=\color{blue},
+  numberstyle=\tiny\color{gray},
+  stringstyle=\color{orange},
+  basicstyle=\fontsize{7}{7}\ttfamily,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+
+% ######################################################################################################################
+
+\begin{document}
+
+  \title{Neuroevolution of Augmenting Topologies}
+  \author{Paul Pauls\\
+          Advisor: Michael Adam}
+  \markboth{Neuroevolution of Augmenting Topologies}{}
+  \maketitle
+
+% While Paper is in development shall I include this table of contents as a quick overview
+\tableofcontents
+
+\begin{abstract}
+\blindtext
+\end{abstract}
+
+% ######################################################################################################################
+
+\section{Introduction}
+
+\IEEEPARstart{T}{his} shall be my introduction. And this shall be my citation \cite{cite01}.
+\blindtext
+
+
+
+% ######################################################################################################################
+
+\section{Neuroevolution and Evolutionary Algorithms}
+% Check out the research done by Uber-Research
+
+
+
+
+% ######################################################################################################################
+
+\section{NeuroEvolution of Augmenting Topologies (NEAT)}
+
+\subsection{<Section Introduction>}
+
+\subsection{Key Aspects of NEAT and Differences to Preceding Neuroevolution}
+% Speciation, Historical Markings, Minimal Initial Pop, See Key Elements identified through ablation (http://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf)
+
+\subsection{Performance of NEAT}
+% NOT SURE YET IF I SHOULD KEEP THIS CHAPTER
+% Chap 4 (Performance) of original Paper (http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf)
+    
+\subsection{Variants and Advancements of NEAT}
+% Follow Up Research and Variants (HyperNeat, adaptive HyperNeat, etc)
+
+
+
+% ######################################################################################################################
+
+\section{Applications of NEAT}
+% Go especially into detail what Stanley considered great NEAT applications in his reddit AMA
+% Introduce my own code accompanying this paper
+
+
+
+% ######################################################################################################################
+
+\section{Conclusions}
+
+\blindtext
+
+
+
+% ######################################################################################################################
+
+\begin{thebibliography}{5}
+
+  \bibitem{cite01}
+    Example Cite, {\em Source}, Apr. 2019.
+    \url{www.example.com}
+
+\end{thebibliography}
+
+\end{document}
