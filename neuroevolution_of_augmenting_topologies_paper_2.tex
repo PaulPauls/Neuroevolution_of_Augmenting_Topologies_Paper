@@ -2,12 +2,13 @@
 
 \documentclass[journal, a4paper]{IEEEtran}
 
-\usepackage{graphicx}   % For graphics, photos, etc
-\usepackage{hyperref}   % For URL and href
-\usepackage{amsmath}    % For advanced mathematical formatting and symbols
-\usepackage{blindtext}  % For placeholder text
-\usepackage{listings}   % For code listings
-\usepackage{color}      % For color
+\usepackage{graphicx}       % For graphics, photos, etc
+\usepackage{hyperref}       % For URL and href
+\usepackage{amsmath}        % For advanced mathematical formatting and symbols
+\usepackage{blindtext}      % For placeholder text
+\usepackage{listings}       % For code listings
+\usepackage{color}          % For color
+\usepackage{draftwatermark} % For watermark
 
 \graphicspath{{./images/}}
 
@@ -50,17 +51,21 @@
 
 \begin{document}
 
-  \title{Neuroevolution of Augmenting Topologies}
-  \author{Paul Pauls\\
-          Advisor: Michael Adam}
-  \markboth{Neuroevolution of Augmenting Topologies}{}
-  \maketitle
+\title{Neuroevolution of Augmenting Topologies}
+\author{Paul Pauls\\
+        Advisor: Michael Adam}
+\markboth{Neuroevolution of Augmenting Topologies}{}
+\maketitle
+  
+% Place small Watermark indicating that this is currently a draft in background  
+\SetWatermarkText{DRAFT}
+\SetWatermarkScale{0.5}
 
 % While Paper is in development shall I include this table of contents as a quick overview
 \tableofcontents
 
 \begin{abstract}
-\blindtext
+    \blindtext
 \end{abstract}
 
 % ######################################################################################################################
@@ -82,8 +87,6 @@ Neuroevolution  is  a  machine  learning  technique  that  applies  evolutionary
 An evolutionary algorithm, used in the construction of those artificial neural networks, is a generic population-based optimization algorithms. This population consists of single members which are often algorithms - or neural networks in the case of Neuroevolution - that are trying to solve the problem upon which the evolutionary algorithm is applied to. The evolutionary algorithm then aims to optimize the members of its population by maximizing their result on the \textit{fitness function} upon which all members of the population are judged and usually does so by the means of reproduction, mutation, recombination and selection - mirroring biological evolution.
 
 This algorithmic form of \textit{natural selection} by only letting the most fit algorithms (members) sustain in the population and eradicating the less performant algorithms is a form of maximizing the cumulative reward of the whole population and does therefore classify as the machine learning paradigm of \textit{Reinforcement Learning}.
-
-
 
 
 
