@@ -13,6 +13,15 @@ Feedback welcome.
 
 #### Very Important Resources ####
 
+https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies
+https://en.wikipedia.org/wiki/Genetic_algorithm
+https://en.wikipedia.org/wiki/Neuroevolution
+https://en.wikipedia.org/wiki/Evolutionary_algorithm
+https://en.wikipedia.org/wiki/Reinforcement_learning
+
+http://www.scholarpedia.org/article/Neuroevolution
+http://www.scholarpedia.org/article/Reinforcement_learning
+
 * [ ] Stanley, Miiikkulainen - Evolving Neural Networks throughAugmenting Topologies (**2002**)
       http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf
       http://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf
