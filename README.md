@@ -13,10 +13,10 @@ Feedback welcome.
 
 #### Very Important Resources ####
 
-https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies
+https://en.wikipedia.org/wiki/Evolutionary_algorithm
 https://en.wikipedia.org/wiki/Genetic_algorithm
 https://en.wikipedia.org/wiki/Neuroevolution
-https://en.wikipedia.org/wiki/Evolutionary_algorithm
+https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies
 https://en.wikipedia.org/wiki/Reinforcement_learning
 
 http://www.scholarpedia.org/article/Neuroevolution
