@@ -22,6 +22,11 @@ https://en.wikipedia.org/wiki/Reinforcement_learning
 http://www.scholarpedia.org/article/Neuroevolution
 http://www.scholarpedia.org/article/Reinforcement_learning
 
+<Created Papers up to now>
+
+https://eng.uber.com/deep-neuroevolution/
+https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
+
 * [ ] Stanley, Miiikkulainen - Evolving Neural Networks throughAugmenting Topologies (**2002**)
       http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf
       http://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf
