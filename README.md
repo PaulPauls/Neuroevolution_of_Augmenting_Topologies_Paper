@@ -354,4 +354,5 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 * https://gitlab.com/lucasrthompson/Sonic-Bot-In-OpenAI-and-NEAT
 * http://gar.eecs.ucf.edu/
 * http://groups.yahoo.com/group/neat/
+* https://www.youtube.com/watch?v=Tyhbf0vgwP0
 
