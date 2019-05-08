@@ -355,4 +355,5 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 * http://gar.eecs.ucf.edu/
 * http://groups.yahoo.com/group/neat/
 * https://www.youtube.com/watch?v=Tyhbf0vgwP0
+* https://www.youtube.com/watch?v=WyDMbfCARW8
 
