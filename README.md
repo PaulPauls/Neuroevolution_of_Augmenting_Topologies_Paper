@@ -11,8 +11,9 @@ Feedback welcome.
 
 
 
-#### Very Important Resources ####
+#### Very Important Resources ##################################################
 
+_Open Tabs_
 https://en.wikipedia.org/wiki/Evolutionary_algorithm
 https://en.wikipedia.org/wiki/Genetic_algorithm
 https://en.wikipedia.org/wiki/Neuroevolution
@@ -27,6 +28,11 @@ http://www.scholarpedia.org/article/Reinforcement_learning
 https://eng.uber.com/deep-neuroevolution/
 https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 
+--------------------------------------------------------------------------------
+
+
+* [ ] Miikkulainen - Neuroeovlution
+      http://www.cs.utexas.edu/users/ai-lab/pubs/miikkulainen.encyclopedia10-ne.pdf
 * [ ] Stanley, Miiikkulainen - Evolving Neural Networks throughAugmenting Topologies (**2002**)
       http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf
       http://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf
@@ -35,6 +41,14 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
       http://www.cs.ucf.edu/~kstanley/#publications
 * [ ] *Primer* Stanley - Webpage describing HyperNEAT (**2009**)
       https://eplex.cs.ucf.edu/hyperNEATpage/
+* [ ] Stanley, D'Ambrosio, et al - A Hypercube-Based Indirect Encoding for Evolving Large-Scale Neural Networks (**2009**)
+      http://axon.cs.byu.edu/~dan/778/papers/NeuroEvolution/stanley3**.pdf
+* [ ] Risi, Lehman, O.Stanley - Evolving the placement and density of neurons in the hyperneat substrate (**2010**)
+      http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.365.5509
+* [ ] Risi, O.Stanley - Enhancing ES-HyperNEAT to Evolve More Complex Regular Neural Networks
+      http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.365.4332
+* [ ] Miikkulainen - Tutorial III: Evolving neural networks (**2015**)
+      https://ieeexplore.ieee.org/document/7317663
 * [ ] *Collection* Stanley, Clune, Uber - Welcoming the Era of Deep Neuroevolution (**2017**)
       https://eng.uber.com/deep-neuroevolution/
       https://github.com/uber-research/deep-neuroevolution
@@ -53,9 +67,12 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
       > "In this paper we have shown that (i) neuro-evolution is capable of constructing large, accurate networks for two challenging and popular image classification benchmarks; 
         (ii) neuro-evolution can do this starting from trivial initial conditions while searching a very large space; (iii) the process, once started, needs no experimenter participation; 
         and (iv) the process yields fully trained models."
+* [ ] *Paper* Real, Aggarwal, et al - Regularized Evolution for Image Classifier Architecture Search
+      https://arxiv.org/pdf/1802.01548.pdf
 * [ ] *Paper* Miikkulaien, Liang, et al - Evolving Deep Neural Networks (**2017**)
       Cited by my resources: 2
       http://nn.cs.utexas.edu/?miikkulainen:chapter18
+      https://arxiv.org/pdf/1703.00548.pdf
       > by Miikkulainen (the co-author of the original NEAT paper)
       > DeepNEAT differs from NEAT in that each node in the chromosome no longer represents a neuron, but a layer in a DNN. A variant of DeepNEAT, called Coevolution DeepNEAT (CoDeepNEAT), 
         separately evolves both network structure and composing modules structure. Authors used it for CNN and LSTM networks.
@@ -70,10 +87,42 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
       Cited by my resources: 2
       > Read again the good summary of this paper in: https://www.inovex.de/blog/neuroevolution/
       > also called 'EvoCNN'
+* [ ] Rawal, Miikkulainen - From Nodes to Networks: Evolving Recurrent Neural Networks (**2018**)
+      http://nn.cs.utexas.edu/?rawal:arxiv18
+* [ ] Jaderberg, Daliard, et al - Population Based Training of Neural Networks (**2018**)
+      https://arxiv.org/abs/1711.09846
+* [ ] Elsken, Metzen, et al - Efficient Multi-objective Neural Architecture Search via Lamarckian Evolution (**2018**)
+      https://arxiv.org/abs/1804.09081
+* [ ] Liu, Simonyan, et al - Hierarchical Representations for Efficient Architecture Search
+      https://openreview.net/pdf?id=BJQRKzbA-
+* [ ] Geard, Wiles - Structure and dynamics of a gene network model (**2013**)
+      https://ieeexplore.ieee.org/document/1299575
+* [ ] Reil - Dynamics of Gene Expression in an Artifical Genome
+      http://users.encs.concordia.ca/~kharma/coen6321/Papers/Reil-1999.pdf
+* [ ] Duerr, Mattiussi, et al - Neuroevolution with Analog Genetic Encoding
+      https://infoscience.epfl.ch/record/87949/files/DuerrMattiussiFloreano2006_PPSNIX_NeuroAGE.pdf
+* [0] *Primer* Neuroevolution: A Primer On Evolving Artificial Neural Networks (**2018**)
+      [Difficulty: Medium, Audience: Advanced, Quality: 5/5]
+      https://www.inovex.de/blog/neuroevolution/
+      > References: Large Scale Evolution of Image Classifiers, Evolving Deep Neural Networks
+* [ ] Reisinger, Miikkulainen - Acquiring Evolvability through Adaptive Representations
+      http://nn.cs.utexas.edu/downloads/papers/reisinger.gecco07.pdf
+* [ ] Floreano, Duerr, Mattiussi - Neuroevolution: From Architectures to Learning (**2008**)
+      http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.182.1567
+* [ ] Kovacs - Genetics-based Machine Learning (**2010**)
+      http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.301.1537
+* [ ] Orchard, Wang - The Evolution of a Generalized Neural Learning Rule
+      https://cs.uwaterloo.ca/~jorchard/academic/OrchardLin_IJCNN16.pdf
+* [ ] Hausknecht, Lehman, Miikkulainen - a neuro-evolution approach to general atari game playing (**2013**)
+      http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.494.7479
+* [ ] Yao - Evolving Artificial Neural Networks 
+      http://avellano.fis.usal.es/~lalonso/compt_soft/articulos/yao99evolving.pdf
+* [ ] Fernando, Banarse, et al - Convolution by Evolution: Differentiable Pattern Producing Networks (**2016**)
+      https://arxiv.org/abs/1606.02580
 
 
 
-#### Neuroevolution and Broader Resources ####
+#### Neuroevolution and Broader Resources ######################################
 
 * [ ] *Primer* Stanley - Competitive Coevolution through Evolutionary Complexification (**2004**)
       https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume21/stanley04a-html/jairhtml.html
@@ -108,7 +157,7 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 
 
 
-#### NEAT/HyperNEAT Resources ####
+#### NEAT/HyperNEAT Resources ##################################################
 
 * [ ] *Podcast* Stanleys Podcast about NEAT (**2018**)
       https://twimlai.com/twiml-talk-94-neuroevolution-evolving-novel-neural-network-architectures-kenneth-stanley/
@@ -131,7 +180,7 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 
 
 
-#### Unsorted Wikipedia Resources ####
+#### Unsorted Wikipedia Resources ##############################################
 
 * [ ] Neuroevolution
       https://en.wikipedia.org/wiki/Neuroevolution
@@ -164,7 +213,7 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 
 
 
-#### Research Paper Resources ####
+#### Research Paper Resources ##################################################
 
 * [ ] Whiteson, Stone, Stanley, Miikkulainen, et al - Automatic feature selection in neuroevolution (**2005**) 
       https://dl.acm.org/citation.cfm?id=1068210
@@ -302,7 +351,7 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 
 
 
-#### Unsorted Implementation Resources ####
+#### Unsorted Implementation Resources #########################################
 
 * [ ] Collection of most of the published NEAT software
       https://eplex.cs.ucf.edu/neat_software/
@@ -326,7 +375,7 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 
 
 
-#### Background Knowledge Resources ####
+#### Background Knowledge Resources ############################################
 
 * [ ] Tensorflow Eager for required dynamic computation graphs: 
       https://www.tensorflow.org/guide/eager
@@ -341,7 +390,7 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 
 
 
-#### Other/Unsorted Resources ####
+#### Other/Unsorted Resources ##################################################
 
 * Neuroevolution Research Group of UTexas (Stanley, Miikkulainen)
   http://nn.cs.utexas.edu/?neuroevolution
