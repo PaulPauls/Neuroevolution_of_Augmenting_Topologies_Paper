@@ -119,6 +119,10 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
       http://avellano.fis.usal.es/~lalonso/compt_soft/articulos/yao99evolving.pdf
 * [ ] Fernando, Banarse, et al - Convolution by Evolution: Differentiable Pattern Producing Networks (**2016**)
       https://arxiv.org/abs/1606.02580
+* [ ] Floreano, Duerr, Mattiussi - Neuroevolution: From Architecture to Learning (**2008**)
+      http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=E4E9EEFA64E5D9C307F6AFB91E9FA210?doi=10.1.1.182.1567&rep=rep1&type=pdf     
+* [ ] Mattiussi, Marbach, Duerr, Floreano - The Age of Analog Networks (**2008**)
+      https://www.aaai.org/ojs/index.php/aimagazine/article/view/2156
 
 
 
