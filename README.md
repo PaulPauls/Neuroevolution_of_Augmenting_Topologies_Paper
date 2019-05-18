@@ -36,6 +36,7 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 * [ ] Stanley, Miiikkulainen - Evolving Neural Networks throughAugmenting Topologies (**2002**)
       http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf
       http://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf
+      http://nn.cs.utexas.edu/downloads/papers/stanley.phd04.pdf
 * [ ] *Primer* Stanley - Webpage describing NEAT (**2003**)
       http://www.cs.ucf.edu/~kstanley/neat.html
       http://www.cs.ucf.edu/~kstanley/#publications
