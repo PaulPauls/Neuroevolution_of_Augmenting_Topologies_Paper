@@ -31,8 +31,10 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 --------------------------------------------------------------------------------
 
 
-* [ ] Miikkulainen - Neuroeovlution
-      http://www.cs.utexas.edu/users/ai-lab/pubs/miikkulainen.encyclopedia10-ne.pdf
+* [ ] Yao - Evolving Artificial Neural Networks (**1999**)
+      http://avellano.fis.usal.es/~lalonso/compt_soft/articulos/yao99evolving.pdf
+* [ ] Reil - Dynamics of Gene Expression in an Artifical Genome (**1999**)
+      http://users.encs.concordia.ca/~kharma/coen6321/Papers/Reil-1999.pdf
 * [ ] Stanley, Miiikkulainen - Evolving Neural Networks throughAugmenting Topologies (**2002**)
       http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf
       http://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf
@@ -40,20 +42,42 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 * [ ] *Primer* Stanley - Webpage describing NEAT (**2003**)
       http://www.cs.ucf.edu/~kstanley/neat.html
       http://www.cs.ucf.edu/~kstanley/#publications
+* [ ] Reisinger, Miikkulainen - Acquiring Evolvability through Adaptive Representations (**2007**)
+      http://nn.cs.utexas.edu/downloads/papers/reisinger.gecco07.pdf
+* [ ] Mattiussi, Marbach, Duerr, Floreano - The Age of Analog Networks (**2008**)
+      https://www.aaai.org/ojs/index.php/aimagazine/article/view/2156
+* [ ] Floreano, Duerr, Mattiussi - Neuroevolution: From Architectures to Learning (**2008**)
+      http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.182.1567
+* [ ] Floreano, Duerr, Mattiussi - Neuroevolution: From Architecture to Learning (**2008**)
+      http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=E4E9EEFA64E5D9C307F6AFB91E9FA210?doi=10.1.1.182.1567&rep=rep1&type=pdf
 * [ ] *Primer* Stanley - Webpage describing HyperNEAT (**2009**)
       https://eplex.cs.ucf.edu/hyperNEATpage/
 * [ ] Stanley, D'Ambrosio, et al - A Hypercube-Based Indirect Encoding for Evolving Large-Scale Neural Networks (**2009**)
       http://axon.cs.byu.edu/~dan/778/papers/NeuroEvolution/stanley3**.pdf
 * [ ] Risi, Lehman, O.Stanley - Evolving the placement and density of neurons in the hyperneat substrate (**2010**)
       http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.365.5509
-* [ ] Risi, O.Stanley - Enhancing ES-HyperNEAT to Evolve More Complex Regular Neural Networks
+* [ ] Kovacs - Genetics-based Machine Learning (**2010**)
+      http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.301.1537
+* [ ] Miikkulainen - Neuroevolution (**2010**)
+      http://nn.cs.utexas.edu/?miikkulainen:encyclopedia10-ne
+* [ ] Risi, O.Stanley - Enhancing ES-HyperNEAT to Evolve More Complex Regular Neural Networks (**2011**)
       http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.365.4332
+* [ ] Geard, Wiles - Structure and dynamics of a gene network model (**2013**)
+      https://ieeexplore.ieee.org/document/1299575
+* [ ] Hausknecht, Lehman, Miikkulainen - a neuro-evolution approach to general atari game playing (**2013**)
+      http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.494.7479
 * [ ] Miikkulainen - Tutorial III: Evolving neural networks (**2015**)
       https://ieeexplore.ieee.org/document/7317663
+* [ ] Fernando, Banarse, et al - Convolution by Evolution: Differentiable Pattern Producing Networks (**2016**)
+      https://arxiv.org/abs/1606.02580
+* [ ] Orchard, Wang - The Evolution of a Generalized Neural Learning Rule (**2016**)
+      https://cs.uwaterloo.ca/~jorchard/academic/OrchardLin_IJCNN16.pdf
 * [ ] *Collection* Stanley, Clune, Uber - Welcoming the Era of Deep Neuroevolution (**2017**)
       https://eng.uber.com/deep-neuroevolution/
       https://github.com/uber-research/deep-neuroevolution
       https://eng.uber.com/accelerated-neuroevolution/
+* [ ] Liu, Simonyan, et al - Hierarchical Representations for Efficient Architecture Search (**2017**)
+      https://openreview.net/pdf?id=BJQRKzbA-
 * [ ] *Paper* Real, Moore, et al - Large Scale Evolution of Image Classifiers (**2017**)
       Cited by my resources: 2
       https://arxiv.org/abs/1703.01041
@@ -68,8 +92,6 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
       > "In this paper we have shown that (i) neuro-evolution is capable of constructing large, accurate networks for two challenging and popular image classification benchmarks; 
         (ii) neuro-evolution can do this starting from trivial initial conditions while searching a very large space; (iii) the process, once started, needs no experimenter participation; 
         and (iv) the process yields fully trained models."
-* [ ] *Paper* Real, Aggarwal, et al - Regularized Evolution for Image Classifier Architecture Search
-      https://arxiv.org/pdf/1802.01548.pdf
 * [ ] *Paper* Miikkulaien, Liang, et al - Evolving Deep Neural Networks (**2017**)
       Cited by my resources: 2
       http://nn.cs.utexas.edu/?miikkulainen:chapter18
@@ -88,42 +110,20 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
       Cited by my resources: 2
       > Read again the good summary of this paper in: https://www.inovex.de/blog/neuroevolution/
       > also called 'EvoCNN'
+* [ ] *Paper* Real, Aggarwal, et al - Regularized Evolution for Image Classifier Architecture Search (**2018**)
+      https://arxiv.org/pdf/1802.01548.pdf
 * [ ] Rawal, Miikkulainen - From Nodes to Networks: Evolving Recurrent Neural Networks (**2018**)
       http://nn.cs.utexas.edu/?rawal:arxiv18
 * [ ] Jaderberg, Daliard, et al - Population Based Training of Neural Networks (**2018**)
       https://arxiv.org/abs/1711.09846
 * [ ] Elsken, Metzen, et al - Efficient Multi-objective Neural Architecture Search via Lamarckian Evolution (**2018**)
       https://arxiv.org/abs/1804.09081
-* [ ] Liu, Simonyan, et al - Hierarchical Representations for Efficient Architecture Search
-      https://openreview.net/pdf?id=BJQRKzbA-
-* [ ] Geard, Wiles - Structure and dynamics of a gene network model (**2013**)
-      https://ieeexplore.ieee.org/document/1299575
-* [ ] Reil - Dynamics of Gene Expression in an Artifical Genome
-      http://users.encs.concordia.ca/~kharma/coen6321/Papers/Reil-1999.pdf
 * [ ] Duerr, Mattiussi, et al - Neuroevolution with Analog Genetic Encoding
       https://infoscience.epfl.ch/record/87949/files/DuerrMattiussiFloreano2006_PPSNIX_NeuroAGE.pdf
 * [0] *Primer* Neuroevolution: A Primer On Evolving Artificial Neural Networks (**2018**)
       [Difficulty: Medium, Audience: Advanced, Quality: 5/5]
       https://www.inovex.de/blog/neuroevolution/
       > References: Large Scale Evolution of Image Classifiers, Evolving Deep Neural Networks
-* [ ] Reisinger, Miikkulainen - Acquiring Evolvability through Adaptive Representations
-      http://nn.cs.utexas.edu/downloads/papers/reisinger.gecco07.pdf
-* [ ] Floreano, Duerr, Mattiussi - Neuroevolution: From Architectures to Learning (**2008**)
-      http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.182.1567
-* [ ] Kovacs - Genetics-based Machine Learning (**2010**)
-      http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.301.1537
-* [ ] Orchard, Wang - The Evolution of a Generalized Neural Learning Rule
-      https://cs.uwaterloo.ca/~jorchard/academic/OrchardLin_IJCNN16.pdf
-* [ ] Hausknecht, Lehman, Miikkulainen - a neuro-evolution approach to general atari game playing (**2013**)
-      http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.494.7479
-* [ ] Yao - Evolving Artificial Neural Networks 
-      http://avellano.fis.usal.es/~lalonso/compt_soft/articulos/yao99evolving.pdf
-* [ ] Fernando, Banarse, et al - Convolution by Evolution: Differentiable Pattern Producing Networks (**2016**)
-      https://arxiv.org/abs/1606.02580
-* [ ] Floreano, Duerr, Mattiussi - Neuroevolution: From Architecture to Learning (**2008**)
-      http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=E4E9EEFA64E5D9C307F6AFB91E9FA210?doi=10.1.1.182.1567&rep=rep1&type=pdf     
-* [ ] Mattiussi, Marbach, Duerr, Floreano - The Age of Analog Networks (**2008**)
-      https://www.aaai.org/ojs/index.php/aimagazine/article/view/2156
 
 
 
