@@ -30,6 +30,12 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 
 --------------------------------------------------------------------------------
 
+_Resources explicitely about Encoding-Schemes_
+* https://www.obitko.com/tutorials/genetic-algorithms/encoding.php
+* https://math.stackexchange.com/questions/3058656/significance-of-encoding-scheme-in-genetic-algorithms
+* https://ieeexplore.ieee.org/document/4414042
+
+--------------------------------------------------------------------------------
 
 * [ ] Yao - Evolving Artificial Neural Networks (**1999**)
       http://avellano.fis.usal.es/~lalonso/compt_soft/articulos/yao99evolving.pdf
