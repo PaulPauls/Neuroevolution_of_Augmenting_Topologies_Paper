@@ -76,6 +76,7 @@ https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
       https://eng.uber.com/deep-neuroevolution/
       https://github.com/uber-research/deep-neuroevolution
       https://eng.uber.com/accelerated-neuroevolution/
+      https://arxiv.org/pdf/1712.06567.pdf
 * [ ] Liu, Simonyan, et al - Hierarchical Representations for Efficient Architecture Search (**2017**)
       https://openreview.net/pdf?id=BJQRKzbA-
 * [ ] *Paper* Real, Moore, et al - Large Scale Evolution of Image Classifiers (**2017**)
