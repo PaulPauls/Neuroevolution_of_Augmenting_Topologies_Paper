@@ -28,6 +28,7 @@ http://www.scholarpedia.org/article/Reinforcement_learning
 https://eng.uber.com/deep-neuroevolution/
 https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 
+
 --------------------------------------------------------------------------------
 
 _Resources explicitely about Encoding-Schemes_
@@ -35,6 +36,7 @@ _Resources explicitely about Encoding-Schemes_
 * https://math.stackexchange.com/questions/3058656/significance-of-encoding-scheme-in-genetic-algorithms
 * https://ieeexplore.ieee.org/document/4414042
 
+  
 --------------------------------------------------------------------------------
 
 * [ ] Yao - Evolving Artificial Neural Networks (**1999**)
@@ -117,6 +119,8 @@ _Resources explicitely about Encoding-Schemes_
       Cited by my resources: 2
       > Read again the good summary of this paper in: https://www.inovex.de/blog/neuroevolution/
       > also called 'EvoCNN'
+* [ ] Liu, Simonyan - Hierarchical Representations for Efficient Architecture Search (**2017**)
+      https://arxiv.org/abs/1711.00436
 * [ ] *Paper* Real, Aggarwal, et al - Regularized Evolution for Image Classifier Architecture Search (**2018**)
       https://arxiv.org/pdf/1802.01548.pdf
 * [ ] Rawal, Miikkulainen - From Nodes to Networks: Evolving Recurrent Neural Networks (**2018**)
