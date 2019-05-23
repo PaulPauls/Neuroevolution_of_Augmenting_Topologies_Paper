@@ -39,7 +39,7 @@ _Resources explicitely about Encoding-Schemes_
   
 --------------------------------------------------------------------------------
 
-* [ ] Yao - Evolving Artificial Neural Networks (**1999**)
+* [X] Yao - Evolving Artificial Neural Networks (**1999**)
       http://avellano.fis.usal.es/~lalonso/compt_soft/articulos/yao99evolving.pdf
 * [ ] Reil - Dynamics of Gene Expression in an Artifical Genome (**1999**)
       http://users.encs.concordia.ca/~kharma/coen6321/Papers/Reil-1999.pdf
@@ -87,7 +87,7 @@ _Resources explicitely about Encoding-Schemes_
       https://arxiv.org/pdf/1712.06567.pdf
 * [ ] Liu, Simonyan, et al - Hierarchical Representations for Efficient Architecture Search (**2017**)
       https://openreview.net/pdf?id=BJQRKzbA-
-* [ ] *Paper* Real, Moore, et al - Large Scale Evolution of Image Classifiers (**2017**)
+* [ ] Real, Moore, et al - Large Scale Evolution of Image Classifiers (**2017**)
       Cited by my resources: 2
       https://arxiv.org/abs/1703.01041
       > Authors employ simple evolutionary techniques at unprecedented scales to discover models for the CIFAR-10 and CIFAR-100 datasets, starting from trivial initial conditions.
