@@ -101,7 +101,7 @@ _Resources explicitely about Encoding-Schemes_
       > "In this paper we have shown that (i) neuro-evolution is capable of constructing large, accurate networks for two challenging and popular image classification benchmarks; 
         (ii) neuro-evolution can do this starting from trivial initial conditions while searching a very large space; (iii) the process, once started, needs no experimenter participation; 
         and (iv) the process yields fully trained models."
-* [ ] *Paper* Miikkulaien, Liang, et al - Evolving Deep Neural Networks (**2017**)
+* [ ] Miikkulaien, Liang, et al - Evolving Deep Neural Networks (**2017**)
       Cited by my resources: 2
       http://nn.cs.utexas.edu/?miikkulainen:chapter18
       https://arxiv.org/pdf/1703.00548.pdf
@@ -111,17 +111,17 @@ _Resources explicitely about Encoding-Schemes_
       > Read again the good summary of this paper in: https://www.inovex.de/blog/neuroevolution/
       > The conclusion of the paper reads as follows: "Evolutionary optimisation makes it possible to construct more complex deep learning architectures than can be done by hand. 
         The topology, components, and hyperparameters of the architecture can all be optimised simultaneously to fit the requirements of the task, resulting in superior performance."
-* [ ] *Paper* Salimans, Ho, et al - Evolution Strategies as a Scalable Alternative to Reinforcement Learning (**2017**)
+* [ ] Salimans, Ho, et al - Evolution Strategies as a Scalable Alternative to Reinforcement Learning (**2017**)
       https://openai.com/blog/evolution-strategies/ 
       https://arxiv.org/abs/1703.03864
-* [ ] *Paper* Sun, Xue - Evolving Deep Convolutional Neural Networks for Image Classification (**2017**)
+* [ ] Sun, Xue - Evolving Deep Convolutional Neural Networks for Image Classification (**2017**)
       https://arxiv.org/abs/1710.10741
       Cited by my resources: 2
       > Read again the good summary of this paper in: https://www.inovex.de/blog/neuroevolution/
       > also called 'EvoCNN'
 * [ ] Liu, Simonyan - Hierarchical Representations for Efficient Architecture Search (**2017**)
       https://arxiv.org/abs/1711.00436
-* [ ] *Paper* Real, Aggarwal, et al - Regularized Evolution for Image Classifier Architecture Search (**2018**)
+* [ ] Real, Aggarwal, et al - Regularized Evolution for Image Classifier Architecture Search (**2018**)
       https://arxiv.org/pdf/1802.01548.pdf
 * [ ] Rawal, Miikkulainen - From Nodes to Networks: Evolving Recurrent Neural Networks (**2018**)
       http://nn.cs.utexas.edu/?rawal:arxiv18
