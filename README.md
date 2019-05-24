@@ -56,8 +56,6 @@ _Resources explicitely about Encoding-Schemes_
       https://www.aaai.org/ojs/index.php/aimagazine/article/view/2156
 * [ ] Floreano, Duerr, Mattiussi - Neuroevolution: From Architectures to Learning (**2008**)
       http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.182.1567
-* [ ] Floreano, Duerr, Mattiussi - Neuroevolution: From Architecture to Learning (**2008**)
-      http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=E4E9EEFA64E5D9C307F6AFB91E9FA210?doi=10.1.1.182.1567&rep=rep1&type=pdf
 * [ ] *Primer* Stanley - Webpage describing HyperNEAT (**2009**)
       https://eplex.cs.ucf.edu/hyperNEATpage/
 * [ ] Stanley, D'Ambrosio, et al - A Hypercube-Based Indirect Encoding for Evolving Large-Scale Neural Networks (**2009**)
@@ -119,8 +117,6 @@ _Resources explicitely about Encoding-Schemes_
       Cited by my resources: 2
       > Read again the good summary of this paper in: https://www.inovex.de/blog/neuroevolution/
       > also called 'EvoCNN'
-* [ ] Liu, Simonyan - Hierarchical Representations for Efficient Architecture Search (**2017**)
-      https://arxiv.org/abs/1711.00436
 * [ ] Real, Aggarwal, et al - Regularized Evolution for Image Classifier Architecture Search (**2018**)
       https://arxiv.org/pdf/1802.01548.pdf
 * [ ] Rawal, Miikkulainen - From Nodes to Networks: Evolving Recurrent Neural Networks (**2018**)
