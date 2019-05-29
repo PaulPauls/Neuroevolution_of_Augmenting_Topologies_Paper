@@ -117,6 +117,8 @@ _Resources explicitely about Encoding-Schemes_
       Cited by my resources: 2
       > Read again the good summary of this paper in: https://www.inovex.de/blog/neuroevolution/
       > also called 'EvoCNN'
+* [ ] *Primer* Stanley - Neuroevolution: A different kind of deep learning (**2017**)
+      https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 * [ ] Real, Aggarwal, et al - Regularized Evolution for Image Classifier Architecture Search (**2018**)
       https://arxiv.org/pdf/1802.01548.pdf
 * [ ] Rawal, Miikkulainen - From Nodes to Networks: Evolving Recurrent Neural Networks (**2018**)
