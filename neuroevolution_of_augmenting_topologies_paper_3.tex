@@ -1,0 +1,214 @@
+% ######################################################################################################################
+
+\documentclass[journal, a4paper]{IEEEtran}
+
+\usepackage{graphicx}       % For graphics, photos, etc
+\usepackage{hyperref}       % For URL and href
+\usepackage{amsmath}        % For advanced mathematical formatting and symbols
+\usepackage{blindtext}      % For placeholder text
+\usepackage{listings}       % For code listings
+\usepackage{color}          % For color
+\usepackage{draftwatermark} % For watermark
+
+\graphicspath{{./images/}}
+
+\definecolor{green}{rgb}{0, 0.66, 0}
+\definecolor{red}{rgb}{1, 0, 0}
+\definecolor{gray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{orange}{rgb}{1, 0.66, 0}
+\definecolor{codebg}{rgb}{0.97, 0.97, 0.97}
+
+\newcommand{\customincludegraphics}[3]{
+    \begin{figure}
+        \includegraphics[width=0.45\textwidth]{{#1}}
+        \caption{{#2}}
+        \label{{#3}}
+    \end{figure}
+}
+ 
+\lstdefinestyle{c-style}{
+  language={[ANSI]C},
+  frame=single,
+  backgroundcolor=\color{codebg},
+  commentstyle=\itshape\color{green},
+  keywordstyle=\color{blue},
+  numberstyle=\tiny\color{gray},
+  stringstyle=\color{orange},
+  basicstyle=\fontsize{7}{7}\ttfamily,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+
+% ######################################################################################################################
+
+\begin{document}
+
+\title{Neuroevolution of Augmenting Topologies}
+\author{Paul Pauls\\
+        Advisor: Michael Adam}
+\markboth{Neuroevolution of Augmenting Topologies}{}
+\maketitle
+
+% Place small Watermark indicating that this is currently a draft in background
+\SetWatermarkText{DRAFT}
+\SetWatermarkScale{0.5}
+
+% While Paper is in development shall I include this table of contents as a quick overview
+\tableofcontents
+
+\begin{abstract}
+    \blindtext
+\end{abstract}
+
+% ######################################################################################################################
+
+\section{Introduction}
+
+\IEEEPARstart{T}{his} shall be my introduction. And this shall be my citation \cite{cite01}.
+\blindtext
+
+
+
+% ######################################################################################################################
+
+\section{Neuroevolution and Evolutionary Algorithms}
+% Check out the research done by Uber-Research
+Neuroevolution is a machine learning technique that applies evolutionary algorithms to construct artificial neural networks, taking inspiration from the evolution of biological nervous systems in nature. \cite{cite02}
+
+A evolutionary algorithm is a generic population-based and meta-heuristically optimized algorithmic solution to an applied problem. When breaking this down to simpler terms, does this mean first of all that an evolutionary algorithm (short form: \textbf{EA}) is simply a solution to an applied problem. This solution can take the form of a classical calculation algorithm or more complex forms like the aforementioned artificial neural network. As generic as its method of solving the problem is, is its application domain. Evolutionary Algorithms - as well as Neuroevolution by which they are employed - are highly general and allow for learning without explicit targets even if provided with only minimal feedback. \cite{cite02}
+
+Evolutionary Algorithms are population-based, meaning they not only handle a single solution to the problem they are applied to, but they have a multitude of solutions to this problem. Each of the solutions is called a \textit{member} of its arbitrarily large population and each solution is arbitrarily similar to one another. Each member of the population is judged by a common \textit{fitness function}, which numerically expresses the members quality of its solution to the applied problem. The higher the corresponding \textit{fitness function} score of a member, the better is the solution to the applied problem. All members are judged by the same fitness function, which is the key hyperparameter that determines how well a problem has been solved.
+
+The key aspect of evolutionary algorithms however lies in its meta-heuristic optimization method. This optimization method improves the members of the population in the sense that along the evolutionary process almost all members of the population score an increasingly higher fitness function evaluation score - meaning they get increasingly better at solving the problem they are applied to.
+This optimization method is employed after each \textit{generation} of a population. A generation in the evolutionary process is completed once every member of the population has been applied to the problem and has been assigned a fitness score by the common fitness function. The population is then mixed up through \textit{reproduction}, \textit{mutation}, \textit{recombination} and \textit{selection}. These processes spread traits of high-performing members to low-performing members, preserve high-performing members while extinguishing low-performing members and introduce novel traits to already high-performing members to further explore the solution-space.
+
+Applying the attributes of Evolutionary Algorithms to artificial Neural Networks does result in the machine learning technique Neuroevolution. Neuroevolution algorithms start out with an initial population of neural networks of varying complexity - meaning topology and weights. The exact nature of this initial population is not stipulated by the Neuroevolution technique and depends on the specific Neuroevolution algorithm. In each generation does each neural network member perform input inference and is subsequently judged by the fitness function. The best scoring neural networks spread their traits to lower scoring neural network. Fixed-Topology Neuroevolution algorithms solely adjust the weights of the lower scoring neural networks towards the higher scoring networks while Topology and Weight Evolving Artificial Neural Network algorithms (short form: \textbf{TWEANNs}) additionally also adjust the topology. They introduce new nodes and connections or delete nodes and connections in the low scoring neural networks depending on if they are present in the better scoring neural networks or introduce completely novel nodes and connections in order to explore new, possibly even better performing, solutions.
+Through this do neural networks developed through Neuroevolution algorithms often have arbitrary neural models and network structures and are able to progress in learning even without explicit targets and only sparse feedback.
+
+While concluding this introduction to Neuroevolution can be said that Neuroevolution can be classified as part of the machine learning paradigm of \textit{Reinforcement Learning}. Neuroevolution algorithms learn through ever-changing interaction with the environment instead of a predetermined set of input-output mapping or creative self-organization of input through probabilistic models. Neuroevolution algorithms learn from the consequence of their actions on the basis of their past experiences and also by new choices - quite accurately conforming with the definition of Reinforcement learning.
+
+
+\subsection{Landmark Research in Neuroevolution}
+% https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
+% Past and Current Research in Neuroevolution (Also specify the explicit Neuroevolution algorithms when getting to the specific research (NEAT, HyperNEAT, DeepNeurevolution, etc))
+% Include comparison with other Reinforcement Learning Techniques (Deep Q-Learning, etc)
+
+
+
+
+
+
+
+
+% - NEAT (2002): https://www.mitpressjournals.org/doi/abs/10.1162/106365602320169811
+% - HyperNEAT (2009): https://eplex.cs.ucf.edu/hyperNEATpage/
+% - Novelty Search (2011): https://eplex.cs.ucf.edu/noveltysearch/userspage/
+
+
+
+
+
+
+
+
+% ######################################################################################################################
+
+\section{NeuroEvolution of Augmenting Topologies (NEAT)}
+
+\subsection{<Section Introduction>}
+
+\subsection{Key Aspects of NEAT and Differences to Preceding Neuroevolution}
+% Speciation, Historical Markings, Minimal Initial Pop, See Key Elements identified through ablation (http://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf)
+
+\subsection{Performance of NEAT}
+% NOT SURE YET IF I SHOULD KEEP THIS CHAPTER
+% Chap 4 (Performance) of original Paper (http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf)
+
+\subsection{Variants and Advancements of NEAT}
+% Follow Up Research and Variants (HyperNeat, adaptive HyperNeat, etc)
+
+
+
+% ######################################################################################################################
+
+\section{Applications of NEAT}
+% Go especially into detail what Stanley considered great NEAT applications in his reddit AMA
+% Introduce my own code accompanying this paper
+
+
+
+% ######################################################################################################################
+
+\section{Conclusions}
+
+\blindtext
+
+
+
+% ######################################################################################################################
+
+\begin{thebibliography}{5}
+
+  \bibitem{cite01}
+    Example Cite, {\em Source}, Apr. 2019.
+    \url{www.example.com}
+
+
+
+Yao - Evolving Artificial Neural Networks
+Stanley, Miikkulainen - Efficient Evolution of Neural Network Topologies
+Stanley, Miikkulainen - Evolving Neural Networks through Augmented Topologies
+Geard, Wiles - Structure and Dynamics of a Gene Network Model Incorporating Small RNAs
+Stanley - Efficient Evolution of Neural Networks through Complexification
+Reisinger, Miikkulainen - Acquiring Evolvability through Adaptive Representations
+Mattiussi, Duerr, et al - Center of Mass Encoding
+Floreano, Duerr, et al - Neuroevolution: From Architectures to Learning
+Stanley, D’Ambrosio, et al - A Hypercube-Based Indirect Encoding for Evolving Large-Scale Neural Networks
+Risi, Stanley - Enhancing ES-HyperNEAT to Evolve More Complex Regular Neural Networks
+Lehman, Stanley - Novelty Search and the Problem with Objectives
+Pascanu, Ganguli, et al - On the Saddle Point for Non-Convex Optimization
+Kim, Minyoung, et al - Deep Clustered Convolutional Kernels
+Fernando, Banarse, et al - Convolution by Evolution
+Jaderberg, Dalibard, et al - Population Based Training of Neural Networks
+Salimans, Ho - Evolution Strategies as a Scalable Alternative to Reinforcement Learning
+Liu, Simonyan, et al - Hierarchical Representation for Efficient Architecture Search
+Real, Moore, et al - Large-scale Evolution of Image Classifiers
+Miikkulainen, Liang, et al -  Evolving Deep Neural networks
+Xie, Yuille - Genetic CNN
+Brock, Lim, et al - One-shot Model Architecture Search through Hypernetworks
+Negrinho, Gordon - Deeparchitect: Automatically Designing and Training Deep Architectures
+Zoph, Vasudevan, et al - Learning Transferable Architectures or Scalable Image Recognition
+Zhong, Yan, et al - Practical Network Blocks Design with Q-Learning
+Zhang, Clune, et al - On the Relationship Between the OpenAI Evolution Strategy and Stochastic Gradient Descent
+Real, Aggarwal, et al - Regularized Evolution for Image Classifier Architecture Search
+Conti, Madhavan, et al - Improving Exploration in Evolution Strategies for Deep Reinforcement Learning via a Population of Novelty Seeking Agents
+Lehman, Chen, et al - ES is More than Just a Traditional Finite-Difference Approximator
+Miikkulainen, Liang, et al - Evolving Deep Neural Networks
+Rawal, Miikkulainen - From Nodes to Networks
+Such, Madhavan, et al - Deep Neuroevolution
+Zhong, Yan, et al - Practical Block-Wise Neural Network Architecture Generation
+Sun, Xue, et al - Evolving Deep Convolutional Neural Networks for Image Classification
+https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies
+http://www.scholarpedia.org/article/Reinforcement_learning
+http://www.scholarpedia.org/article/Neuroevolution
+http://www.scholarpedia.org/article/Evolutionary_programming
+http://www.scholarpedia.org/article/Genetic_algorithms
+https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
+https://openai.com/blog/evolution-strategies/
+https://eng.uber.com/deep-neuroevolution/
+https://eng.uber.com/accelerated-neuroevolution/
+
+
+
+
+\end{thebibliography}
+
+\end{document}
