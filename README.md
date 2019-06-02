@@ -13,33 +13,7 @@ Feedback welcome.
 
 #### Very Important Resources ##################################################
 
-_Open Tabs_
-https://en.wikipedia.org/wiki/Evolutionary_algorithm
-https://en.wikipedia.org/wiki/Genetic_algorithm
-https://en.wikipedia.org/wiki/Neuroevolution
-https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies
-https://en.wikipedia.org/wiki/Reinforcement_learning
-
-http://www.scholarpedia.org/article/Neuroevolution
-http://www.scholarpedia.org/article/Reinforcement_learning
-
-<Created Papers up to now>
-
-https://eng.uber.com/deep-neuroevolution/
-https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
-
-
---------------------------------------------------------------------------------
-
-_Resources explicitely about Encoding-Schemes_
-* https://www.obitko.com/tutorials/genetic-algorithms/encoding.php
-* https://math.stackexchange.com/questions/3058656/significance-of-encoding-scheme-in-genetic-algorithms
-* https://ieeexplore.ieee.org/document/4414042
-
-  
---------------------------------------------------------------------------------
-
-* [X] Yao - Evolving Artificial Neural Networks (**1999**)
+* [ ] Yao - Evolving Artificial Neural Networks (**1999**)
       http://avellano.fis.usal.es/~lalonso/compt_soft/articulos/yao99evolving.pdf
 * [ ] Reil - Dynamics of Gene Expression in an Artifical Genome (**1999**)
       http://users.encs.concordia.ca/~kharma/coen6321/Papers/Reil-1999.pdf
@@ -129,7 +103,7 @@ _Resources explicitely about Encoding-Schemes_
       https://arxiv.org/abs/1804.09081
 * [ ] Duerr, Mattiussi, et al - Neuroevolution with Analog Genetic Encoding
       https://infoscience.epfl.ch/record/87949/files/DuerrMattiussiFloreano2006_PPSNIX_NeuroAGE.pdf
-* [0] *Primer* Neuroevolution: A Primer On Evolving Artificial Neural Networks (**2018**)
+* [ ] *Primer* Neuroevolution: A Primer On Evolving Artificial Neural Networks (**2018**)
       [Difficulty: Medium, Audience: Advanced, Quality: 5/5]
       https://www.inovex.de/blog/neuroevolution/
       > References: Large Scale Evolution of Image Classifiers, Evolving Deep Neural Networks
@@ -140,7 +114,7 @@ _Resources explicitely about Encoding-Schemes_
 
 * [ ] *Primer* Stanley - Competitive Coevolution through Evolutionary Complexification (**2004**)
       https://www.cs.cmu.edu/afs/cs/project/jair/pub/volume21/stanley04a-html/jairhtml.html
-* [1] *Blogpost* 2017, The Year of Neuroevolution (**2017**)
+* [ ] *Blogpost* 2017, The Year of Neuroevolution (**2017**)
       (Difficulty: Easy, Audience: Overview, Quality: 3/5)
       https://medium.com/@moocaholic/2017-the-year-of-neuroevolution-30e59ae8fe18
       > Based on: 'Evolution Strategies as a Scalable Alternative to Reinforcement Learning' (Background Knowledge)
@@ -155,16 +129,16 @@ _Resources explicitely about Encoding-Schemes_
         in Super Neural Networks
 * [ ] *Primer* Stanley - Neuroevolution: A different kind of deep learning (**2017**)
       https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
-* [1] *Blogpost* Introduction to Evolutionary Algorithms (**2018**)
+* [ ] *Blogpost* Introduction to Evolutionary Algorithms (**2018**)
       (Difficulty: Very Easy, Audience: Beginners, Quality: 3/5)
       https://towardsdatascience.com/introduction-to-evolutionary-algorithms-a8594b484ac
-* [0] *Blogpost* Deep Neuroevolution: Genetic Algorithms are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning (**2018**)
+* [ ] *Blogpost* Deep Neuroevolution: Genetic Algorithms are a Competitive Alternative for Training Deep Neural Networks for Reinforcement Learning (**2018**)
       https://towardsdatascience.com/deep-neuroevolution-genetic-algorithms-are-a-competitive-alternative-for-training-deep-neural-822bfe3291f5
       > Mostly referencing and Summarizing Uber's (Deep / Accelerated - Neuroevolution) and OpenAI's (Evolution Strategies as a scalable Alternative to Reinforcement Learning) research 
       > These results indicate that GAs (and RS) are not all out better or worse than other methods of optimising DNN, but that they are a competitive alternative that one can add to their RL tool belt.
         Like OpenAI, they state that although DNNs don't struggle with local optima in supervised learning, they can still get into trouble in RL tasks due to a deceptive or sparse reward signal. 
         It is for this reason that non gradient based methods such as GAs can perform well compared to other popular algorithms in RL.
-* [0] *Primer* Neuroevolution: A Primer On Evolving Artificial Neural Networks (**2018**)
+* [ ] *Primer* Neuroevolution: A Primer On Evolving Artificial Neural Networks (**2018**)
       [Difficulty: Medium, Audience: Advanced, Quality: 5/5]
       https://www.inovex.de/blog/neuroevolution/
       > References: Large Scale Evolution of Image Classifiers, Evolving Deep Neural Networks
@@ -175,7 +149,7 @@ _Resources explicitely about Encoding-Schemes_
 
 * [ ] *Podcast* Stanleys Podcast about NEAT (**2018**)
       https://twimlai.com/twiml-talk-94-neuroevolution-evolving-novel-neural-network-architectures-kenneth-stanley/
-* [1] *Blogpost* NEAT, An Awesome Approach to NeuroEvolution (**2019**)
+* [ ] *Blogpost* NEAT, An Awesome Approach to NeuroEvolution (**2019**)
       (Difficulty: Easy, Audience: Beginners, Quality: 4/5)
       https://towardsdatascience.com/neat-an-awesome-approach-to-neuroevolution-3eca5cc7930f
       > NEAT's original paper focused solely on evolving dense neural networks node by node and connection by connection
@@ -185,7 +159,7 @@ _Resources explicitely about Encoding-Schemes_
       > The NEAT algorithm chooses a direct encoding methodology because of this. Their representation is a little more complex than a simple graph 
         or binary encoding, however, it is still straightforward to understand. It simply has two lists of genes, a series of nodes and a series of connections.
       > Cites: 'Evolving Deep Neural Networks'
-* [1] *Blogpost* HyperNEAT: Powerful, Indirect Neural Network Evolution (**2019**)
+* [ ] *Blogpost* HyperNEAT: Powerful, Indirect Neural Network Evolution (**2019**)
       (Difficulty: Easy, Audience: Beginners, Quality: 3/5)
       https://towardsdatascience.com/hyperneat-powerful-indirect-neural-network-evolution-fba5c7c43b7b
       > DNA is an indirect encoding because the phenotypic results (what we actually see) are orders of magnitude larger than the genotypic content (the genes in the DNA). 
