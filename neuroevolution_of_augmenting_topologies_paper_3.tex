@@ -83,21 +83,6 @@
 % Check out the research done by Uber-Research
 
 
-Neuroevolution is a machine learning technique that applies evolutionary algorithms to construct artificial neural networks, taking inspiration from the evolution of biological nervous systems in nature. \cite{cite02}
-
-A evolutionary algorithm is a generic population-based and meta-heuristically optimized algorithmic solution to an applied problem. When breaking this down to simpler terms, does this mean first of all that an evolutionary algorithm (short form: \textbf{EA}) is simply a solution to an applied problem. This solution can take the form of a classical calculation algorithm or more complex forms like the aforementioned artificial neural network. As generic as its method of solving the problem is, is its application domain. Evolutionary Algorithms - as well as Neuroevolution by which they are employed - are highly general and allow for learning without explicit targets even if provided with only minimal feedback. \cite{cite02}
-
-Evolutionary Algorithms are population-based, meaning they not only handle a single solution to the problem they are applied to, but they have a multitude of solutions to this problem. Each of the solutions is called a \textit{member} of its arbitrarily large population and each solution is arbitrarily similar to one another. Each member of the population is judged by a common \textit{fitness function}, which numerically expresses the members quality of its solution to the applied problem. The higher the corresponding \textit{fitness function} score of a member, the better is the solution to the applied problem. All members are judged by the same fitness function, which is the key hyperparameter that determines how well a problem has been solved.
-
-The key aspect of evolutionary algorithms however lies in its meta-heuristic optimization method. This optimization method improves the members of the population in the sense that along the evolutionary process almost all members of the population score an increasingly higher fitness function evaluation score - meaning they get increasingly better at solving the problem they are applied to.
-This optimization method is employed after each \textit{generation} of a population. A generation in the evolutionary process is completed once every member of the population has been applied to the problem and has been assigned a fitness score by the common fitness function. The population is then mixed up through \textit{reproduction}, \textit{mutation}, \textit{recombination} and \textit{selection}. These processes spread traits of high-performing members to low-performing members, preserve high-performing members while extinguishing low-performing members and introduce novel traits to already high-performing members to further explore the solution-space.
-
-Applying the attributes of Evolutionary Algorithms to artificial Neural Networks does result in the machine learning technique Neuroevolution. Neuroevolution algorithms start out with an initial population of neural networks of varying complexity - meaning topology and weights. The exact nature of this initial population is not stipulated by the Neuroevolution technique and depends on the specific Neuroevolution algorithm. In each generation does each neural network member perform input inference and is subsequently judged by the fitness function. The best scoring neural networks spread their traits to lower scoring neural network. Fixed-Topology Neuroevolution algorithms solely adjust the weights of the lower scoring neural networks towards the higher scoring networks while Topology and Weight Evolving Artificial Neural Network algorithms (short form: \textbf{TWEANNs}) additionally also adjust the topology. They introduce new nodes and connections or delete nodes and connections in the low scoring neural networks depending on if they are present in the better scoring neural networks or introduce completely novel nodes and connections in order to explore new, possibly even better performing, solutions.
-Through this do neural networks developed through Neuroevolution algorithms often have arbitrary neural models and network structures and are able to progress in learning even without explicit targets and only sparse feedback.
-
-While concluding this introduction to Neuroevolution can be said that Neuroevolution can be classified as part of the machine learning paradigm of \textit{Reinforcement Learning}. Neuroevolution algorithms learn through ever-changing interaction with the environment instead of a predetermined set of input-output mapping or creative self-organization of input through probabilistic models. Neuroevolution algorithms learn from the consequence of their actions on the basis of their past experiences and also by new choices - quite accurately conforming with the definition of Reinforcement learning.
-
-
 \subsection{Evolutionary Algorithms}
 
 
@@ -120,6 +105,10 @@ While concluding this introduction to Neuroevolution can be said that Neuroevolu
 \section{NeuroEvolution of Augmenting Topologies (NEAT)}
 
 <Section Introduction>
+
+Neuroevolution of Augmenting Topologies (short form: NEAT) was first introduced in the paper "Evolving Neural Networks through Augmenting Topologies" by Kenneth O.Stanley and Risto Miikkulainen in the year 2002. [cite] It was finalized and shown to be superior to any preceding neuroevolution algorithm in Stanley's PhD thesis "Efficient Evolution of Neural Networks through Complexification" in 2004. [cite]
+
+
 
 At time of envisioning of NEAT was Neuroevolution most promising learning approach. Still is powerful today (see rea17/19)
 "NE is a promising approach to learning behavioral policies and finds solutions faster than leading RL methods on many benchmark tasks (Gomez 2003; Moriarty and Miikkulainen 1997)" \cite{sta04}
