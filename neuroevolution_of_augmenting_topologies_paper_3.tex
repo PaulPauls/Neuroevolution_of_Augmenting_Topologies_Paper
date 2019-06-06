@@ -75,6 +75,8 @@
 \IEEEPARstart{T}{his} shall be my introduction. And this shall be my citation \cite{cite01}.
 \blindtext
 
+% CHECK: HAVE I REMOVED ALL PERSONAL ADRESSING (I, MY, etc) FROM THIS PAPER AND IS IT WRITTEN SCIENTIFICALLY/NEUTRAL?
+
 
 
 % ######################################################################################################################
@@ -87,13 +89,28 @@ To better characterize neuroevolution is it best to first roughly categorize it,
 
 
 
-\subsection{Evolutionary Algorithms}
+\subsection{Evolutionary and Genetic Algorithms}
 
-A evolutionary algorithm is defined as 'a generic population-based and meta-heuristically optimized algorithmic solution to an applied problem' \href{https://en.wikipedia.org/wiki/Evolutionary_algorithm}{[cite]}.
+A evolutionary algorithm (short form: EA)is defined as 'a generic, population-based and meta-heuristically optimized algorithmic solution to an applied problem' \href{https://en.wikipedia.org/wiki/Evolutionary_algorithm}{[cite]}. When breaking this complex definition down into simpler terms, is the first thing that should be clarified about EAs the fact that they are no algorithmic solution to the applied problem in and of themselves per se, but rather that they are meta-algorithms that create another optimized algorithm, which then solves the applied problem. An evolutionary algorithm therefore encodes a method of how to come up with the best solution to an algorithmic problem.
+
+Evolutionary algorithms set out to finding this best algorithmic solution through a \textit{population-based} method. This means that EAs manage an arbitrary variety of algorithmic solutions - all of which differ and solve the applied problem with various grades of accuracy or fitness scoring. Each of these algorithmic solutions is called a \textit{member} of the evolutionary algorithms' \textit{population} and is potentially the best algorithmic solution (the best member) that is eventually returned. To determine the best member of the population does the evolutionary algorithm assign each member a \textit{fitness score} after it is created. In the context of neuroevolution for example is this fitness score calculated by judging the accuracy of the artificial neural network or it is calculated by the fitness function in case of an environment embedded agent.
+
+However, the question remains how the members of population are created in a sensible way so that they may represent a reasonable algorithmic solution to the problem and eventually an optimized one. This is the point at which the EAs' aspect of \textit{meta-heuristic optimization} comes into play. Each new member in a population is conceived by recombining and/or mutating a single or multiple existing members of the population. Presuming that additionally the single or multiple existing members that are recombined and/or mutated to create the new member are chosen to be the highest fitness scoring members (the \textit{fittest} members), does the process constitute an optimization procedure resembling Darwinian evolution. Therefore can be said that evolutionary algorithms breed increasingly optimized algorithmic solution through evolutionary intercombination of existing algorithmic solutions - therefore representing the mentioned optimization process. 
+
+The possible methods of intercombination between existing members are also inspired by biological evolution, such as reproduction, mutation, recombination and selection. For the sake of brevity will only the following chapter \ref{ch:neuroevolution} explain those intercombination methods as they apply to neuroevolution algorithms and no general explanation of those methods be given. The mentioned optimization process achieved through these intercombination methods is considered \textit{meta-heuristic} because the optimization process is possible with incomplete or imperfect information or limited computational capacity. Thus even when the feedback - meaning the ability to determine a sensible fitness score through accuracy measurement or similar - of the applied problem is limited or sparse, is fruitful traversal across the search-space through e.g. a lucky mutation feasible.
 
 
 
-\subsection{Neuroevolution}
+
+
+% Check for pictures on correspondingwikipedia pages or illustrations folder that I might use
+
+\subsection{Neuroevolution}\label{ch:neuroevolution}
+
+% Explain intercombinatin methods reproduction, mutation, recombination and selection
+% mention in the context of explaining 'reproduction' how the initial population is formed
+% mention in the context of explaining 'selection' what a 'generation' is
+
 
 
 \subsection{Landmark Research in Neuroevolution}
