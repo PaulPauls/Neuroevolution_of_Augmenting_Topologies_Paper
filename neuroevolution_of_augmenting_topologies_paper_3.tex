@@ -18,12 +18,7 @@
 \definecolor{orange}{rgb}{1, 0.66, 0}
 \definecolor{codebg}{rgb}{0.97, 0.97, 0.97}
 
-\newcommand{\customincludegraphics}[3]{
-    \begin{figure}
-        \includegraphics[width=0.45\textwidth]{{#1}}
-        \caption{{#2}}
-        \label{{#3}}
-    \end{figure}
+\newcommand{\customincludegraphics}[2]{
 }
  
 \lstdefinestyle{c-style}{
@@ -103,7 +98,7 @@ Finally can be said that the evolutionary algorithms population-based methodolog
 
 Genetic algorithms (short form: GAs) are evolutionary algorithms whose members are not saved as algorithms in memory, but as genetic-like encodings which can then be translated into algorithms by a user-specified component of the genetic algorithm. To give an example, a genetic algorithm trying to find the best search algorithm would not represent a member as e.g. the Quicksort algorithm itself in memory, but e.g. as a series of four different digits which would then in turn translate into the Quicksort algorithm.
 
-The defining advantage of genetic algorithms by representing members as a genetic-like encoding instead of an algorithm in memory is that intercombination methods like mutation and recombination - central aspects of evolutionary algorithms - are vastly easier on relatively simple genetic encodings than on complex specified algorithms. Figure [ref, the competing conventions problem in color], though actually illustrating the 'Competing Conventions Problem', also illustrates well how such a complex algorithm as an artificial neural network is significantly simpler represented as a genetic encoding and how such a genetic encoding can be vastly easier recombined than the algorithm itself.
+The defining advantage of genetic algorithms by representing members as a genetic-like encoding instead of an algorithm in memory is that intercombination methods like mutation and recombination - central aspects of evolutionary algorithms - are vastly easier on relatively simple genetic encodings than on complex specified algorithms. Figure \ref{ill:comp_conv}, though actually illustrating the 'Competing Conventions Problem', also illustrates well how such a complex algorithm as an artificial neural network is significantly simpler represented as a genetic encoding and how such a genetic encoding can be vastly easier recombined than the algorithm itself.
 
 
 
@@ -151,6 +146,14 @@ At time of envisioning of NEAT was Neuroevolution most promising learning approa
 
 \subsection{Key Aspects of NEAT and Differences to Preceding Neuroevolution}
 % Solving Competing Convetions, Speciation, Historical Markings, Minimal Initial Pop, See Key Elements identified through ablation (http://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf)
+
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{{Competing_Conventions_Crossover_-_sta02_2}}
+    \caption{Illustration of the 'Competing Conventions Problem'. (Source: \cite{sta02_2})}
+    \label{ill:comp_conv}
+\end{figure}
+
+
 
 \subsection{Performance of NEAT}
 % Include traditional NEAT performance but also NEAT performance in more current examples
