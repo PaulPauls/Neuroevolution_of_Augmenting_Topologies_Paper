@@ -127,7 +127,7 @@ All those Details of the neuroevolution process, e.g. how the encoding scheme sp
 
 
 
-\subsubsection{Landmark Research in Neuroevolution}
+\subsection{Landmark Research in Neuroevolution}
 % https://www.inovex.de/blog/neuroevolution/
 % https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 % https://en.wikipedia.org/wiki/Evolutionary_algorithm
@@ -147,24 +147,43 @@ All those Details of the neuroevolution process, e.g. how the encoding scheme sp
 
 % Neurevolution first gained significatn traction in the reserach commmunity with NEAT, as it was the first to address fundamental shortcomings from which earlier research suffered (e.g. ... https://en.wikipedia.org/wiki/Neuroevolution)
 
-NEAT
+%##################
+% From OReilly Blog: In 1999, I started to think seriously about neuroevolution as an early Ph.D. student at the University of Texas at Austin in the research group of Professor Risto Miikkulainen, where several important fixed-topology algorithms had already been invented (such as the SANE and ESP algorithms from David Moriarty and Faustino Gomez, both in collaboration with Risto Miikkulainen). These algorithms were already quite clever, investigating the idea that the individual neurons of a network might be evolved in their own subpopulations to cooperate with other neurons, and then grouped with neurons from other subpopulations to form full working networks, an idea generally known as “cooperative coevolution.”
+
+%Arriving on the scene in the midst of these developments, I was enchanted with the idea that the evolution of brains could happen inside a computer. I appreciated the importance of evolving ANNs to solve problems, but my real passion lay with the idea of increasing complexity over evolution. I wanted to build an algorithm that would enable ANNs to explode in complexity inside the computer, echoing the evolution of brains in nature. For some reason, even though existing TWEANN algorithms could change the architecture of evolving ANNs over time, they seemed to lack the strong propensity toward increasing complexity that I hoped to capture.
+
+%I spent a lot of time studying existing TWEANN algorithms and thinking about why they might not be working as well as they could. Some problems were well known, such as the competing conventions problem, which refers to the fact that it is hard to combine two parent ANNs to create an offspring (an operation called “crossover”). More specifically, different networks might express the same functionality with different combinations of connections weights, making it hard to know how to combine them as parents.
+%########
+
+% Mention move from non-TWEANNs to TWEANNs and how nowadays SGD like backpropagation is generally preferred for weight adaptation, though currenlty there is a consesus in the neuroevolution community thata combined approach is the most promising (Evolce and Transfer weights roughly, finetun with SGD)
+
+NEAT (2002)
 % Neat and its variants (rtNeat, odNEAT, etc) from which only HyperNEAT survived being an actual game changer and again being developed by Stanley
 
-HyperNEAT
+HyperNEAT (2009)
 
 ES-HyperNEAT
 
 Novelty Search
+% Novelty search is another invention that abandons the goal to maximise a fitness function. Instead, it rewards individuals that behave differently. This change often leads to much better solutions in the end because novel solutions perform badly in the beginning and need time to fully manifest their potential.
 
-Uber Research
+Coevolution DeepNEAT (2017)
+% Miikkulainen, Liang - Evolving Deep Neural Networks
+% See innovex summary
 
-Deep Neuroevolution (by Miikkulainen)
+Uber Research (2017/2018)
 
-EvoCNN
+EvoCNN (2017/2019)
+% Sun, Xue - Evolving Deep Convolutional Neural Networks for Image classification
+% see innovex summary
 
-real17
+real17 (2017)
 
-real19
+% Include progress picture of the population of image classifier over time
+
+real19 (2019)
+
+% Include the comparison picture of NE vs RL vs RS
 
 
 
