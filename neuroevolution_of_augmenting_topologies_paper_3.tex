@@ -81,7 +81,7 @@
 
 Neuroevolution is a form of evolutionary algorithm that generates specific artificial neural networks (short form: ANN) through modification of its parameters, topology and rules in order to maximize the ANN's accuracy or fitness score. The neuroevolution algorithm seeks to modify the ANN in an evolutionary process similar to the Darwinian process that produced human brains and its process-summarizing maxim 'survival of the fittest'. First methods using neuroevolution can be traced back to the 1980s and 1990s \href{https://www.inovex.de/blog/neuroevolution/}{[cite]}, while the first evolutionary algorithms were conceived in the 1950s by Alan Turing and Nils Barricelli. \href{https://en.wikipedia.org/wiki/Genetic_algorithm#cite_note-mind.oxfordjournals.org-33}{[cite]}
 
-To better characterize neuroevolution is it best to first roughly categorize it, whereupon in the following sections the categories are defined in detail. A \textit{neuroevolution algorithm} is a \textit{genetic algorithm}, whose search-space (or genotypes) consist only of artificial neural networks. A \textit{genetic algorithm} in turn is a \textit{evolutionary algorithm} that evolves genotypes - genetically encoded representations of the actual solution (phenotype) - through mutation, recombination and selection.
+To better characterize neuroevolution is it best to first roughly categorize it, whereupon the following sections describe the categories in detail. A \textit{neuroevolution algorithm} is a \textit{genetic algorithm}, whose search-space (or genotypes) consist only of artificial neural networks. A \textit{genetic algorithm} in turn is a \textit{evolutionary algorithm} that evolves genotypes - genetically encoded representations of the actual solution (phenotype) - through mutation, recombination and selection.
 
 
 
@@ -89,11 +89,11 @@ To better characterize neuroevolution is it best to first roughly categorize it,
 
 A evolutionary algorithm (short form: EA) is defined as 'a generic population-based and meta-heuristically optimized algorithmic solution to an applied problem' \href{https://en.wikipedia.org/wiki/Evolutionary_algorithm}{[cite]}. When breaking this complex definition down into simpler terms, is the first thing that should be clarified about EAs the fact that they are no algorithmic solution to the applied problem in and of themselves per se, but rather that they are meta-algorithms that create another optimized algorithm, which then solves the applied problem. An evolutionary algorithm therefore encodes a method of how to come up with the best solution to an algorithmic problem.
 
-Evolutionary algorithms set out to finding this best algorithmic solution through a \textit{population-based} method. This means that EAs manage an arbitrary variety of algorithmic solutions - all of which differ and solve the applied problem with various grades of accuracy or fitness scoring. Each of these algorithmic solutions is called a \textit{member} of the evolutionary algorithms' population and is potentially the best algorithmic solution - the best member - that is eventually returned. To determine the best member of the population does the evolutionary algorithm assign each member a \textit{fitness score} after it is created. In the context of neuroevolution for example is this fitness score calculated by judging the accuracy of the artificial neural network or it is calculated by the fitness function in case of an environment embedded agent.
+Evolutionary algorithms set out to finding this best algorithmic solution through a \textit{population-based} method. This means that EAs manage an arbitrary variety of algorithmic solutions - all of which differ and solve the applied problem with various grades of accuracy or fitness scoring. Each of these algorithmic solutions is called a \textit{member} of the evolutionary algorithms' population and is potentially the best algorithmic solution - the best member in other words - that is eventually returned. To determine the best member of the population does the evolutionary algorithm assign each member a \textit{fitness score} after it is created. In the context of neuroevolution for example is this fitness score calculated by judging the accuracy of the artificial neural network or it is calculated by the fitness function in case of an environment embedded agent.
 
 However, the question remains how the members of the population are created in a sensible way so that they may represent a reasonable algorithmic solution to the problem and eventually an optimized one. This is the point at which the EAs' aspect of \textit{meta-heuristic optimization} comes into play. Each new member in a population is conceived by recombining and/or mutating a single or multiple existing members of the population. Presuming that additionally the single or multiple existing members that are recombined and/or mutated to create the new member are chosen to be the highest fitness scoring members (a.k.a. the \textit{fittest} members), does the process constitute an optimization procedure resembling Darwinian evolution. Therefore can be said that evolutionary algorithms breed increasingly optimized algorithmic solution through evolutionary intercombination of existing algorithmic solutions - hence representing the mentioned optimization process. 
 
-The possible methods of intercombination between existing members are also inspired by biological evolution, such as mutation, recombination and selection. For the sake of brevity will only the following chapter \ref{ch:neuroevolution} explain those intercombination methods as they apply to neuroevolution algorithms and no general explanation of those methods be given. The mentioned optimization process achieved through these intercombination methods is considered \textit{meta-heuristic} because the optimization process is possible with incomplete or imperfect information or limited computational capacity. Thus even when the feedback - meaning the ability to determine a sensible fitness score through accuracy measurement or similar - of the applied problem is limited or sparse, is fruitful traversal across the search-space through e.g. a lucky mutation feasible.
+The possible methods of intercombination between existing members are inspired by biological evolution, such as mutation, recombination and selection. For the sake of brevity will only the subsequent chapter \ref{ch:neuroevolution} explain those intercombination methods in detail and how they apply to neuroevolution algorithms. The mentioned optimization process achieved through these intercombination methods is considered \textit{meta-heuristic} because the optimization process is possible with incomplete or imperfect information or limited computational capacity. Thus even when the feedback - meaning the ability to determine a sensible fitness score through accuracy measurement or similar - of the applied problem is limited or sparse, is fruitful traversal across the search-space through e.g. a lucky mutation feasible.
 
 Finally can be said that the evolutionary algorithms population-based methodology is considered \textit{generic} because it does not dictate how the members of the population are encoded. Though an evolutionary algorithm needs to eventually return an algorithmic solution to the applied problem, does it not dictate that the members are algorithms in memory, nor that they even need to be in algorithmic form when they are given a fitness score. This is were genetic algorithms come into play.
 
@@ -101,9 +101,9 @@ Finally can be said that the evolutionary algorithms population-based methodolog
 
 \subsection{Genetic Algorithms}
 
-Genetic algorithms (short form: GAs) are evolutionary algorithms whose members are not saved as algorithms in memory, but as genetic-like encodings which can then be translated into algorithms by a user-specified component of the genetic algorithm. The genetic-like encoded member in a GA is called \textit{genotype}, whereas its corresponding translated algorithm is called \textit{phenotype} To give an example, a genetic algorithm trying to find the best search algorithm would not represent a member as e.g. the Quicksort algorithm itself in memory, but e.g. as a series of four different characters which would then in turn translate into the Quicksort algorithm. Its genotype would be the character-string (e.g. "ACGCUG..."), while its phenotype would be the explicit search algorithm in code.
+Genetic algorithms (short form: GAs) are evolutionary algorithms whose members are not saved as algorithms in memory, but as genetic-like encodings which can then be translated into algorithms by a user-specified component of the genetic algorithm. The genetic-like encoded member in a GA is called \textit{genotype}, whereas its corresponding translated algorithm is called \textit{phenotype} To give an example, a genetic algorithm trying to find the best search algorithm would not represent a member such as the Quicksort algorithm itself in memory, but as a series of four different characters which would then in turn translate into the Quicksort algorithm. Its genotype could be a character-string such as "ACGCUG...", while its phenotype would be the explicit search algorithm in code.
 
-The defining advantage of genetic algorithms by representing members as a genetic-like encoding instead of an algorithm in memory is that intercombination methods like mutation and recombination - central aspects of evolutionary algorithms - are vastly easier on relatively simple genetic encodings than on complex specified algorithms. Figure \ref{ill:comp_conv}, though actually illustrating the 'Competing Conventions Problem', also illustrates well how such a complex algorithm as an artificial neural network is significantly simpler represented as a genetic encoding and how such a genetic encoding can be vastly easier recombined than the algorithm itself.
+The defining advantage of genetic algorithms by representing members as a genetic-like encoding instead of an algorithm in memory is that intercombination methods like mutation and recombination - central aspects of evolutionary algorithms - are vastly easier and faster on relatively simple genetic encodings than on complex specified algorithms. Figure \ref{ill:comp_conv}, though actually illustrating the 'Competing Conventions Problem', also illustrates well how such a complex algorithm as an artificial neural network is significantly simpler represented as a genetic encoding and how such a genetic encoding can be vastly easier recombined than the algorithm itself.
 
 
 
@@ -121,14 +121,13 @@ The intercombinatory method of \textit{mutation} in the context of Neuroevolutio
 
 The intercombinatory method of \textit{recombination} in the context of Neuroevolution means that the genotype of two or more arbitrary (though most often high performing) members are combined, forming a new member. This is done in the hopes that those parts of the genotype that encode member-distinct features combine into the newly created genotype and encode an ANN that performs even better than both \textit{parent}-members in isolation. An example of such a recombination, though an impaired one as the figure actually represents the flawed process of the 'Competing Conventions Problem', can be seen in figure \ref{ill:comp_conv}. Again is the manner and probability in which this modification is performed completely up to the implementation specifics of the respective neuroevolution algorithm.
 
-Lastly is the intercombinatory method of \textit{selection}. As previously defined does the process of neuroevolution work on populations; these however are often of fixed size in most neuroevolution algorithms. The purpose of this restriction is to force the neuroevolution process to remove low performing members from the population and therefore the gene pool from which possible parents for intercombination are chosen, by only allowing a limited number of members to exist. Once all members of the population have been assigned a fitness score, is this current state of the population considered a specific \textit{generation}. The method of \textit{selection} then removes certain members of the population while the intercombinatory methods of mutation and recombination add new members to the population and the whole population is evaluated again, marking the start of the next generation. The method of selection is also applicable in the case of an unrestricted population size, e.g. by removing members that score too far below the current best member.
+Lastly is the intercombinatory method of \textit{selection}. As previously defined does the process of neuroevolution work on populations; these however are often of fixed size in most neuroevolution algorithms. The purpose of this restriction is to force the neuroevolution process to remove low performing members from the population - and therefore the gene pool - from which possible parents for intercombination are chosen, by only allowing a limited number of members to exist. Once all members of the population have been assigned a fitness score, is this current state of the population considered a specific \textit{generation}. The method of \textit{selection} then removes certain members of the population while the intercombinatory methods of mutation and recombination add new members to the population and the whole population is evaluated again, marking the start of the next generation. The method of selection is also applicable in the case of an unrestricted population size, e.g. by removing members that score too far below the current best member.
 
 All those Details of the neuroevolution process, e.g. how the encoding scheme specifies genotypes and their translation into the phenotype ANNs, how the initial population is created, which members are chosen as parents for intercombinatory methods or simply how exactly the intercombinatory methods are performed are all left to the specific neuroevolution algorithm.
 
 
 
 \subsubsection{Landmark Research in Neuroevolution}
-% Past and Current Research in Neuroevolution (Also specify the explicit Neuroevolution algorithms when getting to the specific research (NEAT, HyperNEAT, DeepNeurevolution, etc))
 % https://www.inovex.de/blog/neuroevolution/
 % https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning
 % https://en.wikipedia.org/wiki/Evolutionary_algorithm
@@ -139,6 +138,33 @@ All those Details of the neuroevolution process, e.g. how the encoding scheme sp
 % evocnn
 % see all scholarpedia pages in bibliography
 % see all papers listed in __outstanding_papers
+% see DeepNeuroevolution by Miikkulainen
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% aspects in chronological order
+
+% Neurevolution first gained significatn traction in the reserach commmunity with NEAT, as it was the first to address fundamental shortcomings from which earlier research suffered (e.g. ... https://en.wikipedia.org/wiki/Neuroevolution)
+
+NEAT
+% Neat and its variants (rtNeat, odNEAT, etc) from which only HyperNEAT survived being an actual game changer and again being developed by Stanley
+
+HyperNEAT
+
+ES-HyperNEAT
+
+Novelty Search
+
+Uber Research
+
+Deep Neuroevolution (by Miikkulainen)
+
+EvoCNN
+
+real17
+
+real19
 
 
 
@@ -376,6 +402,10 @@ I wish to thank Rezsa Farahani, from the Google Brain team, and Michael Adam, fr
   \bibitem{con18}
     Conti, Madhavan, et al - Improving Exploration in Evolution Strategies for Deep Reinforcement Learning via a Population of Novelty Seeking Agents; Oct 2018;
     \url{https://arxiv.org/abs/1712.06560}
+
+  \bibitem{con18}
+    Frolov - Neuroevolution: A Primer on Evolving Artificial Neural Networks; Oct 2018;
+    \url{https://www.inovex.de/blog/neuroevolution/}
 
   \bibitem{rea19}
     Real, Aggarwal, et al - Regularized Evolution for Image Classifier Architecture Search; Feb 2019;
