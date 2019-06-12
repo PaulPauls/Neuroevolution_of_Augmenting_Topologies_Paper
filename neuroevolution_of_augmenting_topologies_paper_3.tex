@@ -135,16 +135,12 @@ A short listing of landmark research in the field of neuroevolution will close t
 
 \paragraph{HyperNEAT} By Risi\&Stanley in 2009 [cite]. Move from \textit{direct} to \textit{indirect} encoding. Presented genotype does not represent the nodes and connections of ANN, but a function that will generate the ANN. Extended in 2011 with the introduction of ES-HyperNEAT by Risi\&Stanley [cite].
 
+\paragraph{Novelty Search} By Lehman\&Stanley in 2011 [cite]. Abandons maxim to judge the members based on their respective fitness score and replaces it with judging members based upon the novelty of the search space they explore. Though not universally applicable, does a novelty-search algorithm often reach the convergence point faster than traditional algorithms. 
 
-% Mention move from Fixed-Topology NNs to TWEANNs and how nowadays SGD like backpropagation is generally preferred for weight adaptation, though currenlty there is a consesus in the neuroevolution community thata combined approach is the most promising (Evolce and Transfer weights roughly, finetun with SGD) [when did that conensus change happen?]
+\paragraph{CoDeepNEAT} By Miikkulainen, Liang, et al in 2017 [cite]. Applys NEAT to Deep Neural Network with genes representing layers instead of nodes and connections. Repeated Components (as applied in ResNET, GoogleNET, etc), topologies and hyperparameters are then evolved competitively. Around this time did the consensus emerge to use backpropagation to evolve weights and evolution to evolve topology, though a mixture of both is most often applied.
 
+\paragraph{Large-Scale Evolution of Image Classifiers} By Real, Moore, et al in 2017 [cite]. Introduction of tournament selection for massive parallelization 
 
-Novelty Search (2011)
-% Novelty search is another invention that abandons the goal to maximise a fitness function. Instead, it rewards individuals that behave differently. This change often leads to much better solutions in the end because novel solutions perform badly in the beginning and need time to fully manifest their potential.
-
-Coevolution DeepNEAT (2017)
-% Miikkulainen, Liang - Evolving Deep Neural Networks
-% See innovex summary
 
 real17 (2017)
 % Include progress picture of the population of image classifier over time
@@ -152,7 +148,6 @@ real17 (2017)
 EvoCNN (2017)
 % Sun, Xue - Evolving Deep Convolutional Neural Networks for Image classification
 % see innovex summary
-
 
 Uber Research (End 2017 / more in 2018)
 
@@ -162,8 +157,7 @@ real19 (2019)
 
 % Include the comparison picture of NE vs RL vs RS
 
-
-
+% Mention move from Fixed-Topology NNs to TWEANNs and how nowadays SGD like backpropagation is generally preferred for weight adaptation, though currenlty there is a consesus in the neuroevolution community thata combined approach is the most promising (Evolce and Transfer weights roughly, finetun with SGD) [when did that conensus change happen?]
 
 
 
