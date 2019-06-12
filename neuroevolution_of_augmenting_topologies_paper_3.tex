@@ -67,7 +67,7 @@
 
 \section{Introduction}
 
-\IEEEPARstart{T}{his} shall be my introduction. And this shall be my citation \cite{cite01}.
+\IEEEPARstart{T}{his} shall be my introduction.
 \blindtext
 
 % CHECK: HAVE I REMOVED ALL PERSONAL ADRESSING (I, MY, etc) FROM THIS PAPER AND IS IT WRITTEN SCIENTIFICALLY/NEUTRAL?
@@ -129,17 +129,13 @@ All those Details of the neuroevolution process, e.g. how the encoding scheme sp
 
 \subsection{Landmark Research in Neuroevolution}
 
-% Neurevolution first gained significatn traction in the reserach commmunity with NEAT, as it was the first to address fundamental shortcomings from which earlier research suffered (e.g. ... https://en.wikipedia.org/wiki/Neuroevolution)
+Whilst Neuroevolution first gained significant traction in the research community with the NEAT algorithm (see section \ref{sec:neat}), as it was the first neuroevolution algorithm to address and solve fundamental shortcomings of prior research, have multiple considerable algorithms already been invented and widely spread. Representatives of those early algorithms are the SANE [cite] and ESP [cite] algorithms from Moriarty \& Gomez. These algorithms were already quite clever, exploring the ideas nowadays generally known as "cooperative coevolution" [cite], though the aforementioned significant shortcoming was that those algorithms were intended to only evolve Fixed-topology networks, particularly the weights in Fixed-topology networks. At the time this was a fruitful approach as modern methods of stochastic gradient descent like Backpropagation were not as wide spread and "Topology and Weight Evolving Neural Networks" (short form: TWEANNs) were not working as well as they could \href{https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning}{[cite]}.
 
-%##################
-% From OReilly Blog: In 1999, I started to think seriously about neuroevolution as an early Ph.D. student at the University of Texas at Austin in the research group of Professor Risto Miikkulainen, where several important fixed-topology algorithms had already been invented (such as the SANE and ESP algorithms from David Moriarty and Faustino Gomez, both in collaboration with Risto Miikkulainen). These algorithms were already quite clever, investigating the idea that the individual neurons of a network might be evolved in their own subpopulations to cooperate with other neurons, and then grouped with neurons from other subpopulations to form full working networks, an idea generally known as “cooperative coevolution.”
+Until in 2002 "Neuroevolution of Augmenting Topologies" by Stanley\&Miikkulainen [cite] proposed novel enhancements to TWEANN algorithms, that significantly increased their viability (see section \ref{sec:neat_performance}). NEATs' main innovations were the ability to perform meaningful \textit{recombination} between two arbitrary neural networks with different topologies, effectively solving the 'Competing Conventions Problem' (see figure \ref{ill:comp_conv}), and furthermore to provide protection for topological innovation so that it does not disappear from the population prematurely. With the success of NEAT came variations of the algorithm - the most noteworthy of which are rtNEAT [cite] and odNEAT [cite]. rtNEAT introduced a real-time component into the algorithm, enabling faster and more flexible computation than with a generation-focused algorithm, while odNEAT introduces the ability to decentralize the algorithm and speed up parallelization significantly.
 
-%Arriving on the scene in the midst of these developments, I was enchanted with the idea that the evolution of brains could happen inside a computer. I appreciated the importance of evolving ANNs to solve problems, but my real passion lay with the idea of increasing complexity over evolution. I wanted to build an algorithm that would enable ANNs to explode in complexity inside the computer, echoing the evolution of brains in nature. For some reason, even though existing TWEANN algorithms could change the architecture of evolving ANNs over time, they seemed to lack the strong propensity toward increasing complexity that I hoped to capture.
+The field of neuroevolution was advanced further again significantly with the introduction of "HyperNEAT" by Risi\&Stanley [cite] in 2009. HyperNEAT proposes a NEAT like evolution of the genotype, but instead of the genotype representing the nodes and connections directly does the genotype represent a function that will generate the neural network. The encoding of the neural network therefore moved from \textit{direct} to \textit{indirect}.
 
-%I spent a lot of time studying existing TWEANN algorithms and thinking about why they might not be working as well as they could. Some problems were well known, such as the competing conventions problem, which refers to the fact that it is hard to combine two parent ANNs to create an offspring (an operation called “crossover”). More specifically, different networks might express the same functionality with different combinations of connections weights, making it hard to know how to combine them as parents.
-%########
-
-% Mention move from non-TWEANNs to TWEANNs and how nowadays SGD like backpropagation is generally preferred for weight adaptation, though currenlty there is a consesus in the neuroevolution community thata combined approach is the most promising (Evolce and Transfer weights roughly, finetun with SGD)
+% Mention move from Fixed-Topology NNs to TWEANNs and how nowadays SGD like backpropagation is generally preferred for weight adaptation, though currenlty there is a consesus in the neuroevolution community thata combined approach is the most promising (Evolce and Transfer weights roughly, finetun with SGD) [when did that conensus change happen?]
 
 NEAT (2002)
 % Neat and its variants (rtNeat, odNEAT, etc) from which only HyperNEAT survived being an actual game changer and again being developed by Stanley
@@ -178,7 +174,7 @@ real19 (2019)
 
 % ######################################################################################################################
 
-\section{NeuroEvolution of Augmenting Topologies (NEAT)}
+\section{NeuroEvolution of Augmenting Topologies (NEAT)} \label{sec:neat}
 
 % Read papers sta02_1, sta02_2, sta04 again
 
@@ -210,7 +206,7 @@ At time of envisioning of NEAT was Neuroevolution most promising learning approa
 
 
 
-\subsection{Performance of NEAT}
+\subsection{Performance of NEAT} \label{sec:neat_performance}
 % Include traditional NEAT performance but also NEAT performance in more current examples
 
 \subsection{Variants and Advancements of NEAT}
