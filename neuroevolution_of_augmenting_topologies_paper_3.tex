@@ -129,20 +129,15 @@ All those Details of the neuroevolution process, e.g. how the encoding scheme sp
 
 \subsection{Landmark Research in Neuroevolution}
 
-Whilst Neuroevolution first gained significant traction in the research community with the NEAT algorithm (see section \ref{sec:neat}), as it was the first neuroevolution algorithm to address and solve fundamental shortcomings of prior research, have multiple considerable algorithms already been invented and widely spread. Representatives of those early algorithms are the SANE [cite] and ESP [cite] algorithms from Moriarty \& Gomez. These algorithms were already quite clever, exploring the ideas nowadays generally known as "cooperative coevolution" [cite], though the aforementioned significant shortcoming was that those algorithms were intended to only evolve Fixed-topology networks, particularly the weights in Fixed-topology networks. At the time this was a fruitful approach as modern methods of stochastic gradient descent like Backpropagation were not as wide spread and "Topology and Weight Evolving Neural Networks" (short form: TWEANNs) were not working as well as they could \href{https://www.oreilly.com/ideas/neuroevolution-a-different-kind-of-deep-learning}{[cite]}.
+A short listing of landmark research in the field of neuroevolution will close this chapter and introduce some of the most important papers in recent years. This listing will start with the publication of NEAT, as the field of neuroevolution gained significant traction from there on, moving away from the evolution of fixed-topology networks to "Topology and Weight Evolving Neural Networks" (short form: TWEANNs).
 
-Until in 2002 "Neuroevolution of Augmenting Topologies" by Stanley\&Miikkulainen [cite] proposed novel enhancements to TWEANN algorithms, that significantly increased their viability (see section \ref{sec:neat_performance}). NEATs' main innovations were the ability to perform meaningful \textit{recombination} between two arbitrary neural networks with different topologies, effectively solving the 'Competing Conventions Problem' (see figure \ref{ill:comp_conv}), and furthermore to provide protection for topological innovation so that it does not disappear from the population prematurely. With the success of NEAT came variations of the algorithm - the most noteworthy of which are rtNEAT [cite] and odNEAT [cite]. rtNEAT introduced a real-time component into the algorithm, enabling faster and more flexible computation than with a generation-focused algorithm, while odNEAT introduces the ability to decentralize the algorithm and speed up parallelization significantly.
+\paragraph{Neuroevolution of Augmenting Topologies (NEAT)} By Stanley\&Miikkulainen in 2002 [cite]. First viable TWEANN neuroevolution algorithm. Introduced meaningful protection of topological innovation and solved the 'Competing Conventions Problem' and therefore enabled meaningful recombination of genes representing different neural networks. Spawned multiple variations, of which the most noteworty are rtNEAT and odNEAT.
 
-The field of neuroevolution was advanced further again significantly with the introduction of "HyperNEAT" by Risi\&Stanley [cite] in 2009. HyperNEAT proposes a NEAT like evolution of the genotype, but instead of the genotype representing the nodes and connections directly does the genotype represent a function that will generate the neural network. The encoding of the neural network therefore moved from \textit{direct} to \textit{indirect}.
+\paragraph{HyperNEAT} By Risi\&Stanley in 2009 [cite]. Move from \textit{direct} to \textit{indirect} encoding. Presented genotype does not represent the nodes and connections of ANN, but a function that will generate the ANN. Extended in 2011 with the introduction of ES-HyperNEAT by Risi\&Stanley [cite].
+
 
 % Mention move from Fixed-Topology NNs to TWEANNs and how nowadays SGD like backpropagation is generally preferred for weight adaptation, though currenlty there is a consesus in the neuroevolution community thata combined approach is the most promising (Evolce and Transfer weights roughly, finetun with SGD) [when did that conensus change happen?]
 
-NEAT (2002)
-% Neat and its variants (rtNeat, odNEAT, etc) from which only HyperNEAT survived being an actual game changer and again being developed by Stanley
-
-HyperNEAT (2009)
-
-ES-HyperNEAT (2011)
 
 Novelty Search (2011)
 % Novelty search is another invention that abandons the goal to maximise a fitness function. Instead, it rewards individuals that behave differently. This change often leads to much better solutions in the end because novel solutions perform badly in the beginning and need time to fully manifest their potential.
