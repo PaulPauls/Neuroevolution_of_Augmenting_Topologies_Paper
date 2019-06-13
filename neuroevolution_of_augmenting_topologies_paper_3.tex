@@ -151,6 +151,12 @@ A short listing of landmark research in the field of neuroevolution will close t
 \paragraph{Regularized Evolution for Image Classifier Architecture Search} By Real, Aggarwal, et al in 2019 [cite]
 % Include the comparison picture of NE vs RL vs RS
 
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{{Comparison_Regularized_Evolution_RL_RS_-_rea18}}
+    \caption{Performance Comparison of Regularized Evolution for Image Classifier Architecture Search (Source: \cite{rea19})}
+    \label{ill:comparison_ev_rl_rs}
+\end{figure}
+
 
 
 % Mention move from Fixed-Topology NNs to TWEANNs and how nowadays SGD like backpropagation is generally preferred for weight adaptation, though currenlty there is a consesus in the neuroevolution community thata combined approach is the most promising (Evolce and Transfer weights roughly, finetun with SGD) [when did that conensus change happen?]
@@ -180,13 +186,50 @@ At the time of envisionment was NEAT considered one of the most promising approa
 
 
 \subsection{Key Aspects of NEAT and Differences to Preceding Neuroevolution}
-% Solving Competing Convetions, Speciation, Historical Markings, Minimal Initial Pop, See Key Elements identified through ablation (http://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf)
+
+In his 2004 dissertation did Stanley present three main technical challenges to the current state of neuroevolution and evolving structure incrementally [cite]. He asked the following three questions that summarize these challenges [cite]:
+
+\begin{itemize}
+    \item "Is there a genetic representation that allows disparate topologies to cross over in a meaningful way?"
+    \item "How can topological innovation that needs a few generations to be optimized be protected so that it does not disappear from the population prematurely?"
+    \item "How can topologies be minimized throughout evolution without a contrived fitness function that measures complexity explicitly?"
+\end{itemize}
+
+Stanley answered these questions with the following key aspects of NEAT, which differentiate it from the preceding neuroevolution algorithms and resulted in a method that "can evolve a diverse population of increasingly complex topologies separated into unique species. This approach results in powerful evolution that can solve benchmark problems faster than previous methods, and also makes entirely new applications possible."
+
+
+
+\subsubsection{Historical Markings}
+% Notes
 
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{{Competing_Conventions_Crossover_-_sta02_2}}
     \caption{Illustration of the 'Competing Conventions Problem'. (Source: \cite{sta02_2})}
     \label{ill:comp_conv}
 \end{figure}
+
+
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{{ANN_Recombination_With_Innovation_Numbers_-_sta04}}
+    \caption{Recombination of ANNs in NEAT through Innovation Numbers. (Source: \cite{sta04})}
+    \label{ill:ann_recomb_innov_num}
+\end{figure}
+
+
+
+
+
+
+
+
+\subsubsection{Speciation}
+% Notes
+
+
+\subsubsection{Uniform Minimal Initial Population}
+% Notes
+
+
 
 
 
@@ -197,21 +240,19 @@ At the time of envisionment was NEAT considered one of the most promising approa
 % Follow Up Research and Variants (HyperNeat, ES-HyperNeat, Novelty Search, but also small variations of NEAT such as aging NEAT or rtNEAT)
 % Mention non-mating variants of neuro evolution algorithms /neat (such as the current research in rea17/19). See chapter 2.3.2 'non-mating' in [sta04] for an overview
 
-\subsubsection{<Variant 1>}
-\subsubsection{<Variant 2>}
-\subsubsection{<Variant 3>}
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{{CPPN_Activation_Patterns_at_Different_Solutions_-_sta09}}
+    \caption{HyperNEAT CPPN activation patterns at different resolutions. (Source: \cite{sta09})}
+    \label{ill:cppn_diff_resol}
+\end{figure}
 
 
 
 % ######################################################################################################################
 
-\section{Practical Applications of NEAT}
+\subsection{Practical Applications of NEAT}
 % Go especially into detail what Stanley considered great NEAT applications in his reddit AMA
 % Introduce my own code accompanying this paper
-
-\subsection{<Application 1>}
-\subsection{<Application 2>}
-\subsection{<Application 3>}
 
 
 
