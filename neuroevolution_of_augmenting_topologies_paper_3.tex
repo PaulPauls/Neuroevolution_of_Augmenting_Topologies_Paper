@@ -238,8 +238,11 @@ The principle of speciation protects innovation by using explicit fitness sharin
 Without going into too much detail for the equation does it basically mean that innovative members that are considered a new species don't have to compete with the best members, but only the best niches which are put into perspective through the lower performing members of the niche. This favors small and most often new niches and therefore keeps diversity in niches and therefore topological innovation high. An important aspect to make though is that this principle of speciation obviously requires a distance metric between genotypes in order to determine if two members are sufficiently different to place them in distinct species. NEAT provides such a distance metric through historical markings.
 
 
+
 \subsubsection{Complexification}
-% Notes
+The principle of complexification is the simplest one and addresses a problem Stanley identified in most preceding neuroevolution algorithms. Many preceding neuroevolution algorithms would start out with an often considerably large and randomly mutated initial population with the intention to provide genetic diversity in the gene pool. The intention was that this diversity would provide the means to thoroughly traverse through the search space by mutation, as many genetic features were already present in the initial population. Most often did these algorithms also include a functional unit of the algorithm that was not intended to mutate the members in order to explore the search space, but in order to minimize the ANN. This was required as the necessity to of topological innovation - its initially randomly mutated population - possibly left significant clutter in the form of unnecessary genes and genetic features.
+
+This necessity of a randomly mutated initial population to produce innovation however wasn't necessary anymore in NEAT, as the principle of speciation protects innovation and the principle of historical markings allows for lossless and clean recombination between members. The principle of complexification therefore states to provide a minimal initial population, which is only expanded upon. Because new genes (or topological features) only appear and endure if they represent a beneficial new structure, does this also eliminate the resource-costly requirement of a minimization functional unit.
 
 
 
