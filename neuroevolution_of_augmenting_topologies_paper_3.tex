@@ -200,7 +200,14 @@ Stanley answered these questions with the following key aspects of NEAT, which d
 
 
 \subsubsection{Historical Markings}
-% Notes
+
+Historical markings were introduced to overcome the challenge of 'Competing Conventions' - visualized in illustration \ref{ill:comp_conv}. In this example are we crossing over [A,B,C] and [C,B,A], which can result in [C,B,C], a representation that has lost one third of the information that both of the parents had. The probability of severe genetic damage like this when looking at nontrivial crossovers (where an offspring is not simply a duplicate of a parent) is at 66.6\% - as comprehensibly calculated by Stanley in [cite phd, page 19].
+
+The approach of historical markings offers a solution to this problem by introducing a global innovation number . Whenever a new gene appears through structural mutation (which in the context of NEATs' direct encoding effectively means whenever a new node or connection appears), a global innovation number is incremented and assigned to that gene. This allows to track the historical origin of each gene and consequently which genes match up between all members of the population.
+
+Keeping track of those genes allows to identify genes that represent the same structure (though possibly with different weights) and as a result allow to solve the 'Competing Conventions Problem'. The principle of historical markings does so by not allowing the same gene (with the same innovation number and therefore representing the same structure) to be present multiple times in the genotype or a gene being replaced by another one in crossover because it is considered the same one (though innovation numbers show it is not). This does not mean that genes in the genotype can't be removed, though this is not done in the crossover process but rather in the mutation process, which can \textit{disable} individual genes. 
+
+This elaboration of the principle of historical markings explains how the crossover in illustration \ref{ill:comp_conv} would take place without severe genetic damage. Figure \ref{ill:ann_recomb_innov_num} however illustrates the recombination process explicitly with the usage of innovation numbers.
 
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{{Competing_Conventions_Crossover_-_sta02_2}}
@@ -217,16 +224,21 @@ Stanley answered these questions with the following key aspects of NEAT, which d
 
 
 
-
-
-
-
-
 \subsubsection{Speciation}
-% Notes
+Speciation, also known as \textit{niching}, has been studied in GAs but has rarely been applied to NE prior to its introduction in NEAT [cite phd, p25]. Though it is a crucial part of NEAT and as empirically studied in Stanleys PhD thesis does the lack of speciation significantly limit NEAT's ability to add and maintain new topologies [cite PhD, chapter 4.3]. 
+
+The underlying problem and reason for the necessity of speciation is that topological innovation - e.g. a drastically interrupting node or connection - often underperforms compared to the other more matured members of the population, though this topological innovation may set up the new member for another mutation that makes him outperform all other members. Speciation therefore protects innovation following the philosophy that new ideas must be given time to reach their potential before they are eliminated. In the context of neuroevolution does this mean that innovative members must be given time to optimize their weights or further mutate favorably before they are eliminated.
+
+The principle of speciation protects innovation by using explicit fitness sharing, a method under which individuals that are sharing a niche are forced to also share the fitness of the niche. This effectively means that each members fitness is postadjusted according to the following equation [cite phd, chap 3.3]. If $f_i$ is i's fitness before sharing, then after sharing it becomes $f'_i$ according to:
+
+\begin{align}
+    f'_i &= \frac{f_i}{\sum_{j=1}^{n} sh(\delta(i,j))}
+\end{align}
+
+Without going into too much detail for the equation does it basically mean that innovative members that are considered a new species don't have to compete with the best members, but only the best niches which are put into perspective through the lower performing members of the niche. This favors small and most often new niches and therefore keeps diversity in niches and therefore topological innovation high. An important aspect to make though is that this principle of speciation obviously requires a distance metric between genotypes in order to determine if two members are sufficiently different to place them in distinct species. NEAT provides such a distance metric through historical markings.
 
 
-\subsubsection{Uniform Minimal Initial Population}
+\subsubsection{Complexification}
 % Notes
 
 
