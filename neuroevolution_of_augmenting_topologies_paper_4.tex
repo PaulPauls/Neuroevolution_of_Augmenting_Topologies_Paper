@@ -18,9 +18,6 @@
 \definecolor{orange}{rgb}{1, 0.66, 0}
 \definecolor{codebg}{rgb}{0.97, 0.97, 0.97}
 
-\newcommand{\customincludegraphics}[2]{
-}
- 
 \lstdefinestyle{c-style}{
   language={[ANSI]C},
   frame=single,
@@ -63,10 +60,14 @@
     \blindtext
 \end{abstract}
 
+
+
 % ######################################################################################################################
 
 % CHECK: HAVE I REMOVED ALL PERSONAL ADRESSING (I, MY, etc) FROM THIS PAPER AND IS IT WRITTEN SCIENTIFICALLY/NEUTRAL?
 % CHECK: WORK THROUGH PRECEDING VERSIONS OF THIS PAPER AND ADD IMPORTANT INFOS/PHRASINGS THAT I HAD BEFORE
+
+% ######################################################################################################################
 
 \section{Introduction}
 
@@ -126,27 +127,13 @@ All those Details of the neuroevolution process, e.g. how the encoding scheme sp
 
 \section{NeuroEvolution of Augmenting Topologies (NEAT)} \label{sec:neat}
 
-% Read papers sta02_1, sta02_2, sta04 again
-
-In 2002, then PhD-student Kenneth O.Stanley and Risto Miikkulainen at the University of Texas at Austin co-published an approach to neuroevolution they called \textit{Neuroevolution of Augmenting Topologies} (short form: NEAT) in their paper "Evolving Neural Networks through Augmenting Topologies" [cite]. They followed up on its theory in a subsequent ablation study for NEATs components in the same year and eventually Stanley's PhD thesis "Efficient Evolution of Neural Networks through Complexification" in 2004 [cite].
-
-At the time of envisionment was NEAT considered one of the most promising approaches to ANN learning and it is still considered a viable approach and a benchmark algorithm in many neuroevolution frameworks to this day. The first section in this chapter will outline what aspects of NEAT set it apart from preceding research and enabled its leap in performance, which will be looked upon in the second section. This chapter closes with a short overview of variants, advancements and direct descendants of the NEAT algorithm.
-
-
-
-
-
-[See all notes write down about stanleys PhD thesis]
-
-"In highly complex domains the heuristics for determining the appropriate size are not very useful, and it becomes increasingly difficult to solve such domains with fixed-length encodings." \cite{sta04}
-
-"NE is a promising approach to learning behavioral policies and finds solutions faster than leading RL methods on many benchmark tasks (Gomez 2003; Moriarty and Miikkulainen 1997)" \cite{sta04}
+Kenneth O.Stanley and Risto Miikkulainen co-published in the year 2002 an approach to neuroevolution they called \textit{Neuroevolution of Augmenting Topologies} - or in short \textit{'NEAT'} - in their paper "Evolving Neural Networks through Augmenting Topologies" [cite]. At the time of envisionment was NEAT considered one of the most promising approaches to ANN evolution and it is still considered a viable approach and a benchmark algorithm in many neuroevolution frameworks to this day. The first section in this chapter will outline what aspects of NEAT set it apart from the preceding research and enabled its leap in performance, which will be looked upon in the second section. This chapter closes with a short overview of great frameworks that support and projects that are realized with NEAT.
 
 
 
 \subsection{Key Aspects of NEAT and Differences to Preceding Neuroevolution}
 
-In his 2004 dissertation did Stanley present three main technical challenges to the current state of neuroevolution and evolving structure incrementally [cite]. He asked the following three questions that summarize these challenges [cite]:
+In his dissertation titled 'Efficient Evolution of Neural Networks through Complexification' and published in 2004, did Stanley present three main technical challenges to the current state of neuroevolution and evolving structure incrementally [cite]. He asked the following three questions that summarize these challenges [cite]:
 
 \begin{itemize}
     \item "Is there a genetic representation that allows disparate topologies to cross over in a meaningful way?"
@@ -160,13 +147,7 @@ Stanley answered these questions with the following key aspects of NEAT, which d
 
 \subsubsection{Historical Markings}
 
-Historical markings were introduced to overcome the challenge of 'Competing Conventions' - visualized in illustration \ref{ill:comp_conv}. In this example are we crossing over [A,B,C] and [C,B,A], which can result in [C,B,C], a representation that has lost one third of the information that both of the parents had. The probability of severe genetic damage like this when looking at nontrivial crossovers (where an offspring is not simply a duplicate of a parent) is at 66.6\% - as comprehensibly calculated by Stanley in [cite phd, page 19].
-
-The approach of historical markings offers a solution to this problem by introducing a global innovation number . Whenever a new gene appears through structural mutation (which in the context of NEATs' direct encoding effectively means whenever a new node or connection appears), a global innovation number is incremented and assigned to that gene. This allows to track the historical origin of each gene and consequently which genes match up between all members of the population.
-
-Keeping track of those genes allows to identify genes that represent the same structure (though possibly with different weights) and as a result allow to solve the 'Competing Conventions Problem'. The principle of historical markings does so by not allowing the same gene (with the same innovation number and therefore representing the same structure) to be present multiple times in the genotype or a gene being replaced by another one in crossover because it is considered the same one (though innovation numbers show it is not). This does not mean that genes in the genotype can't be removed, though this is not done in the crossover process but rather in the mutation process, which can \textit{disable} individual genes. 
-
-This elaboration of the principle of historical markings explains how the crossover in illustration \ref{ill:comp_conv} would take place without severe genetic damage. Figure \ref{ill:ann_recomb_innov_num} however illustrates the recombination process explicitly with the usage of innovation numbers.
+Historical markings were introduced to overcome the challenge of 'Competing Conventions' - visualized in illustration \ref{ill:comp_conv}. This example illustrates the attempt to cross over [A,B,C] and [C,B,A], which can result in [C,B,C], a representation that has lost one third of the information that both of the parents had. The probability of severe genetic damage like this when looking at nontrivial crossovers (where an offspring is not simply a duplicate of a parent) with no protection against this sort of information erasement lies at 66.6\% - as thoroughly calculated by Stanley in [cite phd, page 19].
 
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{{Competing_Conventions_Crossover_-_sta02_2}}
@@ -174,6 +155,11 @@ This elaboration of the principle of historical markings explains how the crosso
     \label{ill:comp_conv}
 \end{figure}
 
+The approach of historical markings offers a solution to this problem by introducing a global innovation number. Whenever a new gene appears through structural mutation (which in the context of NEATs' direct encoding effectively means whenever a new node or connection appears), a global innovation number is incremented and assigned to that gene. This allows to track the historical origin of each gene and consequently which genes match up between all members of the population.
+
+Keeping track of those genes allows to identify genes that represent the same structure (though possibly with different weights) and as a result allows to solve the 'Competing Conventions Problem'. The principle of historical markings does so by not allowing the same gene (with the same innovation number and therefore representing the same structure) to be present multiple times in the genotype. The principle also prevents from genes erasing on another when crossing over because the innovation number clearly shows if two genes are different and therefore should not eradicate one another. Instead, due to the dynamic-length encoding employed by NEAT, is the genotype simply elongated and both genes (and therefore both features) are placed in the genotype. This does however not mean that genes in the genotype can't be removed, though this is not done in the crossover process but rather in the mutation process, which can \textit{disable} individual genes. 
+
+This elaboration of the principle of historical markings explains how the crossover in illustration \ref{ill:comp_conv} would take place without severe genetic damage. Then again does figure \ref{ill:ann_recomb_innov_num} illustrate such a functional, meaning information preserving, recombination process explicitly with the usage of innovation numbers.
 
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{{ANN_Recombination_With_Innovation_Numbers_-_sta04}}
@@ -184,41 +170,35 @@ This elaboration of the principle of historical markings explains how the crosso
 
 
 \subsubsection{Speciation}
-Speciation, also known as \textit{niching}, has been studied in GAs but has rarely been applied to NE prior to its introduction in NEAT [cite phd, p25]. Though it is a crucial part of NEAT and as empirically studied in Stanleys PhD thesis does the lack of speciation significantly limit NEAT's ability to add and maintain new topologies [cite PhD, chapter 4.3]. 
+Speciation, also known as \textit{niching}, has been studied in GAs but has rarely been applied to NE prior to its introduction in NEAT [cite phd, p25]. Though it is a crucial part of NEAT and as Stanley verified empirically in his PhD thesis does the lack of speciation significantly limit NEAT's ability to add and maintain new topologies [cite PhD, chapter 4.3]. 
 
-The underlying problem and reason for the necessity of speciation is that topological innovation - e.g. a drastically interrupting node or connection - often underperforms compared to the other more matured members of the population, though this topological innovation may set up the new member for another mutation that makes him outperform all other members. Speciation therefore protects innovation following the philosophy that new ideas must be given time to reach their potential before they are eliminated. In the context of neuroevolution does this mean that innovative members must be given time to optimize their weights or further mutate favorably before they are eliminated.
+The underlying problem and reason for the necessity of speciation is that topological innovation - e.g. a drastically interrupting node or connection - often underperforms compared to the other more matured members of the population, though this topological innovation may set up the new member for another mutation that in turn makes it outperform all other members. Speciation therefore protects innovation following the philosophy that new ideas must be given time to reach their potential before they are eliminated. In the context of neuroevolution does this mean that innovative members must be given time to optimize their weights or further mutate favorably before they are eliminated.
 
-The principle of speciation protects innovation by using explicit fitness sharing, a method under which individuals that are sharing a niche are forced to also share the fitness of the niche. This effectively means that each members fitness is postadjusted according to the following equation [cite phd, chap 3.3]. If $f_i$ is i's fitness before sharing, then after sharing it becomes $f'_i$ according to:
+The principle of speciation protects innovation by using explicit fitness sharing, a method under which individuals that are sharing a niche are forced to also share the fitness score of all members in the niche. This effectively means that each members fitness is postadjusted according to the following equation [cite phd, chap 3.3]: 
+
+If $f_i$ is i's fitness before sharing, then after sharing it becomes $f'_i$ according to
 
 \begin{align}
     f'_i &= \frac{f_i}{\sum_{j=1}^{n} sh(\delta(i,j))}
 \end{align}
 
-Without going into too much detail for the equation does it basically mean that innovative members that are considered a new species don't have to compete with the best members, but only the best niches which are put into perspective through the lower performing members of the niche. This favors small and most often new niches and therefore keeps diversity in niches and therefore topological innovation high. An important aspect to make though is that this principle of speciation obviously requires a distance metric between genotypes in order to determine if two members are sufficiently different to place them in distinct species. NEAT provides such a distance metric through historical markings.
+This explicit fitness sharing therefore effectively means that new species don't have to compete with the best members, but only the best niches, which again are put into perspective through the lower performing members in the niche. This favors small and most often new niches and therefore keeps diversity in niches and hence topological innovation high. An important point to make though is that this principle of speciation obviously requires a distance metric between genotypes in order to determine if two members are sufficiently different to place them in distinct species. NEAT provides such a distance metric through the principle of historical markings.
 
 
 
 \subsubsection{Complexification}
-The principle of complexification is the simplest one and addresses a problem Stanley identified in most preceding neuroevolution algorithms. Many preceding neuroevolution algorithms would start out with an often considerably large and randomly mutated initial population with the intention to provide genetic diversity in the gene pool. The intention was that this diversity would provide the means to thoroughly traverse through the search space by mutation, as many genetic features were already present in the initial population. Most often did these algorithms also include a functional unit of the algorithm that was not intended to mutate the members in order to explore the search space, but in order to minimize the ANN. This was required as the necessity to of topological innovation - its initially randomly mutated population - possibly left significant clutter in the form of unnecessary genes and genetic features.
+The principle of complexification is the simplest one and addresses a problem Stanley identified in most preceding neuroevolution algorithms. Many preceding neuroevolution algorithms would start out with an often considerably large and randomly mutated initial population with the intention to provide genetic diversity in the gene pool. The intention was that this diversity would provide the means to thoroughly traverse through the search space by mutation, as many genetic features were already present in the initial population. Most often did these algorithms also include a functional unit of the algorithm that was only intended to minimize the ANN through degenerative mutation. This was required as the necessity of topological innovation - its initially randomly mutated population - usually left significant clutter in the form of unnecessary genes and genetic features.
 
-This necessity of a randomly mutated initial population to produce innovation however wasn't necessary anymore in NEAT, as the principle of speciation protects innovation and the principle of historical markings allows for lossless and clean recombination between members. The principle of complexification therefore states to provide a minimal initial population, which is only expanded upon. Because new genes (or topological features) only appear and endure if they represent a beneficial new structure, does this also eliminate the resource-costly requirement of a minimization functional unit.
-
-
+This necessity of a randomly mutated initial population to produce innovation however wasn't a necessity anymore in NEAT, as the principle of speciation protects innovation and the principle of historical markings allows for lossless and clean recombination between members. The principle of complexification therefore states to provide a minimal initial population, which is only expanded upon. Because new genes (or topological features) only appear and endure if they represent a beneficial new structure, does this also eliminate the resource-costly requirement of a functional unit responsible for minimization.
 
 
 
 \subsection{Performance of NEAT} \label{sec:neat_performance}
 % Include traditional NEAT performance but also NEAT performance in more current examples
 
-\subsection{Variants and Advancements of NEAT}
-% Follow Up Research and Variants (HyperNeat, ES-HyperNeat, Novelty Search, but also small variations of NEAT such as aging NEAT or rtNEAT)
-% Mention non-mating variants of neuro evolution algorithms /neat (such as the current research in rea17/19). See chapter 2.3.2 'non-mating' in [sta04] for an overview
+[Incorporate deleted 'Landmark Research in Neuroevolution' Chapter (also see .tex notes)]
 
-\begin{figure}
-    \includegraphics[width=0.45\textwidth]{{CPPN_Activation_Patterns_at_Different_Solutions_-_sta09}}
-    \caption{HyperNEAT CPPN activation patterns at different resolutions. (Source: \cite{sta09})}
-    \label{ill:cppn_diff_resol}
-\end{figure}
+\blindtext
 
 
 
@@ -228,12 +208,15 @@ This necessity of a randomly mutated initial population to produce innovation ho
 % Go especially into detail what Stanley considered great NEAT applications in his reddit AMA
 % Introduce my own code accompanying this paper
 
+\blindtext
 
 
 
 % ######################################################################################################################
 
 \section{Conclusion}
+
+[Incorporate deleted 'Variants and Advancements of NEAT' Chapter (also see .tex notes). Incorporate it as a possible 'Ausblick']
 
 \blindtext
 
