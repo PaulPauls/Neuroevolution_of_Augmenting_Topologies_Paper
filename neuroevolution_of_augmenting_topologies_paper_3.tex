@@ -65,13 +65,14 @@
 
 % ######################################################################################################################
 
-\section{Introduction}
-
-\IEEEPARstart{T}{his} shall be my introduction.
-\blindtext
-
 % CHECK: HAVE I REMOVED ALL PERSONAL ADRESSING (I, MY, etc) FROM THIS PAPER AND IS IT WRITTEN SCIENTIFICALLY/NEUTRAL?
 % CHECK: WORK THROUGH PRECEDING VERSIONS OF THIS PAPER AND ADD IMPORTANT INFOS/PHRASINGS THAT I HAD BEFORE
+
+\section{Introduction}
+
+\IEEEPARstart{W}{ith} the rise of Deep Learning in this decade, see especially [AlexNet, +2 OTHER EXAMPLES], did the research community increasingly face the challenge of having to configure even more hyperparameters and layers when designing neural networks. In order to ease this design process did the concept of \textit{Automated Machine Learning} (short form: AutoML) come even more into focus. One method of AutoML - the evolution of artificial neural networks (short form: ANNs) - is addressed in this paper and its most prominent representative - NEAT - is thoroughly discussed. 
+
+This evolution of artificial neural networks is called \textit{neuroevolution} and it is a form of evolutionary algorithm that generates specific ANNs through modification of its parameters, topology and rules in order to maximize the ANN's accuracy or fitness score. The neuroevolution algorithm seeks to modify the ANN in an evolutionary process similar to the Darwinian process that produced human brains and its process-summarizing maxim 'survival of the fittest'. First methods using neuroevolution can be traced back to the 1980s and 1990s \href{https://www.inovex.de/blog/neuroevolution/}{[cite]}, while the first evolutionary algorithms were conceived in the 1950s by Alan Turing and Nils Barricelli. \href{https://en.wikipedia.org/wiki/Genetic_algorithm#cite_note-mind.oxfordjournals.org-33}{[cite]}
 
 
 
@@ -79,9 +80,7 @@
 
 \section{Neuroevolution and Evolutionary Algorithms}
 
-Neuroevolution is a form of evolutionary algorithm that generates specific artificial neural networks (short form: ANN) through modification of its parameters, topology and rules in order to maximize the ANN's accuracy or fitness score. The neuroevolution algorithm seeks to modify the ANN in an evolutionary process similar to the Darwinian process that produced human brains and its process-summarizing maxim 'survival of the fittest'. First methods using neuroevolution can be traced back to the 1980s and 1990s \href{https://www.inovex.de/blog/neuroevolution/}{[cite]}, while the first evolutionary algorithms were conceived in the 1950s by Alan Turing and Nils Barricelli. \href{https://en.wikipedia.org/wiki/Genetic_algorithm#cite_note-mind.oxfordjournals.org-33}{[cite]}
-
-To better characterize neuroevolution is it best to first roughly categorize it, whereupon the following sections describe the categories in detail. A \textit{neuroevolution algorithm} is a \textit{genetic algorithm}, whose search-space (or genotypes) consist only of artificial neural networks. A \textit{genetic algorithm} in turn is a \textit{evolutionary algorithm} that evolves genotypes - genetically encoded representations of the actual solution (phenotype) - through mutation, recombination and selection.
+To better characterize neuroevolution in this chapter is it best to first roughly categorize it, whereupon the following sections describe the categories in detail. A \textit{neuroevolution algorithm} is a \textit{genetic algorithm}, whose search-space (or genotypes) consist only of artificial neural networks. A \textit{genetic algorithm} in turn is a \textit{evolutionary algorithm} that evolves genotypes - genetically encoded representations of the actual solution (phenotype) - through mutation, recombination and selection.
 
 
 
