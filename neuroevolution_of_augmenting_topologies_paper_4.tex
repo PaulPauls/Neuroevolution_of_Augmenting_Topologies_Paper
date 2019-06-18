@@ -122,42 +122,6 @@ All those Details of the neuroevolution process, e.g. how the encoding scheme sp
 
 
 
-\subsection{Landmark Research in Neuroevolution}
-
-A short listing of landmark research in the field of neuroevolution will close this chapter and introduce some of the most important papers in recent years. This listing will start with the publication of NEAT, as the field of neuroevolution gained significant traction from there on, moving away from the evolution of fixed-topology networks to "Topology and Weight Evolving Neural Networks" (short form: TWEANNs).
-
-\paragraph{Neuroevolution of Augmenting Topologies (NEAT)} By Stanley\&Miikkulainen in 2002 [cite]. First viable TWEANN neuroevolution algorithm. Introduced meaningful protection of topological innovation and solved the 'Competing Conventions Problem' and therefore enabled meaningful recombination of genes representing different neural networks. Spawned multiple variations, of which the most noteworty are rtNEAT and odNEAT.
-
-\paragraph{HyperNEAT} By Risi\&Stanley in 2009 [cite]. Move from \textit{direct} to \textit{indirect} encoding. Presented genotype does not represent the nodes and connections of ANN, but a function that will generate the ANN. Extended in 2011 with the introduction of ES-HyperNEAT by Risi\&Stanley [cite].
-
-\paragraph{Novelty Search} By Lehman\&Stanley in 2011 [cite]. Abandons maxim to judge the members based on their respective fitness score and replaces it with judging members based upon the novelty of the search space they explore. Though not universally applicable, does a novelty-search algorithm often reach the convergence point faster than traditional algorithms. 
-
-\paragraph{CoDeepNEAT} By Miikkulainen, Liang, et al in 2017 [cite]. Applys NEAT to Deep Neural Network with genes representing layers instead of nodes and connections. Repeated Components (as applied in ResNET, GoogleNET, etc), topologies and hyperparameters are then evolved competitively. Around this time did the consensus emerge to use backpropagation to evolve weights and evolution to evolve topology, though a mixture of both is most often applied.
-
-\paragraph{Large-Scale Evolution of Image Classifiers} By Real, Moore, et al in 2017 [cite].
-% Include progress picture of the population of image classifier over time
-
-\paragraph{EvoCNN} By Sun, Xue, et al in 2017 [cite].
-
-\paragraph{Deep Neuroevolution} By Uber-Research in 2017 [cite].
-
-\paragraph{Hierarchical Representations for Efficient Architecture Search} By Liu, Simonyan, et al in 2018 [cite]
-
-\paragraph{Regularized Evolution for Image Classifier Architecture Search} By Real, Aggarwal, et al in 2019 [cite]
-% Include the comparison picture of NE vs RL vs RS
-
-\begin{figure}
-    \includegraphics[width=0.45\textwidth]{{Comparison_Regularized_Evolution_RL_RS_-_rea18}}
-    \caption{Performance Comparison of Regularized Evolution for Image Classifier Architecture Search (Source: \cite{rea19})}
-    \label{ill:comparison_ev_rl_rs}
-\end{figure}
-
-
-
-% Mention move from Fixed-Topology NNs to TWEANNs and how nowadays SGD like backpropagation is generally preferred for weight adaptation, though currenlty there is a consesus in the neuroevolution community thata combined approach is the most promising (Evolce and Transfer weights roughly, finetun with SGD) [when did that conensus change happen?]
-
-
-
 % ######################################################################################################################
 
 \section{NeuroEvolution of Augmenting Topologies (NEAT)} \label{sec:neat}
