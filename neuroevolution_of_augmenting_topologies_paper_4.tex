@@ -196,13 +196,17 @@ This necessity of a randomly mutated initial population to produce innovation ho
 \subsection{Performance of NEAT} \label{sec:neat_performance}
 % Include traditional NEAT performance but also NEAT performance in more current examples
 
-Beginning with Stanley \& Miikkulainens' first three papers about NEAT in 2002 and 2004 [cite all three] did they include thorough performance analysis, which in each case shows NEAT significantly outperforming [cite test sections from each paper] preceding NE methods. NEAT surpass these preceding methods in terms of speed, required evaluations and simplicity of the solution in key benchmarks like the double pole balancing task [cite paper establishing this benchmark], and [xor?]... [cite paper establishing this benchmark]. [possibly refer here to the comparison table]
+Stanley \& Miikkulainen also included thorough performance analysis in their papers introducing NEAT in 2002 and 2004 [cite all three]. The analysis showed NEAT significantly outperforming [cite test sections from each paper] most preceding NE methods in terms of speed and required evaluations in key benchmarks like the double pole balancing task [cite paper establishing this benchmark] and the XOR topology building task [cite paper establishing this benchmark].
 
+The simpler of the two benchmarks - the xor topology building task - is a sanity check for TWEANN algorithms. Because XOR is not linearly separable does a neural network require hidden units to solve it and therefore make this benchmark suitable for testing NEAT's ability to evolve structure. It is clear that NEAT solves the XOR problem without trouble and in doing so keeps the topology small [cite phd chap 4.1]. 
 
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{{Table_Comparison_DPNV_Benchmark_-_sta02_2}}
+    \caption{Performance Comparison on 'Double pole balancing without velocity information' task. (Source: \cite{sta02_2})}
+    \label{ill:table_dpnv_benchmark}
+\end{figure}
 
-[Incorporate deleted 'Landmark Research in Neuroevolution' Chapter (also see .tex notes)]
-
-\blindtext
+More importantly however is the Double pole balancing task, as - unlike the XOR topology building task - this benchmark is well suited for performance comparison. This benchmark has been used in RL and NE research for over 30 years [cite ablation paper 3.A] and consists of two poles connected to a moving cart by a hinge, whereas the neural network must apply force to the cart to keep the poles balanced for as long as possible. Figure \ref{ill:table_dpnv_benchmark} lists the table showing the results of the 'Double pole balancing without velocity information' in which NEAT is by far the fastest system on this challenging task, clearly even outperforming ESP (Enforced Subpopulations by Gomez and Miikkulainen 1999 [cite]). This is relevant as ESP, unlike all other NE systems at the time, performs at least in the other experiment 'Double pole balancing with velocity information' at the same level as NEAT [see 30p paper 4.3.2]. This underlines NEATs ability to perform especially well in feedback-sparse environments.
 
 
 
