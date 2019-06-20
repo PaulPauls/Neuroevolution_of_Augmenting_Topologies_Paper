@@ -64,11 +64,6 @@
 
 % ######################################################################################################################
 
-% CHECK: HAVE I REMOVED ALL PERSONAL ADRESSING (I, MY, etc) FROM THIS PAPER AND IS IT WRITTEN SCIENTIFICALLY/NEUTRAL?
-% CHECK: WORK THROUGH PRECEDING VERSIONS OF THIS PAPER AND ADD IMPORTANT INFOS/PHRASINGS THAT I HAD BEFORE
-
-% ######################################################################################################################
-
 \section{Introduction}
 
 \IEEEPARstart{W}{ith} the rise of Deep Learning in this decade, see especially [AlexNet, +2 OTHER EXAMPLES], did the research community increasingly face the challenge of having to configure even more hyperparameters and layers when designing neural networks. In order to ease this design process did the concept of \textit{Automated Machine Learning} (short form: AutoML) come even more into focus. One method of AutoML - the evolution of artificial neural networks (short form: ANNs) - is addressed in this paper and its most prominent representative - NEAT - is thoroughly discussed. 
@@ -194,7 +189,6 @@ This necessity of a randomly mutated initial population to produce innovation ho
 
 
 \subsection{Performance of NEAT} \label{sec:neat_performance}
-% Include traditional NEAT performance but also NEAT performance in more current examples
 
 Stanley \& Miikkulainen also included thorough performance analysis in their papers introducing NEAT in 2002 and 2004 [cite all three]. The analysis showed NEAT significantly outperforming [cite test sections from each paper] most preceding NE methods in terms of speed and required evaluations in key benchmarks like the double pole balancing task [cite paper establishing this benchmark] and the XOR topology building task [cite paper establishing this benchmark].
 
@@ -215,7 +209,7 @@ More importantly however is the Double pole balancing task, as - unlike the XOR 
 \subsection{Practical Applications of NEAT}
 
 Practical applications of the NEAT system are plentiful due to its still relevant high performance. One very prominent example of a great application of NEAT is the most accurate measurement to date of the mass of the top quark, which was computed by an enormous team at the Tevatron collider in 2009 \href{https://www.ncbi.nlm.nih.gov/pubmed/19518620}{[cite]}. Though NEAT was not only applied in physics, but also did pioneering work in advancing video game playing AI or medical AI. 
-The work of a single researcher - Matthew Hausknecht - on Atari video game playing utilizing HyperNEAT \href{https://www.cs.utexas.edu/~mhauskn/projects/atari/movies.html}{[cite]} (a very promising Advancement of NEAT introduced in 2009) was so pioneering that it was later referenced by the DeepMind Team \href{https://arxiv.org/pdf/1312.5602v1.pdf}{[cite]}, who eventually created the famous AlphaStar AI. NEAT was also applied in a recent study published in 2018, which compared the achieved accuracy of different neuroevolution approaches in the context of detecting tumors in medical images \href{http://www.bcc.ufrpe.br/sites/www.bcc.ufrpe.br/files/Luiz%20Fran%C3%A7a.pdf}{[cite]}. NEAT's performance was similar to the established algorithms, even when executing a much smaller number of generation .
+The work of a single researcher - Matthew Hausknecht - on Atari video game playing utilizing HyperNEAT \href{https://www.cs.utexas.edu/~mhauskn/projects/atari/movies.html}{[cite]} (a very promising Advancement of NEAT introduced in 2009) was so pioneering that it was later referenced by the DeepMind Team \href{https://arxiv.org/pdf/1312.5602v1.pdf}{[cite]}, who eventually created the famous AlphaStar AI. NEAT was also applied in a recent study published in 2018, which compared the achieved accuracy of different neuroevolution approaches in the context of detecting tumors in medical images \href{http://www.bcc.ufrpe.br/sites/www.bcc.ufrpe.br/files/Luiz%20Fran%C3%A7a.pdf}{[cite]}. NEAT's performance was similar to the established algorithms, even when executing a much smaller number of generation.
     
 Each of these applications implemented their own version of NEAT, as unlike for classical machine learning, there exists no well established framework realizing Neuroevolution. The official NEAT software catalogue \href{http://eplex.cs.ucf.edu/neat_software/}{[cite]} lists 25 different implementations and libraries of NEAT, the most prominent one probably being NEAT-Python \href{https://github.com/codereclaimers/neat-python}{[cite]} by CodeReclaimers. Training an agent to play SuperMario World by utilizing this NEAT-Python library can be realized in under 100 lines of code with good results.
 
