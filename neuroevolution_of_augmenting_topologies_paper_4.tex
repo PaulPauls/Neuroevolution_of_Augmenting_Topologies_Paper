@@ -213,18 +213,13 @@ More importantly however is the Double pole balancing task, as - unlike the XOR 
 % ######################################################################################################################
 
 \subsection{Practical Applications of NEAT}
-% Go especially into detail what Stanley considered great NEAT applications in his reddit AMA
-% Introduce my own code accompanying this paper
 
-% First: Stanleys favored NEAT application to determine quork size
-% Then Tu-Darmstadt TCP-NEAT
-% Then NEAT-Python, my application and the plan to standardize it as a TF addon
+Practical applications of the NEAT system are plentiful due to its still relevant high performance. One very prominent example of a great application of NEAT is the most accurate measurement to date of the mass of the top quark, which was computed by an enormous team at the Tevatron collider in 2009 \href{https://www.ncbi.nlm.nih.gov/pubmed/19518620}{[cite]}. Though NEAT was not only applied in physics, but also did pioneering work in advancing video game playing AI or medical AI. 
+The work of a single researcher - Matthew Hausknecht - on Atari video game playing utilizing HyperNEAT \href{https://www.cs.utexas.edu/~mhauskn/projects/atari/movies.html}{[cite]} (a very promising Advancement of NEAT introduced in 2009) was so pioneering that it was later referenced by the DeepMind Team \href{https://arxiv.org/pdf/1312.5602v1.pdf}{[cite]}, who eventually created the famous AlphaStar AI. NEAT was also applied in a recent study published in 2018, which compared the achieved accuracy of different neuroevolution approaches in the context of detecting tumors in medical images \href{http://www.bcc.ufrpe.br/sites/www.bcc.ufrpe.br/files/Luiz%20Fran%C3%A7a.pdf}{[cite]}. NEAT's performance was similar to the established algorithms, even when executing a much smaller number of generation .
+    
+Each of these applications implemented their own version of NEAT, as unlike for classical machine learning, there exists no well established framework realizing Neuroevolution. The official NEAT software catalogue \href{http://eplex.cs.ucf.edu/neat_software/}{[cite]} lists 25 different implementations and libraries of NEAT, the most prominent one probably being NEAT-Python \href{https://github.com/codereclaimers/neat-python}{[cite]} by CodeReclaimers. Training an agent to play SuperMario World by utilizing this NEAT-Python library can be realized in under 100 lines of code with good results.
 
-% NEAT Software catalogue: http://eplex.cs.ucf.edu/neat_software/
-
-% https://www.seemoo.tu-darmstadt.de/theses/details/index.html%3Fno_cache=1&tx_abschlussarbeiten_abschlussarbeiten%255Babschlussarbeit%255D=996&tx_abschlussarbeiten_abschlussarbeiten%255Baction%255D=show&tx_abschlussarbeiten_abschlussarbeiten%255Bcontroller%255D=Abschlussarbeit&cHash=858c633006b4ee855.html
-
-\blindtext
+There are also currently efforts being made \href{https://github.com/PaulPauls/Tensorflow-Neuroevolution}{[cite]} to implement NEAT in the upcoming Tensorflow 2.0 [cite TF 2.0 release] release as an addon \href{https://github.com/tensorflow/addons}{[cite]} library utilizing Tensorflows newly introduced dynamic computational graphs.
 
 
 
@@ -232,11 +227,7 @@ More importantly however is the Double pole balancing task, as - unlike the XOR 
 
 \section{Conclusion}
 
-[Incorporate deleted 'Variants and Advancements of NEAT' Chapter (also see .tex notes). Incorporate it as a possible 'Ausblick']
-% Write about HyperNEAT, ES-HyperNEAT, Novelty Search, CoDeepNEAT, Real's research
-% Write about SGD and evolution combiningn increasingly with NE for the rough evolution and backpropagation for the finetuning
-
-\blindtext
+As this paper outlines - and the past decade proves - is neuroevolution a promising approach to developing topologies and weights of artifical neural networks. NEAT was a significant advancement for the field of Neuroevolution at the time it was introduced in the year 2002 and is still to this day an important benchmark. Even so did the research community of Neuroevolution not stop innovating and created groundbreaking new neuroevolution algorithms - some being advancement of the original NEAT. Stanley, Risi, D'Ambrosio and Lehman introduced HyperNEAT [cite] and its refinement ES-HyperNEAT [cite] in 2009/2011, further enhancing it with new fitness function objectives like 'Novelty Search' [cite] in 2011. Furthermore did Miikkulainen \& Liang bring the innovations of Deep Learning to Neuroevolution introducing CoDeepNEAT in 2017, while Real \& Aggarwal were able to design a neuroevolution system that surpasses hand-designs for the first time in 2018.
 
 
 
@@ -404,7 +395,7 @@ I wish to thank Rezsa Farahani, from the Google Brain team, and Michael Adam, fr
     Conti, Madhavan, et al - Improving Exploration in Evolution Strategies for Deep Reinforcement Learning via a Population of Novelty Seeking Agents; Oct 2018;
     \url{https://arxiv.org/abs/1712.06560}
 
-  \bibitem{con18}
+  \bibitem{fro18}
     Frolov - Neuroevolution: A Primer on Evolving Artificial Neural Networks; Oct 2018;
     \url{https://www.inovex.de/blog/neuroevolution/}
 
