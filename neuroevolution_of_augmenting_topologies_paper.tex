@@ -8,7 +8,8 @@
 \usepackage{blindtext}      % For placeholder text
 \usepackage{listings}       % For code listings
 \usepackage{color}          % For color
-\usepackage{draftwatermark} % For watermark
+\usepackage{background}     % For draft watermark
+\usepackage{datetime}       % For precisde dating in watermark
 
 \graphicspath{{./illustrations/}}
 
@@ -49,9 +50,21 @@
 \markboth{Neuroevolution of Augmenting Topologies}{}
 \maketitle
 
-% Place small Watermark indicating that this is currently a draft in background
-\SetWatermarkText{DRAFT}
-\SetWatermarkScale{0.5}
+% Place small Watermark indicating that this is currently a draft on the left side
+\backgroundsetup{
+    position=current page.west,
+    angle=90,
+    nodeanchor=west,
+    vshift=-2mm,
+    hshift=-25mm,
+    opacity=1,
+    scale=3,
+    color=gray,
+    contents=DRAFT from \today
+}
+
+%\SetWatermarkText{DRAFT}
+%\SetWatermarkScale{0.5}
 
 % While Paper is in development shall I include this table of contents as a quick overview
 % \tableofcontents
