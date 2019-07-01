@@ -1,0 +1,360 @@
+% ######################################################################################################################
+
+\documentclass[journal, a4paper]{IEEEtran}
+
+\usepackage{graphicx}       % For graphics, photos, etc
+\usepackage{hyperref}       % For URL and href
+\usepackage{amsmath}        % For advanced mathematical formatting and symbols
+\usepackage{blindtext}      % For placeholder text
+\usepackage{listings}       % For code listings
+\usepackage{color}          % For color
+\usepackage{background}     % For draft watermark
+\usepackage{datetime}       % For precisde dating in watermark
+
+\graphicspath{{./illustrations/}}
+
+\definecolor{green}{rgb}{0, 0.66, 0}
+\definecolor{red}{rgb}{1, 0, 0}
+\definecolor{gray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{orange}{rgb}{1, 0.66, 0}
+\definecolor{codebg}{rgb}{0.97, 0.97, 0.97}
+
+\lstdefinestyle{c-style}{
+  language={[ANSI]C},
+  frame=single,
+  backgroundcolor=\color{codebg},
+  commentstyle=\itshape\color{green},
+  keywordstyle=\color{blue},
+  numberstyle=\tiny\color{gray},
+  stringstyle=\color{orange},
+  basicstyle=\fontsize{7}{7}\ttfamily,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+
+% ######################################################################################################################
+
+\begin{document}
+
+\title{An Introduction to Neuroevolution}
+\author{Paul Pauls, \textit{Technical University of Munich (TUM)}\\
+        Advisor: Michael Adam, \textit{Technical University of Munich (TUM)}}
+\markboth{An Introduction to Neuroevolution}{}
+\maketitle
+
+% Place small Watermark indicating that this is currently a draft on the left side
+\backgroundsetup{
+    position=current page.west,
+    angle=90,
+    nodeanchor=west,
+    vshift=-2mm,
+    hshift=-25mm,
+    opacity=1,
+    scale=3,
+    color=gray,
+    contents=DRAFT from \today
+}
+
+%\SetWatermarkText{DRAFT}
+%\SetWatermarkScale{0.5}
+
+% While Paper is in development shall I include this table of contents as a quick overview
+% \tableofcontents
+
+\begin{abstract}
+    Neural networks have proven effective at solving difficult problems but designing their architectures can be challenging, especially when applying deep learning with countless parameters to configure. This paper shows one way to automatically create those deep learning topologies by introducing the system \textit{Neuroevolution of Augmenting Topologies} (abbr. NEAT). First the term neuroevolution is determined and established, whereupon the key aspects that define NEAT are illustrated, closing with an outlook of advancements building upon NEAT.
+\end{abstract}
+
+
+
+% ######################################################################################################################
+
+\section{Introduction}
+
+\IEEEPARstart{W}{ith} the success of Deep Learning in recent years \cite{kri12, cir12, sch14} faced the machine learning research community the challenge of having to configure even more hyperparameters, create even more layers and run even more training-epochs. In order to ease this design process came the concept of \textit{Automated Machine Learning} (abbr. AutoML) into focus. One aspect of AutoML - the evolution of \textit{Artificial Neural Networks} (abbr. ANNs) - is addressed in this paper and its most prominent representative - NEAT - is thoroughly discussed. 
+
+This evolution of artificial neural networks is called \textit{Neuroevolution} and it is a form of evolutionary algorithm that generates specific ANNs through modification of its parameters, topology and rules in order to maximize the ANN's accuracy or fitness score. The neuroevolution algorithm seeks to modify the ANN in an evolutionary process similar to the Darwinian process that produced human brains and its process-summarizing maxim 'survival of the fittest'. First methods using neuroevolution can be traced back to the 1980s and 1990s \cite{fro18}, while the first evolutionary algorithms were conceived in the 1950s by Alan Turing and Nils Barricelli \cite{tur50}.
+
+
+
+% ######################################################################################################################
+
+\section{Neuroevolution and Evolutionary Algorithms}
+
+A \textit{neuroevolution algorithm} is a \textit{genetic algorithm}, whose search-space (or genotypes) consist of artificial neural networks. A \textit{genetic algorithm} in turn is a \textit{evolutionary algorithm} that evolves genotypes - genetically encoded representations of the actual solution (phenotype) - through mutation, recombination and selection. This chapter will introduce each of these terms and revisit how exactly they apply to neuroevolution.
+
+
+
+\subsection{Evolutionary and Genetic Algorithms}
+
+An \textit{Evolutionary Algorithm} (abbr. EA) is defined as "a generic population-based and meta-heuristically optimized algorithmic solution to an applied problem" \cite{hol12}. First of all does that effectively mean that evolutionary algorithms provide an algorithmic solution to an applied problem that is increasingly optimized by some component of the EA. An evolutionary algorithm therefore also encodes a method of how to come up with the best (or most often just highly optimized) solution to an algorithmic problem.
+
+Evolutionary algorithms find this best algorithmic solution through a \textit{population-based} method. This means that EAs manage an arbitrary variety of algorithmic solutions - all of which differ and solve the applied problem with various grades of accuracy or fitness scoring. Each of these algorithmic solutions is called a \textit{member} of the evolutionary algorithms' population. To determine the best member of the population assigns the evolutionary algorithm each member a \textit{fitness score}. In the context of neuroevolution for example is this fitness score calculated by evaluating the accuracy of the artificial neural network.
+
+However, the question remains how the members of the population are created in a sensible way so that they may represent a reasonable algorithmic solution. EAs utilize the method of \textit{meta-heuristic optimization} to achieve this. Each new member in a population is conceived by recombining and/or mutating a single or multiple existing members of the population. Presuming that the existing members, which are recombined to create the new member, are chosen to be members with the highest fitness score, does the process reflect an optimization procedure resembling Darwinian evolution. Evolutionary algorithms therefore breed a single increasingly optimized algorithmic solution through evolutionary intercombination of already existing algorithmic solutions - hence representing the mentioned optimization process. 
+
+The possible methods of intercombination between existing members are inspired by biological evolution as well. These intercombination methods - such as mutation, recombination and selection - are only addressed in the subsequent chapter \ref{ch:neuroevolution} to clarify how they apply to neuroevolution in particular. Furthermore is the mentioned optimization process considered \textit{meta-heuristic} because innovations are transferred within the population or randomly created through these intercombination methods, requiring no outside input whatsoever. Thus, even when the feedback from the applied problem or environment is incomplete or sparse, is a fruitful traversal through the search-space still possible (e.g. via a lucky mutation or a recombination of two fit members).
+
+Moreover is the population-based methodology considered \textit{generic} because it does not specify how the members of the population are encoded. Though an evolutionary algorithm needs to eventually return an algorithmic solution to the applied problem, do the members not need to be algorithms themselves.
+
+\textit{Genetic Algorithms} (abbr. GAs) are evolutionary algorithms whose members are not algorithms per se, but genetic-like encodings which are eventually translated into algorithms by a user-specified component of the genetic algorithm. The gene-like encoded member in a GA is called its \textit{genotype}, whereas its corresponding translated algorithm is called its \textit{phenotype}.
+
+The defining advantage of representing members as a gene-like encodings instead of an algorithm in memory is that intercombination methods like mutation and recombination are vastly easier and faster on relatively simple genetic encodings than on complex specified algorithms. Figure \ref{ill:binary_encoding} shows a neural network topology (a) and its corresponding binary encoding (b). This figure illustrates well how such a complex algorithm as an artificial neural network is significantly simpler represented as a genetic encoding and can in turn significantly simpler be recombined than than the algorithm itself.
+
+
+
+\subsection{Neuroevolution}\label{ch:neuroevolution}
+
+A proper definition of neuroevolution is now possible. Neuroevolution is the - possibly boundless - process in which by the means of a genetic algorithm the population of artificial neural networks is increasingly optimized in order to maximize the accuracy or fitness of the best ANN.
+
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{{Binary_ANN_Encoding_-_yao99}}
+    \caption{Neural Network topology (a) and its corresponding Binary Encoding (b) (Source: \cite{yao99})}
+    \label{ill:binary_encoding}
+\end{figure}
+
+The intercombinatory method of \textit{mutation} in the context of neuroevolution is defined as adding, modifying or removing structure to or from the ANN representation of a chosen member. This is achieved by modifying the members corresponding genotype representation in a sensible manner resulting in such a change in its corresponding ANN phenotype.
+To give an example for the mutation of an ANN, take the binary encoded genotype seen in figure \ref{ill:binary_encoding} and then flip, add or remove some bits, possibly resulting in a new node or connection in its corresponding phenotype.
+
+The intercombinatory method of \textit{recombination} in the context of neuroevolution is defined as crossing over the ANNs of two or more arbitrary members of the population, forming a new ANN with topological features from both \textit{parents}. This crossover of ANNs is achieved by combining the genotype of the parent-members. The intention behind this is that the topological features of each parent combine and form a new ANN that hopefully performs even better than both parent parent-members. An example of such a recombination, though an impaired one as the figure actually represents the flawed process of the \textit{Competing Conventions} problem, can be seen in figure \ref{ill:comp_conv}. This figure shows two simplified ANNs (one encoded with [A,B,C], the other with [C,B,A]) crossing over and the resulting offspring having genetic damage as each is missing information from its parent. This figure however also shows how each possible gene position in the offspring is filled with a gene from either parent, creating valid though genetically impaired offspring.
+
+The intercombinatory method of \textit{selection} in the context of neuroevolution is defined identically as it is defined in EAs or GAs. The lowest performing members of the population are removed periodically in order to increase the overall quality of the gene pool and not waste resources on stuck members. This periodical removal of the lowest performing members is either executed after a member is performing too far below the other members or after each \textit{generation} in the evolutionary process. Once all members of a population have been mutated/recombined, evaluated and assigned a fitness score, is this current state of the population considered a specific generation - whereupon the method of selection can then be applied.
+
+The specifics of the neuroevolution process, e.g. how the intercombinatory methods are performed exactly, how the encoding scheme specifies genotypes and their translation into the phenotype ANNs, how the initial population is created, etc. are all left to the neuroevolution algorithm itself.
+
+
+
+% ######################################################################################################################
+
+\section{NeuroEvolution of Augmenting Topologies (NEAT)} \label{sec:neat}
+
+Kenneth O.Stanley and Risto Miikkulainen co-published an approach to neuroevolution in the year 2002, which they called \textit{Neuroevolution of Augmenting Topologies} (abbr. NEAT) \cite{sta02_1}. At the time of envisionment was NEAT considered one of the most promising approaches to ANN evolution and it is still considered a viable approach and a benchmark algorithm in neuroevolution to this day. The first section in this chapter will outline what aspects of NEAT set it apart from the preceding research and enabled its leap in performance, which will be looked upon in the second section. This chapter closes with a short overview of great implementations and projects that realize or are realized with NEAT.
+
+
+
+\subsection{Key Aspects of NEAT and Differences to Preceding Neuroevolution}
+
+In his dissertation, titled 'Efficient Evolution of Neural Networks through Complexification' \cite{sta04} presents Stanley three main technical challenges to the current state of neuroevolution and evolving structure incrementally. He states the following three questions that summarize these challenges \cite[page 4]{sta04}:
+
+\begin{itemize}
+    \item "Is there a genetic representation that allows disparate topologies to cross over in a meaningful way?"
+    \item "How can topological innovation that needs a few generations to be optimized be protected so that it does not disappear from the population prematurely?"
+    \item "How can topologies be minimized throughout evolution without a contrived fitness function that measures complexity explicitly?"
+\end{itemize}
+
+The following key aspects of NEAT solve the stated problems and result in a powerful evolutionary method that can solve benchmark problems faster than previous methods and make entirely new applications possible.
+
+
+
+\subsubsection{\textbf{Historical Markings}}
+
+Historical markings were introduced to overcome the previously mentioned challenge of \textit{Competing Conventions} - visualized in figure \ref{ill:comp_conv}. This example illustrates the attempt to cross over [A,B,C] and [C,B,A], which can result in offspring like [C,B,C], a representation that has lost one third of the information that both of the parents had. The probability of such severe genetic damage when looking at nontrivial crossovers (where an offspring is not simply a duplicate of a parent) with no protection against this sort of information erasure lies at 66.6\% \cite[page 19]{sta04}.
+
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{{Competing_Conventions_Crossover_-_sta02_2}}
+    \caption{Illustration of ANN crossover and the \textit{Competing Conventions} problem. (Source: \cite{sta02_2})}
+    \label{ill:comp_conv}
+\end{figure}
+
+The approach of historical markings offers a solution to this problem by introducing a global innovation number. Whenever a new gene appears through structural mutation is a global innovation number incremented and assigned to that gene. This allows to track the historical origin of each gene and consequently which genes match up between all members of the population.
+
+This identification of genes representing the same structure allows to solve the Competing Conventions problem. This is possible by first of all, not allowing the same gene (with the same innovation number and therefore representing the same structure) to be present multiple times in the genotype. Secondly does it also allow to prevent genes from erasing one another when crossing over as it is now apparent when both genes are different and an erasure of either would therefore be an erasure of information. Instead, due to the dynamic-length encoding employed by NEAT, is the genotype simply elongated and both genes (and therefore both represented structures) are placed next to each other in the genotype. 
+Genotypes that have become too large through this procedure can also shrink again through the method of mutation, which can \textit{disable} and therefore remove individual genes.
+
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{{ANN_Recombination_With_Innovation_Numbers_-_sta04}}
+    \caption{ANN crossover in NEAT using \textit{Innovation Numbers}. (Source: \cite{sta04})}
+    \label{ill:ann_recomb_innov_num}
+\end{figure}
+
+A functional, meaning information preserving, crossover of 2 ANN genotypes is illustrated in figure \ref{ill:ann_recomb_innov_num}. The genes of the genotypes of both parents are lined up next to each other according to their innovation number in ascending order. The crossover process then simply consists of concatenating all present genomes according to their innovation number, resulting in an elongated genome for the new member.
+
+
+
+\subsubsection{\textbf{Speciation}}
+Speciation has been studied in GAs but has rarely been applied to NE prior to its introduction in NEAT \cite[page 25]{sta04}, even though it is crucial and the lack of speciation significantly limits its ability to add and maintain new topologies \cite{sta02_2} \cite[chap 4.3]{sta04}.
+
+The underlying problem and reason for the necessity of speciation is that topological innovation - e.g. a drastically interrupting node or connection - often underperforms compared to the other more matured members of the population. Though this topological innovation may simply need time to optimize its weights or set up the new member for another mutation that in turn enables a significant performance boost. Speciation protects innovation following the philosophy that new ideas must be given time to reach their potential before they are eliminated. In the context of neuroevolution does this mean that innovative members must be given time to optimize their weights or further mutate favorably before they are eliminated.
+
+The principle of speciation protects innovation by using explicit fitness sharing. This method divides the population into niches according to their topological distinctness, which can be determined through the genotypes innovation numbers. Each member of a niche is then forced to share the fitness score of all other members in the niche according to a specified equation \cite[chap 3.3]{sta04}.
+
+This equation postadjusts each members fitness towards the niches' average and effectively means that new species don't have to compete with the best members, but only the best niches. Each niche in turn is put into perspective through the lower performing members in the niche whose weights are likely not set optimally. This favors small and most often new niches since weight optimization isn't a factor anymore and therefore keeps diversity in niches and hence topological innovation high. 
+
+
+
+\subsubsection{\textbf{Complexification}}
+Many preceding neuroevolution algorithms would start out with an often considerably large and randomly mutated initial population with the intention to provide genetic diversity in the gene pool. The intention was that this diversity would provide the means to thoroughly and quickly traverse through the search space by mutation, as many genetic features were already present in the initial population. Most often included these algorithms also a functional unit of the algorithm that was only intended to minimize the ANN through degenerative mutation. This was required as the necessity of topological innovation - its initially randomly mutated population - usually left significant clutter in the form of unnecessary genes and genetic features.
+
+This necessity of a randomly mutated initial population to produce innovation however isn't a necessity in NEAT, as the principle of historical markings facilitates innovation through lossless and clean recombination and the principle of speciation protects innovation. The principle of complexification therefore states to provide a minimal initial population, which is only expanded upon. Because new topological features only appear and endure if they represent a beneficial new structure, does this also eliminate the resource-costly requirement of a functional unit responsible for minimization.
+
+
+
+\subsection{Performance of NEAT} \label{sec:neat_performance}
+
+Stanley \& Miikkulainen analysis \cite{sta02_1, sta02_2, sta04} of NEAT significantly showed significant performance improvements in comparison to most preceding NE methods in terms of speed and required evaluations in key benchmarks like the double pole balancing task \cite{and89} and the XOR topology building task.
+
+The XOR topology building task is a sanity check for \textit{Topology and Weight Evolving Artificial Neural Network} algorithms. Because XOR is not linearly separable, requires a neural network hidden units to solve it and therefore makes this benchmark suitable for testing NEATs' ability to evolve structure. It is clear that NEAT solves the XOR problem without trouble and in doing so keeps the topology small \cite[chap 4.1]{sta04}. 
+
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{{Table_Comparison_DPNV_Benchmark_-_sta02_2}}
+    \caption{Performance Comparison for 'Double pole balancing without velocity information' task between CE, ESP and NEAT. (Source: \cite{sta02_2})}
+    \label{ill:table_dpnv_benchmark}
+\end{figure}
+
+However, the double pole balancing task is of more importance, as this benchmark is well suited for performance comparison. This benchmark has been used in reinforcement learning and neuroevolution research for over 30 years \cite[chap 3.A]{sta02_2} and consists of two poles connected to a moving cart by a hinge, whereas the neural network must apply force to the cart to keep the poles balanced for as long as possible. Figure \ref{ill:table_dpnv_benchmark} shows a performance comparison between NEAT and the two other benchmark neuroevolution algorithms at the time - \textit{Cellular Encoding} (abbr. CE) \cite{gru94} and \textit{Enforced SubPopulations} (abbr. ESP) \cite{gom99}. The superior performance of NEAT in comparison to ESP is especially noteworthy in this task, as, unlike all other NE algorithms at the time, ESP performs at in the 'double pole balancing with velocity information' experiment at the same level as NEAT \cite[chap 4.3.2]{sta02_1}. This underlines NEATs' ability to perform especially well in feedback-sparse environments.
+
+
+
+% ######################################################################################################################
+
+\subsection{Practical Applications of NEAT}
+
+Practical applications of the NEAT system are plentiful due to it being a benchmark algorithm in the field of neuroevolution. NEAT was successfully employed in a wide field of research, some among them being physics \cite{aal09}, medical diagnosis \cite{fra18}, video game AI \cite{hau12} or robotics \cite{cul15}.
+
+Each of these applications however implemented their own version of NEAT, as - unlike for classical machine learning - there exists no well established framework for neuroevolution. The official NEAT software catalog \cite{neat_software19} lists 25 different implementations and libraries for vanilla NEAT alone, the most prominent one probably being NEAT-Python \cite{cod19}. Training an agent to play SuperMario World by utilizing this NEAT-Python library can be realized in under 100 lines of code with good results \cite{pau19_smw}.
+
+There are also currently efforts being made \cite{pau19_tefne} to implement NEAT in the upcoming Tensorflow 2.0 \cite{tf_beta19} release as an add-on \cite{tf_addons19} library utilizing Tensorflows newly introduced dynamic computational graphs.
+
+
+
+% ######################################################################################################################
+
+\section{Conclusion}
+
+As this paper outlines is neuroevolution a promising approach to developing topologies and weights of artificial neural networks. NEAT was a significant advancement for the field of neuroevolution at the time it was introduced in the year 2002 and is still to this day an important benchmark. Even so did the research community of neuroevolution not stop innovating and created groundbreaking new neuroevolution algorithms - some being advancements of the original NEAT. Stanley, Risi, D'Ambrosio and Lehman introduced HyperNEAT \cite{sta09} and its refinement ES-HyperNEAT \cite{ris11} in 2009/2011, further enhancing it with new fitness function objectives like \textit{Novelty Search} \cite{leh11} in 2011. Furthermore did Miikkulainen \& Liang bring the innovations of Deep Learning to neuroevolution introducing CoDeepNEAT \cite{mii17} in 2017, while Real \& Aggarwal were even able to design a neuroevolution system that surpasses hand-designs for the first time in 2018 \cite{rea19}.
+
+Creating established neuroevolution frameworks that will efficiently use computational resources like the GPU will likely further this field of research even more, as the traditional machine learning frameworks already demonstrated.
+
+
+
+% ######################################################################################################################
+
+\begin{thebibliography}{5}
+    
+    \bibitem{tur50}
+    Turing - Computing Machinery and Intelligence; Oct. 1950;
+    \url{https://academic.oup.com/mind/article/LIX/236/433/986238}
+    
+    \bibitem{and89}
+    Anderson - Learning to control an inverted pendulum using neural networks; 1989;
+    \url{https://ieeexplore.ieee.org/document/24809}
+    
+    \bibitem{gru94}
+    Gruau, Bernard-lyon, et al - Neural Network Synthesis Using Cellular Encoding And The Genetic Algorithm; 1994;
+    \url{https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.29.5939}
+    
+    \bibitem{yao99}
+    Yao - Evolving Artificial Neural Networks; 1999;
+    \url{http://avellano.fis.usal.es/~lalonso/compt_soft/articulos/yao99evolving.pdf}
+    
+    \bibitem{gom99}
+    Gomez, Miikkulainen - Solving Non-Markovian Control Tasks with Neuroevolution; 1999;
+    \url{http://nn.cs.utexas.edu/downloads/papers/gomez.ijcai99.pdf}
+    
+    \bibitem{sta02_1}
+    Stanley, Miikkulainen - Evolving Neural Networks through Augmented Topologies; 2002;
+    \url{http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf}
+    
+    \bibitem{sta02_2}
+    Stanley, Miikkulainen - Efficient Evolution of Neural Network Topologies; 2002;
+    \url{http://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf}
+    
+    \bibitem{sta04}
+    Stanley - Efficient Evolution of Neural Networks through Complexification; Aug 2004;
+    \url{http://nn.cs.utexas.edu/downloads/papers/stanley.phd04.pdf}
+    
+    \bibitem{sta09}
+    Stanley, D’Ambrosio, et al - A Hypercube-Based Indirect Encoding for Evolving Large-Scale Neural Networks; 2009;
+    \url{http://axon.cs.byu.edu/~dan/778/papers/NeuroEvolution/stanley3**.pdf}
+    
+    \bibitem{aal09}
+    Aaltonen, Adelman, et al - Measurement of the top-quark mass with dilepton events selected using neuroevolution at CDF; Apr 2009;
+    \url{https://www.ncbi.nlm.nih.gov/pubmed/19518620}
+    
+    \bibitem{ris11}
+    Risi, Stanley - Enhancing ES-HyperNEAT to Evolve More Complex Regular Neural Networks; Jul 2011;
+    \url{http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.365.4332}
+    
+    \bibitem{leh11}
+    Lehman, Stanley - Novelty Search and the Problem with Objectives; Oct 2011;
+    \url{https://www.cs.ucf.edu/eplex/papers/lehman_gptp11.pdf}
+    
+    \bibitem{hau12}
+    Hausknecht - A Neuroevolution Approach to General Atari Game Playing; 2012;
+    \url{https://www.cs.utexas.edu/~mhauskn/projects/atari/movies.html}
+    
+    \bibitem{cir12}
+    Ciresan, Giusti, et al - Deep Neural Networks Segment Neuronal Membranes in Electron Microscopy Images; 2012;
+    \url{http://people.idsia.ch/~juergen/nips2012.pdf}
+    
+    \bibitem{kri12}
+    Krizhevsky, Sutskever, et al - ImageNet Classification with Deep Convolutional Neural Networks; 2012;
+    \url{https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}
+    
+    \bibitem{hol12}
+    Holland - Scholarpedia Article on 'Genetic Algorithms'; Oct 2012;
+    \url{http://www.scholarpedia.org/article/Genetic_algorithms}
+    
+    \bibitem{Mni13}
+    Mnih, Kavukcuoglu, et al - Playing Atari with Deep Reinforcement Learning; Dec 2013;
+    \url{https://arxiv.org/abs/1312.5602}
+    
+    \bibitem{sch14}
+    Schmidhuber - Deep Learning in Neural Networks; Apr 2014;
+    \url{https://arxiv.org/abs/1404.7828}
+    
+    \bibitem{cul15}
+    Cully, Clune, et al - Robots that can adapt like animals; May 2015;
+    \url{https://www.nature.com/articles/nature14422}
+    
+    \bibitem{mii17}
+    Miikkulainen, Liang, et al - Evolving Deep Neural Networks; Mar 2017;
+    \url{https://arxiv.org/abs/1703.00548}
+    
+    \bibitem{fra18}
+    Franca - Neuroevolution of Augmenting Topologies Applied to the Detection of Cancer in Medical Images; Feb 2018;
+    \url{http://www.bcc.ufrpe.br/sites/www.bcc.ufrpe.br/files/Luiz%20Fran%C3%A7a.pdf}
+        
+        \bibitem{fro18}
+        Frolov - Neuroevolution: A Primer on Evolving Artificial Neural Networks; Oct 2018;
+        \url{https://www.inovex.de/blog/neuroevolution/}
+        
+        \bibitem{rea19}
+        Real, Aggarwal, et al - Regularized Evolution for Image Classifier Architecture Search; Feb 2019;
+        \url{https://arxiv.org/abs/1802.01548}
+        
+        \bibitem{cod19}
+        CodeReclaimers - NEAT Python; Jun 2019;
+        \url{https://github.com/codereclaimers/neat-python}
+        
+        \bibitem{neat_software19}
+        NEAT Software Catalog; Jun 2019;
+        \url{http://eplex.cs.ucf.edu/neat_software/}
+        
+        \bibitem{pau19_smw}
+        Pauls - SuperMario World NEAT Agent; Jun 2019;
+        \url{https://github.com/PaulPauls/SuperMarioWorld-NEAT-Agent}
+        
+        \bibitem{tf_beta19}
+        Tensorflow 2.0 Beta; Jun 2019;
+        \url{https://www.tensorflow.org/beta}
+        
+        \bibitem{tf_addons19}
+        Tensorflow addons; Jun 2019;
+        \url{https://github.com/tensorflow/addons}
+        
+        \bibitem{pau19_tefne}
+        Pauls - Tensorflow Neuroevolution; Jun 2019;
+        \url{https://github.com/PaulPauls/Tensorflow-Neuroevolution}
+        
+    \end{thebibliography}
+
+\end{document}
