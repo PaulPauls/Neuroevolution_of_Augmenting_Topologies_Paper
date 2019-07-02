@@ -101,13 +101,13 @@ Evolutionary algorithms find this best algorithmic solution through a \textit{po
 
 However, the question remains how the members of the population are created in a sensible way so that they may represent a reasonable algorithmic solution. EAs utilize the method of \textit{meta-heuristic optimization} to achieve this. Each new member in a population is conceived by recombining and/or mutating a single or multiple existing members of the population. Presuming that the existing members, which are recombined to create the new member, are chosen to be members with the highest fitness score, does the process reflect an optimization procedure resembling Darwinian evolution. Evolutionary algorithms therefore breed a single increasingly optimized algorithmic solution through evolutionary intercombination of already existing algorithmic solutions - hence representing the mentioned optimization process. 
 
-The possible methods of intercombination between existing members are inspired by biological evolution as well. These intercombination methods - such as mutation, recombination and selection - are only addressed in the subsequent chapter \ref{ch:neuroevolution} to clarify how they apply to neuroevolution in particular. Furthermore is the mentioned optimization process considered \textit{meta-heuristic} because innovations are transferred within the population or randomly created through these intercombination methods, requiring no outside input whatsoever. Thus, even when the feedback from the applied problem or environment is incomplete or sparse, is a fruitful traversal through the search-space still possible (e.g. via a lucky mutation or a recombination of two fit members).
+The possible methods of intercombination between existing members are inspired by biological evolution as well. These intercombination methods - such as mutation, recombination and selection - are only addressed in the subsequent chapter \ref{ch:neuroevolution} to clarify how they apply to neuroevolution in particular. Furthermore is the mentioned optimization process considered \textit{meta-heuristic} because innovations are randomly created and transferred within the population through these intercombination methods, requiring no outside input whatsoever. Thus, even when the feedback from the applied problem or environment is incomplete or sparse, is a fruitful traversal through the search-space still possible (e.g. via a lucky mutation or a recombination of two fit members).
 
 Moreover is the population-based methodology considered \textit{generic} because it does not specify how the members of the population are encoded. Though an evolutionary algorithm needs to eventually return an algorithmic solution to the applied problem, do the members not need to be algorithms themselves.
 
 \textit{Genetic Algorithms} (abbr. GAs) are evolutionary algorithms whose members are not algorithms per se, but genetic-like encodings which are eventually translated into algorithms by a user-specified component of the genetic algorithm. The gene-like encoded member in a GA is called its \textit{genotype}, whereas its corresponding translated algorithm is called its \textit{phenotype}.
 
-The defining advantage of representing members as a gene-like encoding instead of an algorithm in memory is that intercombination methods like mutation and recombination are vastly easier and faster on relatively simple genetic encodings than on complex specified algorithms. Figure \ref{ill:binary_encoding} shows a neural network topology (a) and its corresponding binary encoding (b). This figure illustrates well how such a complex algorithm as an artificial neural network is significantly simpler represented as a genetic encoding and can in turn significantly simpler be recombined than than the algorithm itself.
+The defining advantage of representing members as a gene-like encoding instead of an algorithm in memory is that intercombination methods like mutation and recombination are vastly easier and faster on relatively simple genetic encodings than on complex specified algorithms. Figure \ref{ill:binary_encoding} shows a neural network topology (a) and its corresponding binary encoding (b). This figure illustrates well how such a complex algorithm as an artificial neural network is significantly simpler represented as a genetic encoding and can in turn significantly simpler be recombined than the algorithm itself.
 
 
 
@@ -200,7 +200,7 @@ This necessity of a randomly mutated initial population to produce innovation ho
 
 Stanley \& Miikkulainen analysis \cite{sta02_1, sta02_2, sta04} of NEAT showed significant performance improvements in comparison to most preceding neuroevolution systems in terms of speed and required evaluations in key benchmarks like the double pole balancing task \cite{and89} and the XOR topology building task.
 
-The XOR topology building task is a sanity check for \textit{Topology and Weight Evolving Artificial Neural Network} algorithms. Because XOR is not linearly separable, requires a neural network hidden units to solve it and therefore makes this benchmark suitable for testing NEATs' ability to evolve structure. It is clear that NEAT solves the XOR problem without trouble and in doing so keeps the topology small \cite[chap 4.1]{sta04}. 
+The XOR topology building task is a sanity check for \textit{Topology and Weight Evolving Artificial Neural Network} algorithms. Because XOR is not linearly separable does a neural network require hidden units to solve it, which therefore makes this benchmark suitable for testing NEATs' ability to evolve structure. It is clear that NEAT solves the XOR problem without trouble and in doing so keeps the topology small \cite[chap 4.1]{sta04}. 
 
 \begin{figure}
     \includegraphics[width=0.45\textwidth]{{Table_Comparison_DPNV_Benchmark_-_sta02_2}}
@@ -237,123 +237,123 @@ Creating established neuroevolution frameworks that will efficiently use computa
 % ######################################################################################################################
 
 \begin{thebibliography}{5}
-
-  \bibitem{tur50}
+    
+    \bibitem{tur50}
     Turing - Computing Machinery and Intelligence; Oct. 1950;
     \url{https://academic.oup.com/mind/article/LIX/236/433/986238}
-
-  \bibitem{and89}
+    
+    \bibitem{and89}
     Anderson - Learning to control an inverted pendulum using neural networks; 1989;
     \url{https://ieeexplore.ieee.org/document/24809}
-
-  \bibitem{gru94}
+    
+    \bibitem{gru94}
     Gruau, Bernard-lyon, et al - Neural Network Synthesis Using Cellular Encoding And The Genetic Algorithm; 1994;
     \url{https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.29.5939}
-
-  \bibitem{yao99}
+    
+    \bibitem{yao99}
     Yao - Evolving Artificial Neural Networks; 1999;
     \url{http://avellano.fis.usal.es/~lalonso/compt_soft/articulos/yao99evolving.pdf}
-
-  \bibitem{gom99}
+    
+    \bibitem{gom99}
     Gomez, Miikkulainen - Solving Non-Markovian Control Tasks with Neuroevolution; 1999;
     \url{http://nn.cs.utexas.edu/downloads/papers/gomez.ijcai99.pdf}
-
-  \bibitem{sta02_1}
+    
+    \bibitem{sta02_1}
     Stanley, Miikkulainen - Evolving Neural Networks through Augmented Topologies; 2002;
     \url{http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf}
-
-  \bibitem{sta02_2}
+    
+    \bibitem{sta02_2}
     Stanley, Miikkulainen - Efficient Evolution of Neural Network Topologies; 2002;
     \url{http://nn.cs.utexas.edu/downloads/papers/stanley.cec02.pdf}
-
-  \bibitem{sta04}
+    
+    \bibitem{sta04}
     Stanley - Efficient Evolution of Neural Networks through Complexification; Aug 2004;
     \url{http://nn.cs.utexas.edu/downloads/papers/stanley.phd04.pdf}
-
-  \bibitem{sta09}
+    
+    \bibitem{sta09}
     Stanley, D’Ambrosio, et al - A Hypercube-Based Indirect Encoding for Evolving Large-Scale Neural Networks; 2009;
     \url{http://axon.cs.byu.edu/~dan/778/papers/NeuroEvolution/stanley3**.pdf}
-
-  \bibitem{aal09}
+    
+    \bibitem{aal09}
     Aaltonen, Adelman, et al - Measurement of the top-quark mass with dilepton events selected using neuroevolution at CDF; Apr 2009;
     \url{https://www.ncbi.nlm.nih.gov/pubmed/19518620}
-
-  \bibitem{ris11}
+    
+    \bibitem{ris11}
     Risi, Stanley - Enhancing ES-HyperNEAT to Evolve More Complex Regular Neural Networks; Jul 2011;
     \url{http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.365.4332}
-
-  \bibitem{leh11}
+    
+    \bibitem{leh11}
     Lehman, Stanley - Novelty Search and the Problem with Objectives; Oct 2011;
     \url{https://www.cs.ucf.edu/eplex/papers/lehman_gptp11.pdf}
-
-  \bibitem{hau12}
+    
+    \bibitem{hau12}
     Hausknecht - A Neuroevolution Approach to General Atari Game Playing; 2012;
     \url{https://www.cs.utexas.edu/~mhauskn/projects/atari/movies.html}
-
-  \bibitem{cir12}
+    
+    \bibitem{cir12}
     Ciresan, Giusti, et al - Deep Neural Networks Segment Neuronal Membranes in Electron Microscopy Images; 2012;
     \url{http://people.idsia.ch/~juergen/nips2012.pdf}
-
-  \bibitem{kri12}
+    
+    \bibitem{kri12}
     Krizhevsky, Sutskever, et al - ImageNet Classification with Deep Convolutional Neural Networks; 2012;
     \url{https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf}
-
-  \bibitem{hol12}
+    
+    \bibitem{hol12}
     Holland - Scholarpedia Article on 'Genetic Algorithms'; Oct 2012;
     \url{http://www.scholarpedia.org/article/Genetic_algorithms}
-
-  \bibitem{Mni13}
+    
+    \bibitem{Mni13}
     Mnih, Kavukcuoglu, et al - Playing Atari with Deep Reinforcement Learning; Dec 2013;
     \url{https://arxiv.org/abs/1312.5602}
-
-  \bibitem{sch14}
+    
+    \bibitem{sch14}
     Schmidhuber - Deep Learning in Neural Networks; Apr 2014;
     \url{https://arxiv.org/abs/1404.7828}
-
-  \bibitem{cul15}
+    
+    \bibitem{cul15}
     Cully, Clune, et al - Robots that can adapt like animals; May 2015;
     \url{https://www.nature.com/articles/nature14422}
-
-  \bibitem{mii17}
+    
+    \bibitem{mii17}
     Miikkulainen, Liang, et al - Evolving Deep Neural Networks; Mar 2017;
     \url{https://arxiv.org/abs/1703.00548}
-
-  \bibitem{fra18}
+    
+    \bibitem{fra18}
     Franca - Neuroevolution of Augmenting Topologies Applied to the Detection of Cancer in Medical Images; Feb 2018;
     \url{http://www.bcc.ufrpe.br/sites/www.bcc.ufrpe.br/files/Luiz%20Fran%C3%A7a.pdf}
-
-  \bibitem{fro18}
-    Frolov - Neuroevolution: A Primer on Evolving Artificial Neural Networks; Oct 2018;
-    \url{https://www.inovex.de/blog/neuroevolution/}
-
-  \bibitem{rea19}
-    Real, Aggarwal, et al - Regularized Evolution for Image Classifier Architecture Search; Feb 2019;
-    \url{https://arxiv.org/abs/1802.01548}
-
-  \bibitem{cod19}
-    CodeReclaimers - NEAT Python; Jun 2019;
-    \url{https://github.com/codereclaimers/neat-python}
-
-  \bibitem{neat_software19}
-    NEAT Software Catalog; Jun 2019;
-    \url{http://eplex.cs.ucf.edu/neat_software/}
-
-  \bibitem{pau19_smw}
-    Pauls - SuperMario World NEAT Agent; Jun 2019;
-    \url{https://github.com/PaulPauls/SuperMarioWorld-NEAT-Agent}
-
-  \bibitem{tf_beta19}
-    Tensorflow 2.0 Beta; Jun 2019;
-    \url{https://www.tensorflow.org/beta}
-
-  \bibitem{tf_addons19}
-    Tensorflow addons; Jun 2019;
-    \url{https://github.com/tensorflow/addons}
-
-  \bibitem{pau19_tefne}
-    Pauls - Tensorflow Neuroevolution; Jun 2019;
-    \url{https://github.com/PaulPauls/Tensorflow-Neuroevolution}
-
-\end{thebibliography}
+        
+        \bibitem{fro18}
+        Frolov - Neuroevolution: A Primer on Evolving Artificial Neural Networks; Oct 2018;
+        \url{https://www.inovex.de/blog/neuroevolution/}
+        
+        \bibitem{rea19}
+        Real, Aggarwal, et al - Regularized Evolution for Image Classifier Architecture Search; Feb 2019;
+        \url{https://arxiv.org/abs/1802.01548}
+        
+        \bibitem{cod19}
+        CodeReclaimers - NEAT Python; Jun 2019;
+        \url{https://github.com/codereclaimers/neat-python}
+        
+        \bibitem{neat_software19}
+        NEAT Software Catalog; Jun 2019;
+        \url{http://eplex.cs.ucf.edu/neat_software/}
+        
+        \bibitem{pau19_smw}
+        Pauls - SuperMario World NEAT Agent; Jun 2019;
+        \url{https://github.com/PaulPauls/SuperMarioWorld-NEAT-Agent}
+        
+        \bibitem{tf_beta19}
+        Tensorflow 2.0 Beta; Jun 2019;
+        \url{https://www.tensorflow.org/beta}
+        
+        \bibitem{tf_addons19}
+        Tensorflow addons; Jun 2019;
+        \url{https://github.com/tensorflow/addons}
+        
+        \bibitem{pau19_tefne}
+        Pauls - Tensorflow Neuroevolution; Jun 2019;
+        \url{https://github.com/PaulPauls/Tensorflow-Neuroevolution}
+        
+    \end{thebibliography}
 
 \end{document}
